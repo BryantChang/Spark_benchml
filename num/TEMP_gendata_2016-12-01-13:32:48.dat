@@ -1,0 +1,2 @@
+Error: Master must either be yarn or start with spark, mesos, local
+Run with --help for usage help or --verbose for debug output

@@ -1,0 +1,14 @@
+Using Spark's default log4j profile: org/apache/spark/log4j-defaults.properties
+16/12/05 19:28:44 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+16/12/05 19:28:44 WARN SparkConf: Detected deprecated memory fraction settings: [spark.storage.memoryFraction]. As of Spark 1.6, execution and storage memory management are unified. All memory fractions used in the old model are now deprecated and no longer read. If you wish to use the old memory management, you may explicitly enable `spark.memory.useLegacyMode` (not recommended).
+===========================================================================
+===========================================================================
+Input size: 1000KB
+Total number of records: 10000
+Number of output partitions: 10
+Number of records/ partition:   1000
+===========================================================================
+===========================================================================
+16/12/05 19:28:45 INFO deprecation: mapred.output.dir is deprecated. Instead, use mapreduce.output.fileoutputformat.outputdir
+16/12/05 19:28:45 INFO FileOutputCommitter: File Output Committer Algorithm version is 1
+[Stage 0:>                                                         (0 + 0) / 10][Stage 0:>                                                         (0 + 4) / 10][Stage 0:=====>                                                    (1 + 4) / 10][Stage 0:====================================================>     (9 + 1) / 10]                                                                                Number of records written: 10000

@@ -1,0 +1,1105 @@
+17/03/21 11:32:53 WARN SparkContext: Support for Java 7 is deprecated as of Spark 2.0.0
+17/03/21 11:32:53 DEBUG MutableMetricsFactory: field org.apache.hadoop.metrics2.lib.MutableRate org.apache.hadoop.security.UserGroupInformation$UgiMetrics.loginSuccess with annotation @org.apache.hadoop.metrics2.annotation.Metric(value=[Rate of successful kerberos logins and latency (milliseconds)], valueName=Time, about=, type=DEFAULT, always=false, sampleName=Ops)
+17/03/21 11:32:53 DEBUG MutableMetricsFactory: field org.apache.hadoop.metrics2.lib.MutableRate org.apache.hadoop.security.UserGroupInformation$UgiMetrics.loginFailure with annotation @org.apache.hadoop.metrics2.annotation.Metric(value=[Rate of failed kerberos logins and latency (milliseconds)], valueName=Time, about=, type=DEFAULT, always=false, sampleName=Ops)
+17/03/21 11:32:53 DEBUG MutableMetricsFactory: field org.apache.hadoop.metrics2.lib.MutableRate org.apache.hadoop.security.UserGroupInformation$UgiMetrics.getGroups with annotation @org.apache.hadoop.metrics2.annotation.Metric(value=[GetGroups], valueName=Time, about=, type=DEFAULT, always=false, sampleName=Ops)
+17/03/21 11:32:53 DEBUG MetricsSystemImpl: UgiMetrics, User and group related metrics
+17/03/21 11:32:53 DEBUG Shell: setsid exited with exit code 0
+17/03/21 11:32:53 DEBUG Groups:  Creating new Groups object
+17/03/21 11:32:53 DEBUG NativeCodeLoader: Trying to load the custom-built native-hadoop library...
+17/03/21 11:32:53 DEBUG NativeCodeLoader: Failed to load native-hadoop with error: java.lang.UnsatisfiedLinkError: no hadoop in java.library.path
+17/03/21 11:32:53 DEBUG NativeCodeLoader: java.library.path=/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib
+17/03/21 11:32:53 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+17/03/21 11:32:53 DEBUG PerformanceAdvisory: Falling back to shell based
+17/03/21 11:32:53 DEBUG JniBasedUnixGroupsMappingWithFallback: Group mapping impl=org.apache.hadoop.security.ShellBasedUnixGroupsMapping
+17/03/21 11:32:53 DEBUG Groups: Group mapping impl=org.apache.hadoop.security.JniBasedUnixGroupsMappingWithFallback; cacheTimeout=300000; warningDeltaMs=5000
+17/03/21 11:32:53 DEBUG UserGroupInformation: hadoop login
+17/03/21 11:32:53 DEBUG UserGroupInformation: hadoop login commit
+17/03/21 11:32:53 DEBUG UserGroupInformation: using local user:UnixPrincipal: hadoop
+17/03/21 11:32:53 DEBUG UserGroupInformation: Using user: "UnixPrincipal: hadoop" with name hadoop
+17/03/21 11:32:53 DEBUG UserGroupInformation: User entry: "hadoop"
+17/03/21 11:32:53 DEBUG UserGroupInformation: UGI loginUser:hadoop (auth:SIMPLE)
+17/03/21 11:32:53 WARN SparkConf: Detected deprecated memory fraction settings: [spark.storage.memoryFraction]. As of Spark 1.6, execution and storage memory management are unified. All memory fractions used in the old model are now deprecated and no longer read. If you wish to use the old memory management, you may explicitly enable `spark.memory.useLegacyMode` (not recommended).
+17/03/21 11:32:53 WARN SparkConf: 
+SPARK_CLASSPATH was detected (set to '/home/hadoop/bryantchang/platforms/spark2.0/lib/mysql-connector-java-5.1.40-bin.jar:').
+This is deprecated in Spark 1.0+.
+
+Please instead use:
+ - ./spark-submit with --driver-class-path to augment the driver classpath
+ - spark.executor.extraClassPath to augment the executor classpath
+        
+17/03/21 11:32:53 WARN SparkConf: Setting 'spark.executor.extraClassPath' to '/home/hadoop/bryantchang/platforms/spark2.0/lib/mysql-connector-java-5.1.40-bin.jar:' as a work-around.
+17/03/21 11:32:53 WARN SparkConf: Setting 'spark.driver.extraClassPath' to '/home/hadoop/bryantchang/platforms/spark2.0/lib/mysql-connector-java-5.1.40-bin.jar:' as a work-around.
+17/03/21 11:32:53 DEBUG InternalLoggerFactory: Using SLF4J as the default logging framework
+17/03/21 11:32:53 DEBUG PlatformDependent0: java.nio.Buffer.address: available
+17/03/21 11:32:53 DEBUG PlatformDependent0: sun.misc.Unsafe.theUnsafe: available
+17/03/21 11:32:53 DEBUG PlatformDependent0: sun.misc.Unsafe.copyMemory: available
+17/03/21 11:32:53 DEBUG PlatformDependent0: direct buffer constructor: available
+17/03/21 11:32:53 DEBUG PlatformDependent0: java.nio.Bits.unaligned: available, true
+17/03/21 11:32:53 DEBUG PlatformDependent0: java.nio.DirectByteBuffer.<init>(long, int): available
+17/03/21 11:32:53 DEBUG Cleaner0: java.nio.ByteBuffer.cleaner(): available
+17/03/21 11:32:53 DEBUG PlatformDependent: Java version: 7
+17/03/21 11:32:53 DEBUG PlatformDependent: -Dio.netty.noUnsafe: false
+17/03/21 11:32:53 DEBUG PlatformDependent: sun.misc.Unsafe: available
+17/03/21 11:32:53 DEBUG PlatformDependent: -Dio.netty.noJavassist: false
+17/03/21 11:32:53 DEBUG PlatformDependent: Javassist: available
+17/03/21 11:32:53 DEBUG PlatformDependent: -Dio.netty.tmpdir: /tmp (java.io.tmpdir)
+17/03/21 11:32:53 DEBUG PlatformDependent: -Dio.netty.bitMode: 64 (sun.arch.data.model)
+17/03/21 11:32:53 DEBUG PlatformDependent: -Dio.netty.noPreferDirect: false
+17/03/21 11:32:53 DEBUG PlatformDependent: io.netty.maxDirectMemory: 1342177280 bytes
+17/03/21 11:32:53 DEBUG JavassistTypeParameterMatcherGenerator: Generated: io.netty.util.internal.__matchers__.org.apache.spark.network.protocol.MessageMatcher
+17/03/21 11:32:53 DEBUG JavassistTypeParameterMatcherGenerator: Generated: io.netty.util.internal.__matchers__.io.netty.buffer.ByteBufMatcher
+17/03/21 11:32:53 DEBUG MultithreadEventLoopGroup: -Dio.netty.eventLoopThreads: 8
+17/03/21 11:32:54 DEBUG NioEventLoop: -Dio.netty.noKeySetOptimization: false
+17/03/21 11:32:54 DEBUG NioEventLoop: -Dio.netty.selectorAutoRebuildThreshold: 512
+17/03/21 11:32:54 DEBUG PlatformDependent: org.jctools-core.MpscChunkedArrayQueue: available
+17/03/21 11:32:54 DEBUG PooledByteBufAllocator: -Dio.netty.allocator.numHeapArenas: 8
+17/03/21 11:32:54 DEBUG PooledByteBufAllocator: -Dio.netty.allocator.numDirectArenas: 8
+17/03/21 11:32:54 DEBUG PooledByteBufAllocator: -Dio.netty.allocator.pageSize: 8192
+17/03/21 11:32:54 DEBUG PooledByteBufAllocator: -Dio.netty.allocator.maxOrder: 11
+17/03/21 11:32:54 DEBUG PooledByteBufAllocator: -Dio.netty.allocator.chunkSize: 16777216
+17/03/21 11:32:54 DEBUG PooledByteBufAllocator: -Dio.netty.allocator.tinyCacheSize: 512
+17/03/21 11:32:54 DEBUG PooledByteBufAllocator: -Dio.netty.allocator.smallCacheSize: 256
+17/03/21 11:32:54 DEBUG PooledByteBufAllocator: -Dio.netty.allocator.normalCacheSize: 64
+17/03/21 11:32:54 DEBUG PooledByteBufAllocator: -Dio.netty.allocator.maxCachedBufferCapacity: 32768
+17/03/21 11:32:54 DEBUG PooledByteBufAllocator: -Dio.netty.allocator.cacheTrimInterval: 8192
+17/03/21 11:32:54 DEBUG ThreadLocalRandom: -Dio.netty.initialSeedUniquifier: 0xafa3f695c5ed479c (took 0 ms)
+17/03/21 11:32:54 DEBUG ByteBufUtil: -Dio.netty.allocator.type: unpooled
+17/03/21 11:32:54 DEBUG ByteBufUtil: -Dio.netty.threadLocalDirectBufferSize: 65536
+17/03/21 11:32:54 DEBUG ByteBufUtil: -Dio.netty.maxThreadLocalCharBufferSize: 16384
+17/03/21 11:32:54 DEBUG NetUtil: Loopback interface: lo (lo, 0:0:0:0:0:0:0:1%1)
+17/03/21 11:32:54 DEBUG NetUtil: /proc/sys/net/core/somaxconn: 128
+17/03/21 11:32:54 DEBUG AbstractByteBuf: -Dio.netty.buffer.bytebuf.checkAccessible: true
+17/03/21 11:32:54 DEBUG ResourceLeakDetector: -Dio.netty.leakDetection.level: simple
+17/03/21 11:32:54 DEBUG ResourceLeakDetector: -Dio.netty.leakDetection.maxRecords: 4
+17/03/21 11:32:54 DEBUG ResourceLeakDetectorFactory: Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@76f73f39
+17/03/21 11:32:54 DEBUG Recycler: -Dio.netty.recycler.maxCapacity.default: 32768
+17/03/21 11:32:54 DEBUG Recycler: -Dio.netty.recycler.maxSharedCapacityFactor: 2
+17/03/21 11:32:54 DEBUG Recycler: -Dio.netty.recycler.linkCapacity: 16
+17/03/21 11:32:54 DEBUG Recycler: -Dio.netty.recycler.ratio: 8
+17/03/21 11:32:54 DEBUG BlockReaderLocal: dfs.client.use.legacy.blockreader.local = false
+17/03/21 11:32:54 DEBUG BlockReaderLocal: dfs.client.read.shortcircuit = false
+17/03/21 11:32:54 DEBUG BlockReaderLocal: dfs.client.domain.socket.data.traffic = false
+17/03/21 11:32:54 DEBUG BlockReaderLocal: dfs.domain.socket.path = 
+17/03/21 11:32:54 DEBUG RetryUtils: multipleLinearRandomRetry = null
+17/03/21 11:32:54 DEBUG Server: rpcKind=RPC_PROTOCOL_BUFFER, rpcRequestWrapperClass=class org.apache.hadoop.ipc.ProtobufRpcEngine$RpcRequestWrapper, rpcInvoker=org.apache.hadoop.ipc.ProtobufRpcEngine$Server$ProtoBufRpcInvoker@1b8990ac
+17/03/21 11:32:54 DEBUG Client: getting client out of cache: org.apache.hadoop.ipc.Client@4bf2ba51
+17/03/21 11:32:54 DEBUG PerformanceAdvisory: Both short-circuit local reads and UNIX domain socket are disabled.
+17/03/21 11:32:54 DEBUG DataTransferSaslUtil: DataTransferProtocol not using SaslPropertiesResolver, no QOP found in configuration for dfs.data.transfer.protection
+17/03/21 11:32:54 DEBUG Client: The ping interval is 60000 ms.
+17/03/21 11:32:54 DEBUG Client: Connecting to spark1/172.21.15.90:9000
+17/03/21 11:32:54 DEBUG Client: IPC Client (607260577) connection to spark1/172.21.15.90:9000 from hadoop: starting, having connections 1
+17/03/21 11:32:54 DEBUG Client: IPC Client (607260577) connection to spark1/172.21.15.90:9000 from hadoop sending #0
+17/03/21 11:32:54 DEBUG Client: IPC Client (607260577) connection to spark1/172.21.15.90:9000 from hadoop got value #0
+17/03/21 11:32:54 DEBUG ProtobufRpcEngine: Call: getFileInfo took 24ms
+17/03/21 11:32:55 DEBUG DFSClient: /eventLogs/app-20170321113254-0003.lz4.inprogress: masked=rw-r--r--
+17/03/21 11:32:55 DEBUG Client: IPC Client (607260577) connection to spark1/172.21.15.90:9000 from hadoop sending #1
+17/03/21 11:32:55 DEBUG Client: IPC Client (607260577) connection to spark1/172.21.15.90:9000 from hadoop got value #1
+17/03/21 11:32:55 DEBUG ProtobufRpcEngine: Call: create took 78ms
+17/03/21 11:32:55 DEBUG DFSClient: computePacketChunkSize: src=/eventLogs/app-20170321113254-0003.lz4.inprogress, chunkSize=516, chunksPerPacket=126, packetSize=65016
+17/03/21 11:32:55 DEBUG LeaseRenewer: Lease renewer daemon for [DFSClient_NONMAPREDUCE_107860670_1] with renew id 1 started
+17/03/21 11:32:55 DEBUG Client: IPC Client (607260577) connection to spark1/172.21.15.90:9000 from hadoop sending #2
+17/03/21 11:32:55 DEBUG Client: IPC Client (607260577) connection to spark1/172.21.15.90:9000 from hadoop got value #2
+17/03/21 11:32:55 DEBUG ProtobufRpcEngine: Call: setPermission took 9ms
+17/03/21 11:32:55 DEBUG DFSClient: DFSClient flush(): bytesCurBlock=0 lastFlushOffset=0 createNewBlock=false
+17/03/21 11:32:55 DEBUG DFSClient: Waiting for ack for: -1
+17/03/21 11:32:55 DEBUG DFSClient: DFSClient flush(): bytesCurBlock=0 lastFlushOffset=0 createNewBlock=false
+17/03/21 11:32:55 DEBUG DFSClient: Waiting for ack for: -1
+test data 
+17/03/21 11:32:55 DEBUG Client: IPC Client (607260577) connection to spark1/172.21.15.90:9000 from hadoop sending #3
+17/03/21 11:32:55 DEBUG Client: IPC Client (607260577) connection to spark1/172.21.15.90:9000 from hadoop got value #3
+17/03/21 11:32:55 DEBUG ProtobufRpcEngine: Call: getFileInfo took 1ms
+17/03/21 11:32:55 DEBUG Client: IPC Client (607260577) connection to spark1/172.21.15.90:9000 from hadoop sending #4
+17/03/21 11:32:55 DEBUG Client: IPC Client (607260577) connection to spark1/172.21.15.90:9000 from hadoop got value #4
+17/03/21 11:32:55 DEBUG ProtobufRpcEngine: Call: getListing took 1ms
+17/03/21 11:32:55 DEBUG FileInputFormat: Time taken to get FileStatuses: 15
+17/03/21 11:32:55 INFO FileInputFormat: Total input paths to process : 10
+17/03/21 11:32:55 DEBUG FileInputFormat: Total # of splits generated by getSplits: 10, TimeTaken: 19
+Train model 
+17/03/21 11:32:55 DEBUG DFSClient: DFSClient flush(): bytesCurBlock=0 lastFlushOffset=0 createNewBlock=false
+17/03/21 11:32:55 DEBUG DFSClient: Waiting for ack for: -1
+17/03/21 11:32:57 DEBUG DFSClient: DFSClient writeChunk allocating new packet seqno=0, src=/eventLogs/app-20170321113254-0003.lz4.inprogress, packetSize=65016, chunksPerPacket=126, bytesCurBlock=0
+17/03/21 11:32:57 DEBUG DFSClient: DFSClient flush(): bytesCurBlock=6445 lastFlushOffset=0 createNewBlock=false
+17/03/21 11:32:57 DEBUG DFSClient: Queued packet 0
+17/03/21 11:32:57 DEBUG DFSClient: Waiting for ack for: 0
+17/03/21 11:32:57 DEBUG DFSClient: Allocating new block
+17/03/21 11:32:57 DEBUG Client: IPC Client (607260577) connection to spark1/172.21.15.90:9000 from hadoop sending #5
+17/03/21 11:32:57 DEBUG Client: IPC Client (607260577) connection to spark1/172.21.15.90:9000 from hadoop got value #5
+17/03/21 11:32:57 DEBUG ProtobufRpcEngine: Call: addBlock took 54ms
+17/03/21 11:32:57 DEBUG DFSClient: pipeline = DatanodeInfoWithStorage[172.21.15.173:50010,DS-bcd3842f-7acc-473a-9a24-360950418375,DISK]
+17/03/21 11:32:57 DEBUG DFSClient: Connecting to datanode 172.21.15.173:50010
+17/03/21 11:32:57 DEBUG DFSClient: Send buf size 124928
+17/03/21 11:32:57 DEBUG Client: IPC Client (607260577) connection to spark1/172.21.15.90:9000 from hadoop sending #6
+17/03/21 11:32:57 DEBUG Client: IPC Client (607260577) connection to spark1/172.21.15.90:9000 from hadoop got value #6
+17/03/21 11:32:57 DEBUG ProtobufRpcEngine: Call: getServerDefaults took 1ms
+17/03/21 11:32:57 DEBUG SaslDataTransferClient: SASL client skipping handshake in unsecured configuration for addr = /172.21.15.173, datanodeId = DatanodeInfoWithStorage[172.21.15.173:50010,DS-bcd3842f-7acc-473a-9a24-360950418375,DISK]
+17/03/21 11:32:57 DEBUG DFSClient: DataStreamer block BP-519507147-172.21.15.90-1479901973323:blk_1073810363_69540 sending packet packet seqno: 0 offsetInBlock: 0 lastPacketInBlock: false lastByteOffsetInBlock: 6445
+17/03/21 11:32:57 DEBUG DFSClient: DFSClient seqno: 0 reply: SUCCESS downstreamAckTimeNanos: 0 flag: 0
+17/03/21 11:32:57 DEBUG Client: IPC Client (607260577) connection to spark1/172.21.15.90:9000 from hadoop sending #7
+17/03/21 11:32:57 DEBUG Client: IPC Client (607260577) connection to spark1/172.21.15.90:9000 from hadoop got value #7
+17/03/21 11:32:57 DEBUG ProtobufRpcEngine: Call: fsync took 7ms
+17/03/21 11:32:57 DEBUG DFSClient: DFSClient writeChunk allocating new packet seqno=1, src=/eventLogs/app-20170321113254-0003.lz4.inprogress, packetSize=65016, chunksPerPacket=126, bytesCurBlock=6144
+17/03/21 11:32:57 DEBUG DFSClient: DFSClient flush(): bytesCurBlock=6445 lastFlushOffset=6445 createNewBlock=false
+17/03/21 11:32:57 DEBUG DFSClient: Waiting for ack for: 0
+17/03/21 11:33:04 DEBUG DFSClient: DFSClient writeChunk allocating new packet seqno=2, src=/eventLogs/app-20170321113254-0003.lz4.inprogress, packetSize=65016, chunksPerPacket=126, bytesCurBlock=6144
+17/03/21 11:33:04 DEBUG DFSClient: DFSClient flush(): bytesCurBlock=6445 lastFlushOffset=6445 createNewBlock=false
+17/03/21 11:33:04 DEBUG DFSClient: Waiting for ack for: 0
+17/03/21 11:33:04 DEBUG DFSClient: DFSClient writeChunk allocating new packet seqno=3, src=/eventLogs/app-20170321113254-0003.lz4.inprogress, packetSize=65016, chunksPerPacket=126, bytesCurBlock=6144
+17/03/21 11:33:04 DEBUG DFSClient: DFSClient flush(): bytesCurBlock=6445 lastFlushOffset=6445 createNewBlock=false
+17/03/21 11:33:04 DEBUG DFSClient: Waiting for ack for: 0
+17/03/21 11:33:04 DEBUG DFSClient: DFSClient writeChunk allocating new packet seqno=4, src=/eventLogs/app-20170321113254-0003.lz4.inprogress, packetSize=65016, chunksPerPacket=126, bytesCurBlock=6144
+17/03/21 11:33:04 DEBUG DFSClient: DFSClient flush(): bytesCurBlock=6445 lastFlushOffset=6445 createNewBlock=false
+17/03/21 11:33:04 DEBUG DFSClient: Waiting for ack for: 0
+[Stage 1:=====>                                                    (1 + 0) / 10]17/03/21 11:33:07 DEBUG Client: IPC Client (607260577) connection to spark1/172.21.15.90:9000 from hadoop: closed
+17/03/21 11:33:07 DEBUG Client: IPC Client (607260577) connection to spark1/172.21.15.90:9000 from hadoop: stopped, remaining connections 0
+[Stage 1:=====>                                                    (1 + 4) / 10][Stage 1:=============================>                            (5 + 4) / 10]17/03/21 11:33:25 DEBUG Client: The ping interval is 60000 ms.
+17/03/21 11:33:25 DEBUG Client: Connecting to spark1/172.21.15.90:9000
+17/03/21 11:33:25 DEBUG Client: IPC Client (607260577) connection to spark1/172.21.15.90:9000 from hadoop: starting, having connections 1
+17/03/21 11:33:25 DEBUG Client: IPC Client (607260577) connection to spark1/172.21.15.90:9000 from hadoop sending #8
+17/03/21 11:33:25 DEBUG Client: IPC Client (607260577) connection to spark1/172.21.15.90:9000 from hadoop got value #8
+17/03/21 11:33:25 DEBUG ProtobufRpcEngine: Call: renewLease took 8ms
+17/03/21 11:33:25 DEBUG LeaseRenewer: Lease renewed for client DFSClient_NONMAPREDUCE_107860670_1
+17/03/21 11:33:25 DEBUG LeaseRenewer: Lease renewer daemon for [DFSClient_NONMAPREDUCE_107860670_1] with renew id 1 executed
+[Stage 1:==============================================>           (8 + 2) / 10][Stage 1:====================================================>     (9 + 1) / 10]                                                                                17/03/21 11:33:32 DEBUG DFSClient: DFSClient writeChunk allocating new packet seqno=5, src=/eventLogs/app-20170321113254-0003.lz4.inprogress, packetSize=65016, chunksPerPacket=126, bytesCurBlock=6144
+17/03/21 11:33:32 DEBUG DFSClient: DFSClient flush(): bytesCurBlock=15184 lastFlushOffset=6445 createNewBlock=false
+17/03/21 11:33:32 DEBUG DFSClient: Queued packet 5
+17/03/21 11:33:32 DEBUG DFSClient: Waiting for ack for: 5
+17/03/21 11:33:32 DEBUG DFSClient: DataStreamer block BP-519507147-172.21.15.90-1479901973323:blk_1073810363_69540 sending packet packet seqno: 5 offsetInBlock: 6144 lastPacketInBlock: false lastByteOffsetInBlock: 15184
+17/03/21 11:33:32 WARN DFSClient: Slow ReadProcessor read fields took 35481ms (threshold=30000ms); ack: seqno: 5 reply: SUCCESS downstreamAckTimeNanos: 0 flag: 0, targets: [DatanodeInfoWithStorage[172.21.15.173:50010,DS-bcd3842f-7acc-473a-9a24-360950418375,DISK]]
+17/03/21 11:33:32 DEBUG DFSClient: DFSClient writeChunk allocating new packet seqno=6, src=/eventLogs/app-20170321113254-0003.lz4.inprogress, packetSize=65016, chunksPerPacket=126, bytesCurBlock=14848
+17/03/21 11:33:32 DEBUG DFSClient: DFSClient flush(): bytesCurBlock=15184 lastFlushOffset=15184 createNewBlock=false
+17/03/21 11:33:32 DEBUG DFSClient: Waiting for ack for: 5
+17/03/21 11:33:32 DEBUG DFSClient: DFSClient writeChunk allocating new packet seqno=7, src=/eventLogs/app-20170321113254-0003.lz4.inprogress, packetSize=65016, chunksPerPacket=126, bytesCurBlock=14848
+17/03/21 11:33:32 DEBUG DFSClient: DFSClient flush(): bytesCurBlock=15184 lastFlushOffset=15184 createNewBlock=false
+17/03/21 11:33:32 DEBUG DFSClient: Waiting for ack for: 5
+[Stage 2:>                                                         (0 + 4) / 10][Stage 2:=======================>                                  (4 + 4) / 10][Stage 2:==============================================>           (8 + 2) / 10]                                                                                17/03/21 11:33:34 DEBUG DFSClient: DFSClient writeChunk allocating new packet seqno=8, src=/eventLogs/app-20170321113254-0003.lz4.inprogress, packetSize=65016, chunksPerPacket=126, bytesCurBlock=14848
+17/03/21 11:33:34 DEBUG DFSClient: DFSClient flush(): bytesCurBlock=20084 lastFlushOffset=15184 createNewBlock=false
+17/03/21 11:33:34 DEBUG DFSClient: Queued packet 8
+17/03/21 11:33:34 DEBUG DFSClient: Waiting for ack for: 8
+17/03/21 11:33:34 DEBUG DFSClient: DataStreamer block BP-519507147-172.21.15.90-1479901973323:blk_1073810363_69540 sending packet packet seqno: 8 offsetInBlock: 14848 lastPacketInBlock: false lastByteOffsetInBlock: 20084
+17/03/21 11:33:34 DEBUG DFSClient: DFSClient seqno: 8 reply: SUCCESS downstreamAckTimeNanos: 0 flag: 0
+17/03/21 11:33:34 DEBUG DFSClient: DFSClient writeChunk allocating new packet seqno=9, src=/eventLogs/app-20170321113254-0003.lz4.inprogress, packetSize=65016, chunksPerPacket=126, bytesCurBlock=19968
+17/03/21 11:33:34 DEBUG DFSClient: DFSClient flush(): bytesCurBlock=20084 lastFlushOffset=20084 createNewBlock=false
+17/03/21 11:33:34 DEBUG DFSClient: Waiting for ack for: 8
+17/03/21 11:33:34 DEBUG DFSClient: DFSClient writeChunk allocating new packet seqno=10, src=/eventLogs/app-20170321113254-0003.lz4.inprogress, packetSize=65016, chunksPerPacket=126, bytesCurBlock=19968
+17/03/21 11:33:34 DEBUG DFSClient: DFSClient flush(): bytesCurBlock=20084 lastFlushOffset=20084 createNewBlock=false
+17/03/21 11:33:34 DEBUG DFSClient: Waiting for ack for: 8
+17/03/21 11:33:35 DEBUG Client: IPC Client (607260577) connection to spark1/172.21.15.90:9000 from hadoop: closed
+17/03/21 11:33:35 DEBUG Client: IPC Client (607260577) connection to spark1/172.21.15.90:9000 from hadoop: stopped, remaining connections 0
+[Stage 3:>                                                         (0 + 4) / 10][Stage 3:=======================>                                  (4 + 4) / 10][Stage 3:==============================================>           (8 + 2) / 10]17/03/21 11:33:36 DEBUG DFSClient: DFSClient writeChunk allocating new packet seqno=11, src=/eventLogs/app-20170321113254-0003.lz4.inprogress, packetSize=65016, chunksPerPacket=126, bytesCurBlock=19968
+17/03/21 11:33:36 DEBUG DFSClient: DFSClient flush(): bytesCurBlock=24478 lastFlushOffset=20084 createNewBlock=false
+17/03/21 11:33:36 DEBUG DFSClient: Queued packet 11
+17/03/21 11:33:36 DEBUG DFSClient: Waiting for ack for: 11
+17/03/21 11:33:36 DEBUG DFSClient: DataStreamer block BP-519507147-172.21.15.90-1479901973323:blk_1073810363_69540 sending packet packet seqno: 11 offsetInBlock: 19968 lastPacketInBlock: false lastByteOffsetInBlock: 24478
+17/03/21 11:33:36 DEBUG DFSClient: DFSClient seqno: 11 reply: SUCCESS downstreamAckTimeNanos: 0 flag: 0
+                                                                                17/03/21 11:33:36 DEBUG DFSClient: DFSClient writeChunk allocating new packet seqno=12, src=/eventLogs/app-20170321113254-0003.lz4.inprogress, packetSize=65016, chunksPerPacket=126, bytesCurBlock=24064
+17/03/21 11:33:36 DEBUG DFSClient: DFSClient flush(): bytesCurBlock=29752 lastFlushOffset=24478 createNewBlock=false
+17/03/21 11:33:36 DEBUG DFSClient: Queued packet 12
+17/03/21 11:33:36 DEBUG DFSClient: Waiting for ack for: 12
+17/03/21 11:33:36 DEBUG DFSClient: DataStreamer block BP-519507147-172.21.15.90-1479901973323:blk_1073810363_69540 sending packet packet seqno: 12 offsetInBlock: 24064 lastPacketInBlock: false lastByteOffsetInBlock: 29752
+17/03/21 11:33:36 DEBUG DFSClient: DFSClient seqno: 12 reply: SUCCESS downstreamAckTimeNanos: 0 flag: 0
+17/03/21 11:33:36 DEBUG DFSClient: DFSClient writeChunk allocating new packet seqno=13, src=/eventLogs/app-20170321113254-0003.lz4.inprogress, packetSize=65016, chunksPerPacket=126, bytesCurBlock=29696
+17/03/21 11:33:36 DEBUG DFSClient: DFSClient flush(): bytesCurBlock=29752 lastFlushOffset=29752 createNewBlock=false
+17/03/21 11:33:36 DEBUG DFSClient: Waiting for ack for: 12
+17/03/21 11:33:36 DEBUG DFSClient: DFSClient writeChunk allocating new packet seqno=14, src=/eventLogs/app-20170321113254-0003.lz4.inprogress, packetSize=65016, chunksPerPacket=126, bytesCurBlock=29696
+17/03/21 11:33:36 DEBUG DFSClient: DFSClient flush(): bytesCurBlock=29752 lastFlushOffset=29752 createNewBlock=false
+17/03/21 11:33:36 DEBUG DFSClient: Waiting for ack for: 12
+[Stage 5:=======================>                                  (4 + 4) / 10][Stage 5:==============================================>           (8 + 2) / 10][Stage 5:====================================================>     (9 + 1) / 10]17/03/21 11:33:37 DEBUG DFSClient: DFSClient writeChunk allocating new packet seqno=15, src=/eventLogs/app-20170321113254-0003.lz4.inprogress, packetSize=65016, chunksPerPacket=126, bytesCurBlock=29696
+17/03/21 11:33:37 DEBUG DFSClient: DFSClient flush(): bytesCurBlock=34361 lastFlushOffset=29752 createNewBlock=false
+17/03/21 11:33:37 DEBUG DFSClient: Queued packet 15
+17/03/21 11:33:37 DEBUG DFSClient: Waiting for ack for: 15
+17/03/21 11:33:37 DEBUG DFSClient: DataStreamer block BP-519507147-172.21.15.90-1479901973323:blk_1073810363_69540 sending packet packet seqno: 15 offsetInBlock: 29696 lastPacketInBlock: false lastByteOffsetInBlock: 34361
+17/03/21 11:33:37 DEBUG DFSClient: DFSClient seqno: 15 reply: SUCCESS downstreamAckTimeNanos: 0 flag: 0
+                                                                                17/03/21 11:33:37 DEBUG DFSClient: DFSClient writeChunk allocating new packet seqno=16, src=/eventLogs/app-20170321113254-0003.lz4.inprogress, packetSize=65016, chunksPerPacket=126, bytesCurBlock=34304
+17/03/21 11:33:37 DEBUG DFSClient: DFSClient flush(): bytesCurBlock=39629 lastFlushOffset=34361 createNewBlock=false
+17/03/21 11:33:37 DEBUG DFSClient: Queued packet 16
+17/03/21 11:33:37 DEBUG DFSClient: Waiting for ack for: 16
+17/03/21 11:33:37 DEBUG DFSClient: DataStreamer block BP-519507147-172.21.15.90-1479901973323:blk_1073810363_69540 sending packet packet seqno: 16 offsetInBlock: 34304 lastPacketInBlock: false lastByteOffsetInBlock: 39629
+17/03/21 11:33:37 DEBUG DFSClient: DFSClient seqno: 16 reply: SUCCESS downstreamAckTimeNanos: 0 flag: 0
+17/03/21 11:33:37 DEBUG DFSClient: DFSClient writeChunk allocating new packet seqno=17, src=/eventLogs/app-20170321113254-0003.lz4.inprogress, packetSize=65016, chunksPerPacket=126, bytesCurBlock=39424
+17/03/21 11:33:37 DEBUG DFSClient: DFSClient flush(): bytesCurBlock=39629 lastFlushOffset=39629 createNewBlock=false
+17/03/21 11:33:37 DEBUG DFSClient: Waiting for ack for: 16
+17/03/21 11:33:37 DEBUG DFSClient: DFSClient writeChunk allocating new packet seqno=18, src=/eventLogs/app-20170321113254-0003.lz4.inprogress, packetSize=65016, chunksPerPacket=126, bytesCurBlock=39424
+17/03/21 11:33:37 DEBUG DFSClient: DFSClient flush(): bytesCurBlock=39629 lastFlushOffset=39629 createNewBlock=false
+17/03/21 11:33:37 DEBUG DFSClient: Waiting for ack for: 16
+[Stage 7:=======================>                                  (4 + 4) / 10][Stage 7:==============================================>           (8 + 2) / 10]17/03/21 11:33:39 DEBUG DFSClient: DFSClient writeChunk allocating new packet seqno=19, src=/eventLogs/app-20170321113254-0003.lz4.inprogress, packetSize=65016, chunksPerPacket=126, bytesCurBlock=39424
+17/03/21 11:33:39 DEBUG DFSClient: DFSClient flush(): bytesCurBlock=44016 lastFlushOffset=39629 createNewBlock=false
+17/03/21 11:33:39 DEBUG DFSClient: Queued packet 19
+17/03/21 11:33:39 DEBUG DFSClient: Waiting for ack for: 19
+17/03/21 11:33:39 DEBUG DFSClient: DataStreamer block BP-519507147-172.21.15.90-1479901973323:blk_1073810363_69540 sending packet packet seqno: 19 offsetInBlock: 39424 lastPacketInBlock: false lastByteOffsetInBlock: 44016
+17/03/21 11:33:39 DEBUG DFSClient: DFSClient seqno: 19 reply: SUCCESS downstreamAckTimeNanos: 0 flag: 0
+                                                                                predict score and labels 
+17/03/21 11:33:39 DEBUG DFSClient: DFSClient writeChunk allocating new packet seqno=20, src=/eventLogs/app-20170321113254-0003.lz4.inprogress, packetSize=65016, chunksPerPacket=126, bytesCurBlock=43520
+17/03/21 11:33:39 DEBUG DFSClient: DFSClient flush(): bytesCurBlock=49295 lastFlushOffset=44016 createNewBlock=false
+17/03/21 11:33:39 DEBUG DFSClient: Queued packet 20
+17/03/21 11:33:39 DEBUG DFSClient: Waiting for ack for: 20
+17/03/21 11:33:39 DEBUG DFSClient: DataStreamer block BP-519507147-172.21.15.90-1479901973323:blk_1073810363_69540 sending packet packet seqno: 20 offsetInBlock: 43520 lastPacketInBlock: false lastByteOffsetInBlock: 49295
+17/03/21 11:33:39 DEBUG DFSClient: DFSClient seqno: 20 reply: SUCCESS downstreamAckTimeNanos: 0 flag: 0
+17/03/21 11:33:39 DEBUG DFSClient: DFSClient writeChunk allocating new packet seqno=21, src=/eventLogs/app-20170321113254-0003.lz4.inprogress, packetSize=65016, chunksPerPacket=126, bytesCurBlock=49152
+17/03/21 11:33:39 DEBUG DFSClient: DFSClient flush(): bytesCurBlock=49295 lastFlushOffset=49295 createNewBlock=false
+17/03/21 11:33:39 DEBUG DFSClient: Waiting for ack for: 20
+17/03/21 11:33:39 DEBUG DFSClient: DFSClient writeChunk allocating new packet seqno=22, src=/eventLogs/app-20170321113254-0003.lz4.inprogress, packetSize=65016, chunksPerPacket=126, bytesCurBlock=49152
+17/03/21 11:33:39 DEBUG DFSClient: DFSClient flush(): bytesCurBlock=49295 lastFlushOffset=49295 createNewBlock=false
+17/03/21 11:33:39 DEBUG DFSClient: Waiting for ack for: 20
+[Stage 9:>                 (0 + 4) / 10][Stage 10:>                (0 + 0) / 10][Stage 9:=====>            (3 + 4) / 10][Stage 10:>                (0 + 0) / 10][Stage 9:=======>          (4 + 4) / 10][Stage 10:>                (0 + 0) / 10]17/03/21 11:33:55 DEBUG Client: The ping interval is 60000 ms.
+17/03/21 11:33:55 DEBUG Client: Connecting to spark1/172.21.15.90:9000
+17/03/21 11:33:55 DEBUG Client: IPC Client (607260577) connection to spark1/172.21.15.90:9000 from hadoop: starting, having connections 1
+17/03/21 11:33:55 DEBUG Client: IPC Client (607260577) connection to spark1/172.21.15.90:9000 from hadoop sending #9
+17/03/21 11:33:55 DEBUG Client: IPC Client (607260577) connection to spark1/172.21.15.90:9000 from hadoop got value #9
+17/03/21 11:33:55 DEBUG ProtobufRpcEngine: Call: renewLease took 7ms
+17/03/21 11:33:55 DEBUG LeaseRenewer: Lease renewed for client DFSClient_NONMAPREDUCE_107860670_1
+17/03/21 11:33:55 DEBUG LeaseRenewer: Lease renewer daemon for [DFSClient_NONMAPREDUCE_107860670_1] with renew id 1 executed
+[Stage 9:============>     (7 + 3) / 10][Stage 10:>                (0 + 1) / 10][Stage 9:==============>   (8 + 2) / 10][Stage 10:>                (0 + 2) / 10][Stage 9:==============>   (8 + 2) / 10][Stage 10:=>               (1 + 2) / 10][Stage 9:==============>   (8 + 2) / 10][Stage 10:===>             (2 + 2) / 10][Stage 9:==============>   (8 + 2) / 10][Stage 10:=====>           (3 + 2) / 10][Stage 9:==============>   (8 + 2) / 10][Stage 10:======>          (4 + 2) / 10][Stage 9:==============>   (8 + 2) / 10][Stage 10:========>        (5 + 2) / 10][Stage 9:==============>   (8 + 2) / 10][Stage 10:==========>      (6 + 2) / 10][Stage 9:==============>   (8 + 2) / 10][Stage 10:===========>     (7 + 2) / 10][Stage 9:==============>   (8 + 2) / 10][Stage 10:=============>   (8 + 2) / 10]17/03/21 11:34:04 DEBUG DFSClient: DFSClient writeChunk allocating new packet seqno=23, src=/eventLogs/app-20170321113254-0003.lz4.inprogress, packetSize=65016, chunksPerPacket=126, bytesCurBlock=49152
+17/03/21 11:34:04 DEBUG DFSClient: DFSClient flush(): bytesCurBlock=59028 lastFlushOffset=49295 createNewBlock=false
+17/03/21 11:34:04 DEBUG DFSClient: Queued packet 23
+17/03/21 11:34:04 DEBUG DFSClient: Waiting for ack for: 23
+17/03/21 11:34:04 DEBUG DFSClient: DataStreamer block BP-519507147-172.21.15.90-1479901973323:blk_1073810363_69540 sending packet packet seqno: 23 offsetInBlock: 49152 lastPacketInBlock: false lastByteOffsetInBlock: 59028
+17/03/21 11:34:04 DEBUG DFSClient: DFSClient seqno: 23 reply: SUCCESS downstreamAckTimeNanos: 0 flag: 0
+[Stage 9:====================================================>     (9 + 1) / 10]17/03/21 11:34:04 DEBUG DFSClient: DFSClient writeChunk allocating new packet seqno=24, src=/eventLogs/app-20170321113254-0003.lz4.inprogress, packetSize=65016, chunksPerPacket=126, bytesCurBlock=58880
+17/03/21 11:34:04 DEBUG DFSClient: DFSClient flush(): bytesCurBlock=59028 lastFlushOffset=59028 createNewBlock=false
+17/03/21 11:34:04 DEBUG DFSClient: Waiting for ack for: 23
+17/03/21 11:34:05 DEBUG Client: IPC Client (607260577) connection to spark1/172.21.15.90:9000 from hadoop: closed
+17/03/21 11:34:05 DEBUG Client: IPC Client (607260577) connection to spark1/172.21.15.90:9000 from hadoop: stopped, remaining connections 0
+[Stage 11:>                                                        (0 + 4) / 10]17/03/21 11:34:17 WARN TaskSetManager: Lost task 0.0 in stage 11.0 (TID 77, 172.21.15.173, executor 0): java.lang.OutOfMemoryError: Java heap space
+	at java.nio.HeapByteBuffer.<init>(HeapByteBuffer.java:57)
+	at java.nio.ByteBuffer.allocate(ByteBuffer.java:331)
+	at org.apache.spark.storage.ShuffleBlockFetcherIterator$$anonfun$4.apply(ShuffleBlockFetcherIterator.scala:364)
+	at org.apache.spark.storage.ShuffleBlockFetcherIterator$$anonfun$4.apply(ShuffleBlockFetcherIterator.scala:364)
+	at org.apache.spark.util.io.ChunkedByteBufferOutputStream.allocateNewChunkIfNeeded(ChunkedByteBufferOutputStream.scala:87)
+	at org.apache.spark.util.io.ChunkedByteBufferOutputStream.write(ChunkedByteBufferOutputStream.scala:75)
+	at org.apache.spark.util.Utils$$anonfun$copyStream$1.apply$mcJ$sp(Utils.scala:356)
+	at org.apache.spark.util.Utils$$anonfun$copyStream$1.apply(Utils.scala:322)
+	at org.apache.spark.util.Utils$$anonfun$copyStream$1.apply(Utils.scala:322)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1303)
+	at org.apache.spark.util.Utils$.copyStream(Utils.scala:362)
+	at org.apache.spark.storage.ShuffleBlockFetcherIterator.next(ShuffleBlockFetcherIterator.scala:369)
+	at org.apache.spark.storage.ShuffleBlockFetcherIterator.next(ShuffleBlockFetcherIterator.scala:58)
+	at scala.collection.Iterator$$anon$12.nextCur(Iterator.scala:434)
+	at scala.collection.Iterator$$anon$12.hasNext(Iterator.scala:440)
+	at scala.collection.Iterator$$anon$11.hasNext(Iterator.scala:408)
+	at org.apache.spark.util.CompletionIterator.hasNext(CompletionIterator.scala:32)
+	at org.apache.spark.InterruptibleIterator.hasNext(InterruptibleIterator.scala:39)
+	at scala.collection.Iterator$class.foreach(Iterator.scala:893)
+	at org.apache.spark.InterruptibleIterator.foreach(InterruptibleIterator.scala:28)
+	at org.apache.spark.rdd.SubtractedRDD.integrate$1(SubtractedRDD.scala:114)
+	at org.apache.spark.rdd.SubtractedRDD.compute(SubtractedRDD.scala:119)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:323)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:287)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:38)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:323)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:287)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:38)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:323)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:287)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:97)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:54)
+
+17/03/21 11:34:25 DEBUG Client: The ping interval is 60000 ms.
+17/03/21 11:34:25 DEBUG Client: Connecting to spark1/172.21.15.90:9000
+17/03/21 11:34:25 DEBUG Client: IPC Client (607260577) connection to spark1/172.21.15.90:9000 from hadoop: starting, having connections 1
+17/03/21 11:34:25 DEBUG Client: IPC Client (607260577) connection to spark1/172.21.15.90:9000 from hadoop sending #10
+17/03/21 11:34:25 DEBUG Client: IPC Client (607260577) connection to spark1/172.21.15.90:9000 from hadoop got value #10
+17/03/21 11:34:25 DEBUG ProtobufRpcEngine: Call: renewLease took 7ms
+17/03/21 11:34:25 DEBUG LeaseRenewer: Lease renewed for client DFSClient_NONMAPREDUCE_107860670_1
+17/03/21 11:34:25 DEBUG LeaseRenewer: Lease renewer daemon for [DFSClient_NONMAPREDUCE_107860670_1] with renew id 1 executed
+17/03/21 11:34:35 DEBUG Client: IPC Client (607260577) connection to spark1/172.21.15.90:9000 from hadoop: closed
+17/03/21 11:34:35 DEBUG Client: IPC Client (607260577) connection to spark1/172.21.15.90:9000 from hadoop: stopped, remaining connections 0
+17/03/21 11:34:55 DEBUG Client: The ping interval is 60000 ms.
+17/03/21 11:34:55 DEBUG Client: Connecting to spark1/172.21.15.90:9000
+17/03/21 11:34:55 DEBUG Client: IPC Client (607260577) connection to spark1/172.21.15.90:9000 from hadoop: starting, having connections 1
+17/03/21 11:34:55 DEBUG Client: IPC Client (607260577) connection to spark1/172.21.15.90:9000 from hadoop sending #11
+17/03/21 11:34:55 DEBUG Client: IPC Client (607260577) connection to spark1/172.21.15.90:9000 from hadoop got value #11
+17/03/21 11:34:55 DEBUG ProtobufRpcEngine: Call: renewLease took 6ms
+17/03/21 11:34:55 DEBUG LeaseRenewer: Lease renewed for client DFSClient_NONMAPREDUCE_107860670_1
+17/03/21 11:34:55 DEBUG LeaseRenewer: Lease renewer daemon for [DFSClient_NONMAPREDUCE_107860670_1] with renew id 1 executed
+17/03/21 11:34:59 WARN TaskSetManager: Lost task 1.0 in stage 11.0 (TID 78, 172.21.15.173, executor 0): java.lang.OutOfMemoryError: Java heap space
+	at java.nio.HeapByteBuffer.<init>(HeapByteBuffer.java:57)
+	at java.nio.ByteBuffer.allocate(ByteBuffer.java:331)
+	at org.apache.spark.storage.ShuffleBlockFetcherIterator$$anonfun$4.apply(ShuffleBlockFetcherIterator.scala:364)
+	at org.apache.spark.storage.ShuffleBlockFetcherIterator$$anonfun$4.apply(ShuffleBlockFetcherIterator.scala:364)
+	at org.apache.spark.util.io.ChunkedByteBufferOutputStream.allocateNewChunkIfNeeded(ChunkedByteBufferOutputStream.scala:87)
+	at org.apache.spark.util.io.ChunkedByteBufferOutputStream.write(ChunkedByteBufferOutputStream.scala:75)
+	at org.apache.spark.util.Utils$$anonfun$copyStream$1.apply$mcJ$sp(Utils.scala:356)
+	at org.apache.spark.util.Utils$$anonfun$copyStream$1.apply(Utils.scala:322)
+	at org.apache.spark.util.Utils$$anonfun$copyStream$1.apply(Utils.scala:322)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1303)
+	at org.apache.spark.util.Utils$.copyStream(Utils.scala:362)
+	at org.apache.spark.storage.ShuffleBlockFetcherIterator.next(ShuffleBlockFetcherIterator.scala:369)
+	at org.apache.spark.storage.ShuffleBlockFetcherIterator.next(ShuffleBlockFetcherIterator.scala:58)
+	at scala.collection.Iterator$$anon$12.nextCur(Iterator.scala:434)
+	at scala.collection.Iterator$$anon$12.hasNext(Iterator.scala:440)
+	at scala.collection.Iterator$$anon$11.hasNext(Iterator.scala:408)
+	at org.apache.spark.util.CompletionIterator.hasNext(CompletionIterator.scala:32)
+	at org.apache.spark.InterruptibleIterator.hasNext(InterruptibleIterator.scala:39)
+	at scala.collection.Iterator$class.foreach(Iterator.scala:893)
+	at org.apache.spark.InterruptibleIterator.foreach(InterruptibleIterator.scala:28)
+	at org.apache.spark.rdd.SubtractedRDD.integrate$1(SubtractedRDD.scala:114)
+	at org.apache.spark.rdd.SubtractedRDD.compute(SubtractedRDD.scala:119)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:323)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:287)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:38)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:323)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:287)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:38)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:323)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:287)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:97)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:54)
+
+17/03/21 11:35:00 WARN TaskSetManager: Lost task 4.0 in stage 11.0 (TID 81, 172.21.15.173, executor 0): FetchFailed(BlockManagerId(0, 172.21.15.173, 34338, None), shuffleId=3, mapId=1, reduceId=4, message=
+org.apache.spark.shuffle.FetchFailedException: Error in opening FileSegmentManagedBuffer{file=/tmp/spark-e08e0921-612c-40ba-9b94-a2c327b4280e/executor-0352dfe3-ced0-4670-a8cb-120ff0b76434/blockmgr-bd2beceb-daeb-4a79-94ab-d04681fad29d/08/shuffle_3_1_0.data, offset=20719731, length=5225107}
+	at org.apache.spark.storage.ShuffleBlockFetcherIterator.throwFetchFailedException(ShuffleBlockFetcherIterator.scala:416)
+	at org.apache.spark.storage.ShuffleBlockFetcherIterator.next(ShuffleBlockFetcherIterator.scala:356)
+	at org.apache.spark.storage.ShuffleBlockFetcherIterator.next(ShuffleBlockFetcherIterator.scala:58)
+	at scala.collection.Iterator$$anon$12.nextCur(Iterator.scala:434)
+	at scala.collection.Iterator$$anon$12.hasNext(Iterator.scala:440)
+	at scala.collection.Iterator$$anon$11.hasNext(Iterator.scala:408)
+	at org.apache.spark.util.CompletionIterator.hasNext(CompletionIterator.scala:32)
+	at org.apache.spark.InterruptibleIterator.hasNext(InterruptibleIterator.scala:39)
+	at scala.collection.Iterator$class.foreach(Iterator.scala:893)
+	at org.apache.spark.InterruptibleIterator.foreach(InterruptibleIterator.scala:28)
+	at org.apache.spark.rdd.SubtractedRDD.integrate$1(SubtractedRDD.scala:114)
+	at org.apache.spark.rdd.SubtractedRDD.compute(SubtractedRDD.scala:119)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:323)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:287)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:38)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:323)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:287)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:38)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:323)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:287)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:97)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:54)
+	at org.apache.spark.scheduler.Task.run(Task.scala:114)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:322)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.io.IOException: Error in opening FileSegmentManagedBuffer{file=/tmp/spark-e08e0921-612c-40ba-9b94-a2c327b4280e/executor-0352dfe3-ced0-4670-a8cb-120ff0b76434/blockmgr-bd2beceb-daeb-4a79-94ab-d04681fad29d/08/shuffle_3_1_0.data, offset=20719731, length=5225107}
+	at org.apache.spark.network.buffer.FileSegmentManagedBuffer.createInputStream(FileSegmentManagedBuffer.java:113)
+	at org.apache.spark.storage.ShuffleBlockFetcherIterator.next(ShuffleBlockFetcherIterator.scala:349)
+	... 25 more
+Caused by: java.io.FileNotFoundException: /tmp/spark-e08e0921-612c-40ba-9b94-a2c327b4280e/executor-0352dfe3-ced0-4670-a8cb-120ff0b76434/blockmgr-bd2beceb-daeb-4a79-94ab-d04681fad29d/08/shuffle_3_1_0.data (没有那个文件或目录)
+	at java.io.FileInputStream.open(Native Method)
+	at java.io.FileInputStream.<init>(FileInputStream.java:146)
+	at org.apache.spark.network.buffer.FileSegmentManagedBuffer.createInputStream(FileSegmentManagedBuffer.java:98)
+	... 26 more
+
+)
+17/03/21 11:35:00 WARN TaskSetManager: Lost task 0.1 in stage 11.0 (TID 82, 172.21.15.173, executor 0): FetchFailed(BlockManagerId(0, 172.21.15.173, 34338, None), shuffleId=3, mapId=0, reduceId=0, message=
+org.apache.spark.shuffle.FetchFailedException: /tmp/spark-e08e0921-612c-40ba-9b94-a2c327b4280e/executor-0352dfe3-ced0-4670-a8cb-120ff0b76434/blockmgr-bd2beceb-daeb-4a79-94ab-d04681fad29d/0d/shuffle_3_0_0.index (没有那个文件或目录)
+	at org.apache.spark.storage.ShuffleBlockFetcherIterator.throwFetchFailedException(ShuffleBlockFetcherIterator.scala:416)
+	at org.apache.spark.storage.ShuffleBlockFetcherIterator.next(ShuffleBlockFetcherIterator.scala:392)
+	at org.apache.spark.storage.ShuffleBlockFetcherIterator.next(ShuffleBlockFetcherIterator.scala:58)
+	at scala.collection.Iterator$$anon$12.nextCur(Iterator.scala:434)
+	at scala.collection.Iterator$$anon$12.hasNext(Iterator.scala:440)
+	at scala.collection.Iterator$$anon$11.hasNext(Iterator.scala:408)
+	at org.apache.spark.util.CompletionIterator.hasNext(CompletionIterator.scala:32)
+	at org.apache.spark.InterruptibleIterator.hasNext(InterruptibleIterator.scala:39)
+	at scala.collection.Iterator$class.foreach(Iterator.scala:893)
+	at org.apache.spark.InterruptibleIterator.foreach(InterruptibleIterator.scala:28)
+	at org.apache.spark.rdd.SubtractedRDD.integrate$1(SubtractedRDD.scala:114)
+	at org.apache.spark.rdd.SubtractedRDD.compute(SubtractedRDD.scala:119)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:323)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:287)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:38)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:323)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:287)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:38)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:323)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:287)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:97)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:54)
+	at org.apache.spark.scheduler.Task.run(Task.scala:114)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:322)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.io.FileNotFoundException: /tmp/spark-e08e0921-612c-40ba-9b94-a2c327b4280e/executor-0352dfe3-ced0-4670-a8cb-120ff0b76434/blockmgr-bd2beceb-daeb-4a79-94ab-d04681fad29d/0d/shuffle_3_0_0.index (没有那个文件或目录)
+	at java.io.FileInputStream.open(Native Method)
+	at java.io.FileInputStream.<init>(FileInputStream.java:146)
+	at org.apache.spark.shuffle.IndexShuffleBlockResolver.getBlockData(IndexShuffleBlockResolver.scala:199)
+	at org.apache.spark.storage.BlockManager.getBlockData(BlockManager.scala:302)
+	at org.apache.spark.storage.ShuffleBlockFetcherIterator.fetchLocalBlocks(ShuffleBlockFetcherIterator.scala:269)
+	at org.apache.spark.storage.ShuffleBlockFetcherIterator.initialize(ShuffleBlockFetcherIterator.scala:303)
+	at org.apache.spark.storage.ShuffleBlockFetcherIterator.<init>(ShuffleBlockFetcherIterator.scala:132)
+	at org.apache.spark.shuffle.BlockStoreShuffleReader.read(BlockStoreShuffleReader.scala:45)
+	at org.apache.spark.rdd.SubtractedRDD.integrate$1(SubtractedRDD.scala:113)
+	... 16 more
+
+)
+17/03/21 11:35:00 WARN TaskSetManager: Lost task 3.0 in stage 11.0 (TID 80, 172.21.15.173, executor 0): FetchFailed(BlockManagerId(0, 172.21.15.173, 34338, None), shuffleId=4, mapId=0, reduceId=3, message=
+org.apache.spark.shuffle.FetchFailedException: /tmp/spark-e08e0921-612c-40ba-9b94-a2c327b4280e/executor-0352dfe3-ced0-4670-a8cb-120ff0b76434/blockmgr-bd2beceb-daeb-4a79-94ab-d04681fad29d/0c/shuffle_4_0_0.index (没有那个文件或目录)
+	at org.apache.spark.storage.ShuffleBlockFetcherIterator.throwFetchFailedException(ShuffleBlockFetcherIterator.scala:416)
+	at org.apache.spark.storage.ShuffleBlockFetcherIterator.next(ShuffleBlockFetcherIterator.scala:392)
+	at org.apache.spark.storage.ShuffleBlockFetcherIterator.next(ShuffleBlockFetcherIterator.scala:58)
+	at scala.collection.Iterator$$anon$12.nextCur(Iterator.scala:434)
+	at scala.collection.Iterator$$anon$12.hasNext(Iterator.scala:440)
+	at scala.collection.Iterator$$anon$11.hasNext(Iterator.scala:408)
+	at org.apache.spark.util.CompletionIterator.hasNext(CompletionIterator.scala:32)
+	at org.apache.spark.InterruptibleIterator.hasNext(InterruptibleIterator.scala:39)
+	at scala.collection.Iterator$class.foreach(Iterator.scala:893)
+	at org.apache.spark.InterruptibleIterator.foreach(InterruptibleIterator.scala:28)
+	at org.apache.spark.rdd.SubtractedRDD.integrate$1(SubtractedRDD.scala:114)
+	at org.apache.spark.rdd.SubtractedRDD.compute(SubtractedRDD.scala:121)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:323)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:287)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:38)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:323)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:287)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:38)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:323)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:287)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:97)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:54)
+	at org.apache.spark.scheduler.Task.run(Task.scala:114)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:322)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.io.FileNotFoundException: /tmp/spark-e08e0921-612c-40ba-9b94-a2c327b4280e/executor-0352dfe3-ced0-4670-a8cb-120ff0b76434/blockmgr-bd2beceb-daeb-4a79-94ab-d04681fad29d/0c/shuffle_4_0_0.index (没有那个文件或目录)
+	at java.io.FileInputStream.open(Native Method)
+	at java.io.FileInputStream.<init>(FileInputStream.java:146)
+	at org.apache.spark.shuffle.IndexShuffleBlockResolver.getBlockData(IndexShuffleBlockResolver.scala:199)
+	at org.apache.spark.storage.BlockManager.getBlockData(BlockManager.scala:302)
+	at org.apache.spark.storage.ShuffleBlockFetcherIterator.fetchLocalBlocks(ShuffleBlockFetcherIterator.scala:269)
+	at org.apache.spark.storage.ShuffleBlockFetcherIterator.initialize(ShuffleBlockFetcherIterator.scala:303)
+	at org.apache.spark.storage.ShuffleBlockFetcherIterator.<init>(ShuffleBlockFetcherIterator.scala:132)
+	at org.apache.spark.shuffle.BlockStoreShuffleReader.read(BlockStoreShuffleReader.scala:45)
+	at org.apache.spark.rdd.SubtractedRDD.integrate$1(SubtractedRDD.scala:113)
+	... 16 more
+
+)
+17/03/21 11:35:00 DEBUG DFSClient: DFSClient writeChunk allocating new packet seqno=25, src=/eventLogs/app-20170321113254-0003.lz4.inprogress, packetSize=65016, chunksPerPacket=126, bytesCurBlock=58880
+17/03/21 11:35:00 DEBUG DFSClient: DFSClient flush(): bytesCurBlock=64847 lastFlushOffset=59028 createNewBlock=false
+17/03/21 11:35:00 DEBUG DFSClient: Queued packet 25
+17/03/21 11:35:00 DEBUG DFSClient: Waiting for ack for: 25
+17/03/21 11:35:00 DEBUG DFSClient: DataStreamer block BP-519507147-172.21.15.90-1479901973323:blk_1073810363_69540 sending packet packet seqno: 25 offsetInBlock: 58880 lastPacketInBlock: false lastByteOffsetInBlock: 64847
+17/03/21 11:35:00 WARN DFSClient: Slow ReadProcessor read fields took 56200ms (threshold=30000ms); ack: seqno: 25 reply: SUCCESS downstreamAckTimeNanos: 0 flag: 0, targets: [DatanodeInfoWithStorage[172.21.15.173:50010,DS-bcd3842f-7acc-473a-9a24-360950418375,DISK]]
+17/03/21 11:35:00 DEBUG DFSClient: DFSClient writeChunk allocating new packet seqno=26, src=/eventLogs/app-20170321113254-0003.lz4.inprogress, packetSize=65016, chunksPerPacket=126, bytesCurBlock=64512
+17/03/21 11:35:00 DEBUG DFSClient: DFSClient flush(): bytesCurBlock=64847 lastFlushOffset=64847 createNewBlock=false
+17/03/21 11:35:00 DEBUG DFSClient: Waiting for ack for: 25
+17/03/21 11:35:00 WARN TaskSetManager: Lost task 1.1 in stage 11.0 (TID 83, 172.21.15.173, executor 0): FetchFailed(BlockManagerId(0, 172.21.15.173, 34338, None), shuffleId=3, mapId=0, reduceId=1, message=
+org.apache.spark.shuffle.FetchFailedException: /tmp/spark-e08e0921-612c-40ba-9b94-a2c327b4280e/executor-0352dfe3-ced0-4670-a8cb-120ff0b76434/blockmgr-bd2beceb-daeb-4a79-94ab-d04681fad29d/0d/shuffle_3_0_0.index (没有那个文件或目录)
+	at org.apache.spark.storage.ShuffleBlockFetcherIterator.throwFetchFailedException(ShuffleBlockFetcherIterator.scala:416)
+	at org.apache.spark.storage.ShuffleBlockFetcherIterator.next(ShuffleBlockFetcherIterator.scala:392)
+	at org.apache.spark.storage.ShuffleBlockFetcherIterator.next(ShuffleBlockFetcherIterator.scala:58)
+	at scala.collection.Iterator$$anon$12.nextCur(Iterator.scala:434)
+	at scala.collection.Iterator$$anon$12.hasNext(Iterator.scala:440)
+	at scala.collection.Iterator$$anon$11.hasNext(Iterator.scala:408)
+	at org.apache.spark.util.CompletionIterator.hasNext(CompletionIterator.scala:32)
+	at org.apache.spark.InterruptibleIterator.hasNext(InterruptibleIterator.scala:39)
+	at scala.collection.Iterator$class.foreach(Iterator.scala:893)
+	at org.apache.spark.InterruptibleIterator.foreach(InterruptibleIterator.scala:28)
+	at org.apache.spark.rdd.SubtractedRDD.integrate$1(SubtractedRDD.scala:114)
+	at org.apache.spark.rdd.SubtractedRDD.compute(SubtractedRDD.scala:119)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:323)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:287)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:38)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:323)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:287)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:38)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:323)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:287)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:97)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:54)
+	at org.apache.spark.scheduler.Task.run(Task.scala:114)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:322)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.io.FileNotFoundException: /tmp/spark-e08e0921-612c-40ba-9b94-a2c327b4280e/executor-0352dfe3-ced0-4670-a8cb-120ff0b76434/blockmgr-bd2beceb-daeb-4a79-94ab-d04681fad29d/0d/shuffle_3_0_0.index (没有那个文件或目录)
+	at java.io.FileInputStream.open(Native Method)
+	at java.io.FileInputStream.<init>(FileInputStream.java:146)
+	at org.apache.spark.shuffle.IndexShuffleBlockResolver.getBlockData(IndexShuffleBlockResolver.scala:199)
+	at org.apache.spark.storage.BlockManager.getBlockData(BlockManager.scala:302)
+	at org.apache.spark.storage.ShuffleBlockFetcherIterator.fetchLocalBlocks(ShuffleBlockFetcherIterator.scala:269)
+	at org.apache.spark.storage.ShuffleBlockFetcherIterator.initialize(ShuffleBlockFetcherIterator.scala:303)
+	at org.apache.spark.storage.ShuffleBlockFetcherIterator.<init>(ShuffleBlockFetcherIterator.scala:132)
+	at org.apache.spark.shuffle.BlockStoreShuffleReader.read(BlockStoreShuffleReader.scala:45)
+	at org.apache.spark.rdd.SubtractedRDD.integrate$1(SubtractedRDD.scala:113)
+	... 16 more
+
+)
+17/03/21 11:35:00 WARN TaskSetManager: Lost task 5.0 in stage 11.0 (TID 84, 172.21.15.173, executor 0): FetchFailed(BlockManagerId(0, 172.21.15.173, 34338, None), shuffleId=3, mapId=0, reduceId=5, message=
+org.apache.spark.shuffle.FetchFailedException: /tmp/spark-e08e0921-612c-40ba-9b94-a2c327b4280e/executor-0352dfe3-ced0-4670-a8cb-120ff0b76434/blockmgr-bd2beceb-daeb-4a79-94ab-d04681fad29d/0d/shuffle_3_0_0.index (没有那个文件或目录)
+	at org.apache.spark.storage.ShuffleBlockFetcherIterator.throwFetchFailedException(ShuffleBlockFetcherIterator.scala:416)
+	at org.apache.spark.storage.ShuffleBlockFetcherIterator.next(ShuffleBlockFetcherIterator.scala:392)
+	at org.apache.spark.storage.ShuffleBlockFetcherIterator.next(ShuffleBlockFetcherIterator.scala:58)
+	at scala.collection.Iterator$$anon$12.nextCur(Iterator.scala:434)
+	at scala.collection.Iterator$$anon$12.hasNext(Iterator.scala:440)
+	at scala.collection.Iterator$$anon$11.hasNext(Iterator.scala:408)
+	at org.apache.spark.util.CompletionIterator.hasNext(CompletionIterator.scala:32)
+	at org.apache.spark.InterruptibleIterator.hasNext(InterruptibleIterator.scala:39)
+	at scala.collection.Iterator$class.foreach(Iterator.scala:893)
+	at org.apache.spark.InterruptibleIterator.foreach(InterruptibleIterator.scala:28)
+	at org.apache.spark.rdd.SubtractedRDD.integrate$1(SubtractedRDD.scala:114)
+	at org.apache.spark.rdd.SubtractedRDD.compute(SubtractedRDD.scala:119)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:323)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:287)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:38)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:323)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:287)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:38)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:323)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:287)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:97)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:54)
+	at org.apache.spark.scheduler.Task.run(Task.scala:114)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:322)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.io.FileNotFoundException: /tmp/spark-e08e0921-612c-40ba-9b94-a2c327b4280e/executor-0352dfe3-ced0-4670-a8cb-120ff0b76434/blockmgr-bd2beceb-daeb-4a79-94ab-d04681fad29d/0d/shuffle_3_0_0.index (没有那个文件或目录)
+	at java.io.FileInputStream.open(Native Method)
+	at java.io.FileInputStream.<init>(FileInputStream.java:146)
+	at org.apache.spark.shuffle.IndexShuffleBlockResolver.getBlockData(IndexShuffleBlockResolver.scala:199)
+	at org.apache.spark.storage.BlockManager.getBlockData(BlockManager.scala:302)
+	at org.apache.spark.storage.ShuffleBlockFetcherIterator.fetchLocalBlocks(ShuffleBlockFetcherIterator.scala:269)
+	at org.apache.spark.storage.ShuffleBlockFetcherIterator.initialize(ShuffleBlockFetcherIterator.scala:303)
+	at org.apache.spark.storage.ShuffleBlockFetcherIterator.<init>(ShuffleBlockFetcherIterator.scala:132)
+	at org.apache.spark.shuffle.BlockStoreShuffleReader.read(BlockStoreShuffleReader.scala:45)
+	at org.apache.spark.rdd.SubtractedRDD.integrate$1(SubtractedRDD.scala:113)
+	... 16 more
+
+)
+17/03/21 11:35:00 WARN TaskSetManager: Lost task 2.0 in stage 11.0 (TID 79, 172.21.15.173, executor 0): FetchFailed(BlockManagerId(0, 172.21.15.173, 34338, None), shuffleId=4, mapId=0, reduceId=2, message=
+org.apache.spark.shuffle.FetchFailedException: /tmp/spark-e08e0921-612c-40ba-9b94-a2c327b4280e/executor-0352dfe3-ced0-4670-a8cb-120ff0b76434/blockmgr-bd2beceb-daeb-4a79-94ab-d04681fad29d/0c/shuffle_4_0_0.index (没有那个文件或目录)
+	at org.apache.spark.storage.ShuffleBlockFetcherIterator.throwFetchFailedException(ShuffleBlockFetcherIterator.scala:416)
+	at org.apache.spark.storage.ShuffleBlockFetcherIterator.next(ShuffleBlockFetcherIterator.scala:392)
+	at org.apache.spark.storage.ShuffleBlockFetcherIterator.next(ShuffleBlockFetcherIterator.scala:58)
+	at scala.collection.Iterator$$anon$12.nextCur(Iterator.scala:434)
+	at scala.collection.Iterator$$anon$12.hasNext(Iterator.scala:440)
+	at scala.collection.Iterator$$anon$11.hasNext(Iterator.scala:408)
+	at org.apache.spark.util.CompletionIterator.hasNext(CompletionIterator.scala:32)
+	at org.apache.spark.InterruptibleIterator.hasNext(InterruptibleIterator.scala:39)
+	at scala.collection.Iterator$class.foreach(Iterator.scala:893)
+	at org.apache.spark.InterruptibleIterator.foreach(InterruptibleIterator.scala:28)
+	at org.apache.spark.rdd.SubtractedRDD.integrate$1(SubtractedRDD.scala:114)
+	at org.apache.spark.rdd.SubtractedRDD.compute(SubtractedRDD.scala:121)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:323)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:287)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:38)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:323)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:287)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:38)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:323)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:287)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:97)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:54)
+	at org.apache.spark.scheduler.Task.run(Task.scala:114)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:322)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.io.FileNotFoundException: /tmp/spark-e08e0921-612c-40ba-9b94-a2c327b4280e/executor-0352dfe3-ced0-4670-a8cb-120ff0b76434/blockmgr-bd2beceb-daeb-4a79-94ab-d04681fad29d/0c/shuffle_4_0_0.index (没有那个文件或目录)
+	at java.io.FileInputStream.open(Native Method)
+	at java.io.FileInputStream.<init>(FileInputStream.java:146)
+	at org.apache.spark.shuffle.IndexShuffleBlockResolver.getBlockData(IndexShuffleBlockResolver.scala:199)
+	at org.apache.spark.storage.BlockManager.getBlockData(BlockManager.scala:302)
+	at org.apache.spark.storage.ShuffleBlockFetcherIterator.fetchLocalBlocks(ShuffleBlockFetcherIterator.scala:269)
+	at org.apache.spark.storage.ShuffleBlockFetcherIterator.initialize(ShuffleBlockFetcherIterator.scala:303)
+	at org.apache.spark.storage.ShuffleBlockFetcherIterator.<init>(ShuffleBlockFetcherIterator.scala:132)
+	at org.apache.spark.shuffle.BlockStoreShuffleReader.read(BlockStoreShuffleReader.scala:45)
+	at org.apache.spark.rdd.SubtractedRDD.integrate$1(SubtractedRDD.scala:113)
+	... 16 more
+
+)
+17/03/21 11:35:00 WARN TransportChannelHandler: Exception in connection from /172.21.15.173:36434
+java.io.IOException: Connection reset by peer
+	at sun.nio.ch.FileDispatcherImpl.read0(Native Method)
+	at sun.nio.ch.SocketDispatcher.read(SocketDispatcher.java:39)
+	at sun.nio.ch.IOUtil.readIntoNativeBuffer(IOUtil.java:223)
+	at sun.nio.ch.IOUtil.read(IOUtil.java:192)
+	at sun.nio.ch.SocketChannelImpl.read(SocketChannelImpl.java:379)
+	at io.netty.buffer.PooledUnsafeDirectByteBuf.setBytes(PooledUnsafeDirectByteBuf.java:221)
+	at io.netty.buffer.AbstractByteBuf.writeBytes(AbstractByteBuf.java:899)
+	at io.netty.channel.socket.nio.NioSocketChannel.doReadBytes(NioSocketChannel.java:275)
+	at io.netty.channel.nio.AbstractNioByteChannel$NioByteUnsafe.read(AbstractNioByteChannel.java:119)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKey(NioEventLoop.java:652)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeysOptimized(NioEventLoop.java:575)
+	at io.netty.channel.nio.NioEventLoop.processSelectedKeys(NioEventLoop.java:489)
+	at io.netty.channel.nio.NioEventLoop.run(NioEventLoop.java:451)
+	at io.netty.util.concurrent.SingleThreadEventExecutor$2.run(SingleThreadEventExecutor.java:140)
+	at io.netty.util.concurrent.DefaultThreadFactory$DefaultRunnableDecorator.run(DefaultThreadFactory.java:144)
+	at java.lang.Thread.run(Thread.java:745)
+17/03/21 11:35:00 ERROR TaskSchedulerImpl: Lost executor 0 on 172.21.15.173: Remote RPC client disassociated. Likely due to containers exceeding thresholds, or network issues. Check driver logs for WARN messages.
+17/03/21 11:35:00 WARN TaskSetManager: Lost task 1.0 in stage 9.1 (TID 86, 172.21.15.173, executor 0): ExecutorLostFailure (executor 0 exited caused by one of the running tasks) Reason: Remote RPC client disassociated. Likely due to containers exceeding thresholds, or network issues. Check driver logs for WARN messages.
+17/03/21 11:35:00 WARN TaskSetManager: Lost task 0.0 in stage 9.1 (TID 85, 172.21.15.173, executor 0): ExecutorLostFailure (executor 0 exited caused by one of the running tasks) Reason: Remote RPC client disassociated. Likely due to containers exceeding thresholds, or network issues. Check driver logs for WARN messages.
+17/03/21 11:35:00 WARN TaskSetManager: Lost task 3.0 in stage 9.1 (TID 88, 172.21.15.173, executor 0): ExecutorLostFailure (executor 0 exited caused by one of the running tasks) Reason: Remote RPC client disassociated. Likely due to containers exceeding thresholds, or network issues. Check driver logs for WARN messages.
+17/03/21 11:35:00 WARN TaskSetManager: Lost task 2.0 in stage 9.1 (TID 87, 172.21.15.173, executor 0): ExecutorLostFailure (executor 0 exited caused by one of the running tasks) Reason: Remote RPC client disassociated. Likely due to containers exceeding thresholds, or network issues. Check driver logs for WARN messages.
+17/03/21 11:35:00 DEBUG DFSClient: DFSClient writeChunk allocating new packet seqno=27, src=/eventLogs/app-20170321113254-0003.lz4.inprogress, packetSize=65016, chunksPerPacket=126, bytesCurBlock=64512
+17/03/21 11:35:00 DEBUG DFSClient: DFSClient flush(): bytesCurBlock=69858 lastFlushOffset=64847 createNewBlock=false
+17/03/21 11:35:00 DEBUG DFSClient: Queued packet 27
+17/03/21 11:35:00 DEBUG DFSClient: Waiting for ack for: 27
+17/03/21 11:35:00 DEBUG DFSClient: DataStreamer block BP-519507147-172.21.15.90-1479901973323:blk_1073810363_69540 sending packet packet seqno: 27 offsetInBlock: 64512 lastPacketInBlock: false lastByteOffsetInBlock: 69858
+17/03/21 11:35:00 DEBUG DFSClient: DFSClient seqno: 27 reply: SUCCESS downstreamAckTimeNanos: 0 flag: 0
+[Stage 9:>                 (0 + 0) / 10][Stage 10:>                (0 + 0) / 10]17/03/21 11:35:03 DEBUG DFSClient: DFSClient writeChunk allocating new packet seqno=28, src=/eventLogs/app-20170321113254-0003.lz4.inprogress, packetSize=65016, chunksPerPacket=126, bytesCurBlock=69632
+17/03/21 11:35:03 DEBUG DFSClient: DFSClient flush(): bytesCurBlock=69858 lastFlushOffset=69858 createNewBlock=false
+17/03/21 11:35:03 DEBUG DFSClient: Waiting for ack for: 27
+17/03/21 11:35:03 DEBUG DFSClient: DFSClient writeChunk allocating new packet seqno=29, src=/eventLogs/app-20170321113254-0003.lz4.inprogress, packetSize=65016, chunksPerPacket=126, bytesCurBlock=69632
+17/03/21 11:35:03 DEBUG DFSClient: DFSClient flush(): bytesCurBlock=69858 lastFlushOffset=69858 createNewBlock=false
+17/03/21 11:35:03 DEBUG DFSClient: Waiting for ack for: 27
+[Stage 9:>                 (0 + 4) / 10][Stage 10:>                (0 + 0) / 10]17/03/21 11:35:05 DEBUG Client: IPC Client (607260577) connection to spark1/172.21.15.90:9000 from hadoop: closed
+17/03/21 11:35:05 DEBUG Client: IPC Client (607260577) connection to spark1/172.21.15.90:9000 from hadoop: stopped, remaining connections 0
+[Stage 9:=====>            (3 + 4) / 10][Stage 10:>                (0 + 0) / 10][Stage 9:=======>          (4 + 4) / 10][Stage 10:>                (0 + 0) / 10][Stage 9:==========>       (6 + 4) / 10][Stage 10:>                (0 + 0) / 10][Stage 9:==============>   (8 + 2) / 10][Stage 10:>                (0 + 2) / 10]17/03/21 11:35:25 DEBUG Client: The ping interval is 60000 ms.
+17/03/21 11:35:25 DEBUG Client: Connecting to spark1/172.21.15.90:9000
+17/03/21 11:35:25 DEBUG Client: IPC Client (607260577) connection to spark1/172.21.15.90:9000 from hadoop: starting, having connections 1
+17/03/21 11:35:25 DEBUG Client: IPC Client (607260577) connection to spark1/172.21.15.90:9000 from hadoop sending #12
+17/03/21 11:35:25 DEBUG Client: IPC Client (607260577) connection to spark1/172.21.15.90:9000 from hadoop got value #12
+17/03/21 11:35:25 DEBUG ProtobufRpcEngine: Call: renewLease took 7ms
+17/03/21 11:35:25 DEBUG LeaseRenewer: Lease renewed for client DFSClient_NONMAPREDUCE_107860670_1
+17/03/21 11:35:25 DEBUG LeaseRenewer: Lease renewer daemon for [DFSClient_NONMAPREDUCE_107860670_1] with renew id 1 executed
+[Stage 9:================> (9 + 1) / 10][Stage 10:>                (0 + 3) / 10]17/03/21 11:35:32 DEBUG DFSClient: DFSClient writeChunk allocating new packet seqno=30, src=/eventLogs/app-20170321113254-0003.lz4.inprogress, packetSize=65016, chunksPerPacket=126, bytesCurBlock=69632
+17/03/21 11:35:32 DEBUG DFSClient: DFSClient flush(): bytesCurBlock=74398 lastFlushOffset=69858 createNewBlock=false
+17/03/21 11:35:32 DEBUG DFSClient: Queued packet 30
+17/03/21 11:35:32 DEBUG DFSClient: Waiting for ack for: 30
+17/03/21 11:35:32 DEBUG DFSClient: DataStreamer block BP-519507147-172.21.15.90-1479901973323:blk_1073810363_69540 sending packet packet seqno: 30 offsetInBlock: 69632 lastPacketInBlock: false lastByteOffsetInBlock: 74398
+17/03/21 11:35:32 WARN DFSClient: Slow ReadProcessor read fields took 31521ms (threshold=30000ms); ack: seqno: 30 reply: SUCCESS downstreamAckTimeNanos: 0 flag: 0, targets: [DatanodeInfoWithStorage[172.21.15.173:50010,DS-bcd3842f-7acc-473a-9a24-360950418375,DISK]]
+[Stage 10:>                                                        (0 + 4) / 10][Stage 10:===========>                                             (2 + 4) / 10]17/03/21 11:35:35 DEBUG Client: IPC Client (607260577) connection to spark1/172.21.15.90:9000 from hadoop: closed
+17/03/21 11:35:35 DEBUG Client: IPC Client (607260577) connection to spark1/172.21.15.90:9000 from hadoop: stopped, remaining connections 0
+[Stage 10:=================>                                       (3 + 4) / 10][Stage 10:======================>                                  (4 + 4) / 10][Stage 10:============================>                            (5 + 4) / 10][Stage 10:==================================>                      (6 + 4) / 10][Stage 10:=======================================>                 (7 + 3) / 10][Stage 10:=============================================>           (8 + 2) / 10]17/03/21 11:35:53 DEBUG DFSClient: DFSClient writeChunk allocating new packet seqno=31, src=/eventLogs/app-20170321113254-0003.lz4.inprogress, packetSize=65016, chunksPerPacket=126, bytesCurBlock=74240
+17/03/21 11:35:53 DEBUG DFSClient: DFSClient flush(): bytesCurBlock=83813 lastFlushOffset=74398 createNewBlock=false
+17/03/21 11:35:53 DEBUG DFSClient: Queued packet 31
+17/03/21 11:35:53 DEBUG DFSClient: Waiting for ack for: 31
+17/03/21 11:35:53 DEBUG DFSClient: DataStreamer block BP-519507147-172.21.15.90-1479901973323:blk_1073810363_69540 sending packet packet seqno: 31 offsetInBlock: 74240 lastPacketInBlock: false lastByteOffsetInBlock: 83813
+17/03/21 11:35:53 DEBUG DFSClient: DFSClient seqno: 31 reply: SUCCESS downstreamAckTimeNanos: 0 flag: 0
+[Stage 11:>                                                        (0 + 4) / 10]17/03/21 11:35:55 DEBUG Client: The ping interval is 60000 ms.
+17/03/21 11:35:55 DEBUG Client: Connecting to spark1/172.21.15.90:9000
+17/03/21 11:35:55 DEBUG Client: IPC Client (607260577) connection to spark1/172.21.15.90:9000 from hadoop: starting, having connections 1
+17/03/21 11:35:55 DEBUG Client: IPC Client (607260577) connection to spark1/172.21.15.90:9000 from hadoop sending #13
+17/03/21 11:35:55 DEBUG Client: IPC Client (607260577) connection to spark1/172.21.15.90:9000 from hadoop got value #13
+17/03/21 11:35:55 DEBUG ProtobufRpcEngine: Call: renewLease took 7ms
+17/03/21 11:35:55 DEBUG LeaseRenewer: Lease renewed for client DFSClient_NONMAPREDUCE_107860670_1
+17/03/21 11:35:55 DEBUG LeaseRenewer: Lease renewer daemon for [DFSClient_NONMAPREDUCE_107860670_1] with renew id 1 executed
+17/03/21 11:36:05 DEBUG Client: IPC Client (607260577) connection to spark1/172.21.15.90:9000 from hadoop: closed
+17/03/21 11:36:05 DEBUG Client: IPC Client (607260577) connection to spark1/172.21.15.90:9000 from hadoop: stopped, remaining connections 0
+17/03/21 11:36:15 WARN TaskSetManager: Lost task 2.0 in stage 11.1 (TID 111, 172.21.15.173, executor 1): java.lang.OutOfMemoryError: Java heap space
+	at java.nio.HeapByteBuffer.<init>(HeapByteBuffer.java:57)
+	at java.nio.ByteBuffer.allocate(ByteBuffer.java:331)
+	at org.apache.spark.storage.ShuffleBlockFetcherIterator$$anonfun$4.apply(ShuffleBlockFetcherIterator.scala:364)
+	at org.apache.spark.storage.ShuffleBlockFetcherIterator$$anonfun$4.apply(ShuffleBlockFetcherIterator.scala:364)
+	at org.apache.spark.util.io.ChunkedByteBufferOutputStream.allocateNewChunkIfNeeded(ChunkedByteBufferOutputStream.scala:87)
+	at org.apache.spark.util.io.ChunkedByteBufferOutputStream.write(ChunkedByteBufferOutputStream.scala:75)
+	at org.apache.spark.util.Utils$$anonfun$copyStream$1.apply$mcJ$sp(Utils.scala:356)
+	at org.apache.spark.util.Utils$$anonfun$copyStream$1.apply(Utils.scala:322)
+	at org.apache.spark.util.Utils$$anonfun$copyStream$1.apply(Utils.scala:322)
+	at org.apache.spark.util.Utils$.tryWithSafeFinally(Utils.scala:1303)
+	at org.apache.spark.util.Utils$.copyStream(Utils.scala:362)
+	at org.apache.spark.storage.ShuffleBlockFetcherIterator.next(ShuffleBlockFetcherIterator.scala:369)
+	at org.apache.spark.storage.ShuffleBlockFetcherIterator.next(ShuffleBlockFetcherIterator.scala:58)
+	at scala.collection.Iterator$$anon$12.nextCur(Iterator.scala:434)
+	at scala.collection.Iterator$$anon$12.hasNext(Iterator.scala:440)
+	at scala.collection.Iterator$$anon$11.hasNext(Iterator.scala:408)
+	at org.apache.spark.util.CompletionIterator.hasNext(CompletionIterator.scala:32)
+	at org.apache.spark.InterruptibleIterator.hasNext(InterruptibleIterator.scala:39)
+	at scala.collection.Iterator$class.foreach(Iterator.scala:893)
+	at org.apache.spark.InterruptibleIterator.foreach(InterruptibleIterator.scala:28)
+	at org.apache.spark.rdd.SubtractedRDD.integrate$1(SubtractedRDD.scala:114)
+	at org.apache.spark.rdd.SubtractedRDD.compute(SubtractedRDD.scala:119)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:323)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:287)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:38)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:323)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:287)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:38)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:323)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:287)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:97)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:54)
+
+17/03/21 11:36:20 WARN TaskSetManager: Lost task 1.0 in stage 11.1 (TID 110, 172.21.15.173, executor 1): FetchFailed(BlockManagerId(1, 172.21.15.173, 39148, None), shuffleId=4, mapId=3, reduceId=1, message=
+org.apache.spark.shuffle.FetchFailedException: Error in opening FileSegmentManagedBuffer{file=/tmp/spark-e08e0921-612c-40ba-9b94-a2c327b4280e/executor-0352dfe3-ced0-4670-a8cb-120ff0b76434/blockmgr-66d46d34-18b6-4141-a119-fbc24afb8fff/25/shuffle_4_3_0.data, offset=4700435, length=4708356}
+	at org.apache.spark.storage.ShuffleBlockFetcherIterator.throwFetchFailedException(ShuffleBlockFetcherIterator.scala:416)
+	at org.apache.spark.storage.ShuffleBlockFetcherIterator.next(ShuffleBlockFetcherIterator.scala:356)
+	at org.apache.spark.storage.ShuffleBlockFetcherIterator.next(ShuffleBlockFetcherIterator.scala:58)
+	at scala.collection.Iterator$$anon$12.nextCur(Iterator.scala:434)
+	at scala.collection.Iterator$$anon$12.hasNext(Iterator.scala:440)
+	at scala.collection.Iterator$$anon$11.hasNext(Iterator.scala:408)
+	at org.apache.spark.util.CompletionIterator.hasNext(CompletionIterator.scala:32)
+	at org.apache.spark.InterruptibleIterator.hasNext(InterruptibleIterator.scala:39)
+	at scala.collection.Iterator$class.foreach(Iterator.scala:893)
+	at org.apache.spark.InterruptibleIterator.foreach(InterruptibleIterator.scala:28)
+	at org.apache.spark.rdd.SubtractedRDD.integrate$1(SubtractedRDD.scala:114)
+	at org.apache.spark.rdd.SubtractedRDD.compute(SubtractedRDD.scala:121)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:323)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:287)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:38)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:323)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:287)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:38)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:323)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:287)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:97)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:54)
+	at org.apache.spark.scheduler.Task.run(Task.scala:114)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:322)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.io.IOException: Error in opening FileSegmentManagedBuffer{file=/tmp/spark-e08e0921-612c-40ba-9b94-a2c327b4280e/executor-0352dfe3-ced0-4670-a8cb-120ff0b76434/blockmgr-66d46d34-18b6-4141-a119-fbc24afb8fff/25/shuffle_4_3_0.data, offset=4700435, length=4708356}
+	at org.apache.spark.network.buffer.FileSegmentManagedBuffer.createInputStream(FileSegmentManagedBuffer.java:113)
+	at org.apache.spark.storage.ShuffleBlockFetcherIterator.next(ShuffleBlockFetcherIterator.scala:349)
+	... 25 more
+Caused by: java.io.FileNotFoundException: /tmp/spark-e08e0921-612c-40ba-9b94-a2c327b4280e/executor-0352dfe3-ced0-4670-a8cb-120ff0b76434/blockmgr-66d46d34-18b6-4141-a119-fbc24afb8fff/25/shuffle_4_3_0.data (没有那个文件或目录)
+	at java.io.FileInputStream.open(Native Method)
+	at java.io.FileInputStream.<init>(FileInputStream.java:146)
+	at org.apache.spark.network.buffer.FileSegmentManagedBuffer.createInputStream(FileSegmentManagedBuffer.java:98)
+	... 26 more
+
+)
+17/03/21 11:36:20 DEBUG DFSClient: DFSClient writeChunk allocating new packet seqno=32, src=/eventLogs/app-20170321113254-0003.lz4.inprogress, packetSize=65016, chunksPerPacket=126, bytesCurBlock=83456
+17/03/21 11:36:20 DEBUG DFSClient: DFSClient flush(): bytesCurBlock=89146 lastFlushOffset=83813 createNewBlock=false
+17/03/21 11:36:20 DEBUG DFSClient: Queued packet 32
+17/03/21 11:36:20 DEBUG DFSClient: Waiting for ack for: 32
+17/03/21 11:36:20 DEBUG DFSClient: DataStreamer block BP-519507147-172.21.15.90-1479901973323:blk_1073810363_69540 sending packet packet seqno: 32 offsetInBlock: 83456 lastPacketInBlock: false lastByteOffsetInBlock: 89146
+17/03/21 11:36:20 DEBUG DFSClient: DFSClient seqno: 32 reply: SUCCESS downstreamAckTimeNanos: 0 flag: 0
+17/03/21 11:36:20 DEBUG DFSClient: DFSClient writeChunk allocating new packet seqno=33, src=/eventLogs/app-20170321113254-0003.lz4.inprogress, packetSize=65016, chunksPerPacket=126, bytesCurBlock=89088
+17/03/21 11:36:20 DEBUG DFSClient: DFSClient flush(): bytesCurBlock=89146 lastFlushOffset=89146 createNewBlock=false
+17/03/21 11:36:20 DEBUG DFSClient: Waiting for ack for: 32
+17/03/21 11:36:20 WARN TaskSetManager: Lost task 2.1 in stage 11.1 (TID 114, 172.21.15.173, executor 1): FetchFailed(BlockManagerId(1, 172.21.15.173, 39148, None), shuffleId=3, mapId=0, reduceId=2, message=
+org.apache.spark.shuffle.FetchFailedException: /tmp/spark-e08e0921-612c-40ba-9b94-a2c327b4280e/executor-0352dfe3-ced0-4670-a8cb-120ff0b76434/blockmgr-66d46d34-18b6-4141-a119-fbc24afb8fff/0d/shuffle_3_0_0.index (没有那个文件或目录)
+	at org.apache.spark.storage.ShuffleBlockFetcherIterator.throwFetchFailedException(ShuffleBlockFetcherIterator.scala:416)
+	at org.apache.spark.storage.ShuffleBlockFetcherIterator.next(ShuffleBlockFetcherIterator.scala:392)
+	at org.apache.spark.storage.ShuffleBlockFetcherIterator.next(ShuffleBlockFetcherIterator.scala:58)
+	at scala.collection.Iterator$$anon$12.nextCur(Iterator.scala:434)
+	at scala.collection.Iterator$$anon$12.hasNext(Iterator.scala:440)
+	at scala.collection.Iterator$$anon$11.hasNext(Iterator.scala:408)
+	at org.apache.spark.util.CompletionIterator.hasNext(CompletionIterator.scala:32)
+	at org.apache.spark.InterruptibleIterator.hasNext(InterruptibleIterator.scala:39)
+	at scala.collection.Iterator$class.foreach(Iterator.scala:893)
+	at org.apache.spark.InterruptibleIterator.foreach(InterruptibleIterator.scala:28)
+	at org.apache.spark.rdd.SubtractedRDD.integrate$1(SubtractedRDD.scala:114)
+	at org.apache.spark.rdd.SubtractedRDD.compute(SubtractedRDD.scala:119)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:323)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:287)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:38)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:323)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:287)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:38)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:323)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:287)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:97)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:54)
+	at org.apache.spark.scheduler.Task.run(Task.scala:114)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:322)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.io.FileNotFoundException: /tmp/spark-e08e0921-612c-40ba-9b94-a2c327b4280e/executor-0352dfe3-ced0-4670-a8cb-120ff0b76434/blockmgr-66d46d34-18b6-4141-a119-fbc24afb8fff/0d/shuffle_3_0_0.index (没有那个文件或目录)
+	at java.io.FileInputStream.open(Native Method)
+	at java.io.FileInputStream.<init>(FileInputStream.java:146)
+	at org.apache.spark.shuffle.IndexShuffleBlockResolver.getBlockData(IndexShuffleBlockResolver.scala:199)
+	at org.apache.spark.storage.BlockManager.getBlockData(BlockManager.scala:302)
+	at org.apache.spark.storage.ShuffleBlockFetcherIterator.fetchLocalBlocks(ShuffleBlockFetcherIterator.scala:269)
+	at org.apache.spark.storage.ShuffleBlockFetcherIterator.initialize(ShuffleBlockFetcherIterator.scala:303)
+	at org.apache.spark.storage.ShuffleBlockFetcherIterator.<init>(ShuffleBlockFetcherIterator.scala:132)
+	at org.apache.spark.shuffle.BlockStoreShuffleReader.read(BlockStoreShuffleReader.scala:45)
+	at org.apache.spark.rdd.SubtractedRDD.integrate$1(SubtractedRDD.scala:113)
+	... 16 more
+
+)
+17/03/21 11:36:21 WARN TaskSetManager: Lost task 4.0 in stage 11.1 (TID 113, 172.21.15.173, executor 1): FetchFailed(BlockManagerId(1, 172.21.15.173, 39148, None), shuffleId=3, mapId=6, reduceId=4, message=
+org.apache.spark.shuffle.FetchFailedException: Error in opening FileSegmentManagedBuffer{file=/tmp/spark-e08e0921-612c-40ba-9b94-a2c327b4280e/executor-0352dfe3-ced0-4670-a8cb-120ff0b76434/blockmgr-66d46d34-18b6-4141-a119-fbc24afb8fff/23/shuffle_3_6_0.data, offset=20780197, length=5190422}
+	at org.apache.spark.storage.ShuffleBlockFetcherIterator.throwFetchFailedException(ShuffleBlockFetcherIterator.scala:416)
+	at org.apache.spark.storage.ShuffleBlockFetcherIterator.next(ShuffleBlockFetcherIterator.scala:356)
+	at org.apache.spark.storage.ShuffleBlockFetcherIterator.next(ShuffleBlockFetcherIterator.scala:58)
+	at scala.collection.Iterator$$anon$12.nextCur(Iterator.scala:434)
+	at scala.collection.Iterator$$anon$12.hasNext(Iterator.scala:440)
+	at scala.collection.Iterator$$anon$11.hasNext(Iterator.scala:408)
+	at org.apache.spark.util.CompletionIterator.hasNext(CompletionIterator.scala:32)
+	at org.apache.spark.InterruptibleIterator.hasNext(InterruptibleIterator.scala:39)
+	at scala.collection.Iterator$class.foreach(Iterator.scala:893)
+	at org.apache.spark.InterruptibleIterator.foreach(InterruptibleIterator.scala:28)
+	at org.apache.spark.rdd.SubtractedRDD.integrate$1(SubtractedRDD.scala:114)
+	at org.apache.spark.rdd.SubtractedRDD.compute(SubtractedRDD.scala:119)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:323)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:287)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:38)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:323)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:287)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:38)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:323)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:287)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:97)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:54)
+	at org.apache.spark.scheduler.Task.run(Task.scala:114)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:322)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+Caused by: java.io.IOException: Error in opening FileSegmentManagedBuffer{file=/tmp/spark-e08e0921-612c-40ba-9b94-a2c327b4280e/executor-0352dfe3-ced0-4670-a8cb-120ff0b76434/blockmgr-66d46d34-18b6-4141-a119-fbc24afb8fff/23/shuffle_3_6_0.data, offset=20780197, length=5190422}
+	at org.apache.spark.network.buffer.FileSegmentManagedBuffer.createInputStream(FileSegmentManagedBuffer.java:113)
+	at org.apache.spark.storage.ShuffleBlockFetcherIterator.next(ShuffleBlockFetcherIterator.scala:349)
+	... 25 more
+Caused by: java.io.FileNotFoundException: /tmp/spark-e08e0921-612c-40ba-9b94-a2c327b4280e/executor-0352dfe3-ced0-4670-a8cb-120ff0b76434/blockmgr-66d46d34-18b6-4141-a119-fbc24afb8fff/23/shuffle_3_6_0.data (没有那个文件或目录)
+	at java.io.FileInputStream.open(Native Method)
+	at java.io.FileInputStream.<init>(FileInputStream.java:146)
+	at org.apache.spark.network.buffer.FileSegmentManagedBuffer.createInputStream(FileSegmentManagedBuffer.java:98)
+	... 26 more
+
+)
+17/03/21 11:36:21 DEBUG DFSClient: DFSClient writeChunk allocating new packet seqno=34, src=/eventLogs/app-20170321113254-0003.lz4.inprogress, packetSize=65016, chunksPerPacket=126, bytesCurBlock=89088
+17/03/21 11:36:21 DEBUG DFSClient: DFSClient flush(): bytesCurBlock=89146 lastFlushOffset=89146 createNewBlock=false
+17/03/21 11:36:21 DEBUG DFSClient: Waiting for ack for: 32
+[Stage 9:>                                                         (0 + 2) / 10]17/03/21 11:36:21 WARN TaskSetManager: Lost task 1.0 in stage 9.2 (TID 116, 172.21.15.173, executor 1): java.io.FileNotFoundException: /tmp/spark-e08e0921-612c-40ba-9b94-a2c327b4280e/executor-0352dfe3-ced0-4670-a8cb-120ff0b76434/blockmgr-66d46d34-18b6-4141-a119-fbc24afb8fff/18/temp_shuffle_6f505734-5182-4085-8bb9-20686de450f5 (没有那个文件或目录)
+	at java.io.FileOutputStream.open(Native Method)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:221)
+	at org.apache.spark.storage.DiskBlockObjectWriter.initialize(DiskBlockObjectWriter.scala:102)
+	at org.apache.spark.storage.DiskBlockObjectWriter.open(DiskBlockObjectWriter.scala:115)
+	at org.apache.spark.storage.DiskBlockObjectWriter.write(DiskBlockObjectWriter.scala:229)
+	at org.apache.spark.shuffle.sort.BypassMergeSortShuffleWriter.write(BypassMergeSortShuffleWriter.java:152)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:97)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:54)
+	at org.apache.spark.scheduler.Task.run(Task.scala:114)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:322)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+
+[Stage 9:>                 (0 + 2) / 10][Stage 10:>                (0 + 0) / 10]17/03/21 11:36:21 WARN TaskSetManager: Lost task 0.0 in stage 9.2 (TID 115, 172.21.15.173, executor 1): java.io.FileNotFoundException: /tmp/spark-e08e0921-612c-40ba-9b94-a2c327b4280e/executor-0352dfe3-ced0-4670-a8cb-120ff0b76434/blockmgr-66d46d34-18b6-4141-a119-fbc24afb8fff/35/temp_shuffle_373687b7-8f80-48a3-aa32-ce7a524fcfd4 (没有那个文件或目录)
+	at java.io.FileOutputStream.open(Native Method)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:221)
+	at org.apache.spark.storage.DiskBlockObjectWriter.initialize(DiskBlockObjectWriter.scala:102)
+	at org.apache.spark.storage.DiskBlockObjectWriter.open(DiskBlockObjectWriter.scala:115)
+	at org.apache.spark.storage.DiskBlockObjectWriter.write(DiskBlockObjectWriter.scala:229)
+	at org.apache.spark.shuffle.sort.BypassMergeSortShuffleWriter.write(BypassMergeSortShuffleWriter.java:152)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:97)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:54)
+	at org.apache.spark.scheduler.Task.run(Task.scala:114)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:322)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+
+17/03/21 11:36:21 WARN TaskSetManager: Lost task 1.1 in stage 9.2 (TID 118, 172.21.15.173, executor 1): java.io.FileNotFoundException: /tmp/spark-e08e0921-612c-40ba-9b94-a2c327b4280e/executor-0352dfe3-ced0-4670-a8cb-120ff0b76434/blockmgr-66d46d34-18b6-4141-a119-fbc24afb8fff/25/temp_shuffle_ead5ca97-72fa-4da9-b30e-97f394ca51ed (没有那个文件或目录)
+	at java.io.FileOutputStream.open(Native Method)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:221)
+	at org.apache.spark.storage.DiskBlockObjectWriter.initialize(DiskBlockObjectWriter.scala:102)
+	at org.apache.spark.storage.DiskBlockObjectWriter.open(DiskBlockObjectWriter.scala:115)
+	at org.apache.spark.storage.DiskBlockObjectWriter.write(DiskBlockObjectWriter.scala:229)
+	at org.apache.spark.shuffle.sort.BypassMergeSortShuffleWriter.write(BypassMergeSortShuffleWriter.java:152)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:97)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:54)
+	at org.apache.spark.scheduler.Task.run(Task.scala:114)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:322)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+
+17/03/21 11:36:21 WARN TaskSetManager: Lost task 0.1 in stage 9.2 (TID 119, 172.21.15.173, executor 1): java.io.FileNotFoundException: /tmp/spark-e08e0921-612c-40ba-9b94-a2c327b4280e/executor-0352dfe3-ced0-4670-a8cb-120ff0b76434/blockmgr-66d46d34-18b6-4141-a119-fbc24afb8fff/25/temp_shuffle_6362cf05-121b-4d13-bd38-ae3b585057da (没有那个文件或目录)
+	at java.io.FileOutputStream.open(Native Method)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:221)
+	at org.apache.spark.storage.DiskBlockObjectWriter.initialize(DiskBlockObjectWriter.scala:102)
+	at org.apache.spark.storage.DiskBlockObjectWriter.open(DiskBlockObjectWriter.scala:115)
+	at org.apache.spark.storage.DiskBlockObjectWriter.write(DiskBlockObjectWriter.scala:229)
+	at org.apache.spark.shuffle.sort.BypassMergeSortShuffleWriter.write(BypassMergeSortShuffleWriter.java:152)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:97)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:54)
+	at org.apache.spark.scheduler.Task.run(Task.scala:114)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:322)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+
+17/03/21 11:36:21 WARN TaskSetManager: Lost task 1.2 in stage 9.2 (TID 120, 172.21.15.173, executor 1): java.io.FileNotFoundException: /tmp/spark-e08e0921-612c-40ba-9b94-a2c327b4280e/executor-0352dfe3-ced0-4670-a8cb-120ff0b76434/blockmgr-66d46d34-18b6-4141-a119-fbc24afb8fff/1c/temp_shuffle_90611171-96ed-4d1e-9f30-f32738e18fb2 (没有那个文件或目录)
+	at java.io.FileOutputStream.open(Native Method)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:221)
+	at org.apache.spark.storage.DiskBlockObjectWriter.initialize(DiskBlockObjectWriter.scala:102)
+	at org.apache.spark.storage.DiskBlockObjectWriter.open(DiskBlockObjectWriter.scala:115)
+	at org.apache.spark.storage.DiskBlockObjectWriter.write(DiskBlockObjectWriter.scala:229)
+	at org.apache.spark.shuffle.sort.BypassMergeSortShuffleWriter.write(BypassMergeSortShuffleWriter.java:152)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:97)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:54)
+	at org.apache.spark.scheduler.Task.run(Task.scala:114)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:322)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+
+17/03/21 11:36:21 WARN TaskSetManager: Lost task 0.2 in stage 9.2 (TID 121, 172.21.15.173, executor 1): java.io.FileNotFoundException: /tmp/spark-e08e0921-612c-40ba-9b94-a2c327b4280e/executor-0352dfe3-ced0-4670-a8cb-120ff0b76434/blockmgr-66d46d34-18b6-4141-a119-fbc24afb8fff/0d/temp_shuffle_4e42b912-902b-42ea-8d52-e140c266482b (没有那个文件或目录)
+	at java.io.FileOutputStream.open(Native Method)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:221)
+	at org.apache.spark.storage.DiskBlockObjectWriter.initialize(DiskBlockObjectWriter.scala:102)
+	at org.apache.spark.storage.DiskBlockObjectWriter.open(DiskBlockObjectWriter.scala:115)
+	at org.apache.spark.storage.DiskBlockObjectWriter.write(DiskBlockObjectWriter.scala:229)
+	at org.apache.spark.shuffle.sort.BypassMergeSortShuffleWriter.write(BypassMergeSortShuffleWriter.java:152)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:97)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:54)
+	at org.apache.spark.scheduler.Task.run(Task.scala:114)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:322)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+
+17/03/21 11:36:21 WARN TaskSetManager: Lost task 1.3 in stage 9.2 (TID 122, 172.21.15.173, executor 1): java.io.FileNotFoundException: /tmp/spark-e08e0921-612c-40ba-9b94-a2c327b4280e/executor-0352dfe3-ced0-4670-a8cb-120ff0b76434/blockmgr-66d46d34-18b6-4141-a119-fbc24afb8fff/05/temp_shuffle_450f1162-c18a-425e-8805-5bfc7d9a8f79 (没有那个文件或目录)
+	at java.io.FileOutputStream.open(Native Method)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:221)
+	at org.apache.spark.storage.DiskBlockObjectWriter.initialize(DiskBlockObjectWriter.scala:102)
+	at org.apache.spark.storage.DiskBlockObjectWriter.open(DiskBlockObjectWriter.scala:115)
+	at org.apache.spark.storage.DiskBlockObjectWriter.write(DiskBlockObjectWriter.scala:229)
+	at org.apache.spark.shuffle.sort.BypassMergeSortShuffleWriter.write(BypassMergeSortShuffleWriter.java:152)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:97)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:54)
+	at org.apache.spark.scheduler.Task.run(Task.scala:114)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:322)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+
+17/03/21 11:36:21 ERROR TaskSetManager: Task 1 in stage 9.2 failed 4 times; aborting job
+Exception in thread "main" org.apache.spark.SparkException: Job aborted due to stage failure: Task 1 in stage 9.2 failed 4 times, most recent failure: Lost task 1.3 in stage 9.2 (TID 122, 172.21.15.173, executor 1): java.io.FileNotFoundException: /tmp/spark-e08e0921-612c-40ba-9b94-a2c327b4280e/executor-0352dfe3-ced0-4670-a8cb-120ff0b76434/blockmgr-66d46d34-18b6-4141-a119-fbc24afb8fff/05/temp_shuffle_450f1162-c18a-425e-8805-5bfc7d9a8f79 (没有那个文件或目录)
+	at java.io.FileOutputStream.open(Native Method)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:221)
+	at org.apache.spark.storage.DiskBlockObjectWriter.initialize(DiskBlockObjectWriter.scala:102)
+	at org.apache.spark.storage.DiskBlockObjectWriter.open(DiskBlockObjectWriter.scala:115)
+	at org.apache.spark.storage.DiskBlockObjectWriter.write(DiskBlockObjectWriter.scala:229)
+	at org.apache.spark.shuffle.sort.BypassMergeSortShuffleWriter.write(BypassMergeSortShuffleWriter.java:152)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:97)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:54)
+	at org.apache.spark.scheduler.Task.run(Task.scala:114)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:322)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+
+Driver stacktrace:
+	at org.apache.spark.scheduler.DAGScheduler.org$apache$spark$scheduler$DAGScheduler$$failJobAndIndependentStages(DAGScheduler.scala:1456)
+	at org.apache.spark.scheduler.DAGScheduler$$anonfun$abortStage$1.apply(DAGScheduler.scala:1444)
+	at org.apache.spark.scheduler.DAGScheduler$$anonfun$abortStage$1.apply(DAGScheduler.scala:1443)
+	at scala.collection.mutable.ResizableArray$class.foreach(ResizableArray.scala:59)
+	at scala.collection.mutable.ArrayBuffer.foreach(ArrayBuffer.scala:48)
+	at org.apache.spark.scheduler.DAGScheduler.abortStage(DAGScheduler.scala:1443)
+	at org.apache.spark.scheduler.DAGScheduler$$anonfun$handleTaskSetFailed$1.apply(DAGScheduler.scala:802)
+	at org.apache.spark.scheduler.DAGScheduler$$anonfun$handleTaskSetFailed$1.apply(DAGScheduler.scala:802)
+	at scala.Option.foreach(Option.scala:257)
+	at org.apache.spark.scheduler.DAGScheduler.handleTaskSetFailed(DAGScheduler.scala:802)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.doOnReceive(DAGScheduler.scala:1671)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.onReceive(DAGScheduler.scala:1626)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.onReceive(DAGScheduler.scala:1615)
+	at org.apache.spark.util.EventLoop$$anon$1.run(EventLoop.scala:48)
+	at org.apache.spark.scheduler.DAGScheduler.runJob(DAGScheduler.scala:628)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2016)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2037)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2056)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2081)
+	at org.apache.spark.rdd.RDD$$anonfun$collect$1.apply(RDD.scala:937)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:151)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:112)
+	at org.apache.spark.rdd.RDD.withScope(RDD.scala:364)
+	at org.apache.spark.rdd.RDD.collect(RDD.scala:936)
+	at org.apache.spark.RangePartitioner$.sketch(Partitioner.scala:266)
+	at org.apache.spark.RangePartitioner.<init>(Partitioner.scala:128)
+	at org.apache.spark.rdd.OrderedRDDFunctions$$anonfun$sortByKey$1.apply(OrderedRDDFunctions.scala:62)
+	at org.apache.spark.rdd.OrderedRDDFunctions$$anonfun$sortByKey$1.apply(OrderedRDDFunctions.scala:61)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:151)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:112)
+	at org.apache.spark.rdd.RDD.withScope(RDD.scala:364)
+	at org.apache.spark.rdd.OrderedRDDFunctions.sortByKey(OrderedRDDFunctions.scala:61)
+	at org.apache.spark.mllib.evaluation.BinaryClassificationMetrics.x$4$lzycompute(BinaryClassificationMetrics.scala:155)
+	at org.apache.spark.mllib.evaluation.BinaryClassificationMetrics.x$4(BinaryClassificationMetrics.scala:146)
+	at org.apache.spark.mllib.evaluation.BinaryClassificationMetrics.confusions$lzycompute(BinaryClassificationMetrics.scala:148)
+	at org.apache.spark.mllib.evaluation.BinaryClassificationMetrics.confusions(BinaryClassificationMetrics.scala:148)
+	at org.apache.spark.mllib.evaluation.BinaryClassificationMetrics.createCurve(BinaryClassificationMetrics.scala:223)
+	at org.apache.spark.mllib.evaluation.BinaryClassificationMetrics.roc(BinaryClassificationMetrics.scala:86)
+	at org.apache.spark.mllib.evaluation.BinaryClassificationMetrics.areaUnderROC(BinaryClassificationMetrics.scala:97)
+	at SVM.src.main.java.SVMApp.main(SVMApp.java:111)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.apache.spark.deploy.SparkSubmit$.org$apache$spark$deploy$SparkSubmit$$runMain(SparkSubmit.scala:728)
+	at org.apache.spark.deploy.SparkSubmit$.doRunMain$1(SparkSubmit.scala:177)
+	at org.apache.spark.deploy.SparkSubmit$.submit(SparkSubmit.scala:202)
+	at org.apache.spark.deploy.SparkSubmit$.main(SparkSubmit.scala:116)
+	at org.apache.spark.deploy.SparkSubmit.main(SparkSubmit.scala)
+Caused by: java.io.FileNotFoundException: /tmp/spark-e08e0921-612c-40ba-9b94-a2c327b4280e/executor-0352dfe3-ced0-4670-a8cb-120ff0b76434/blockmgr-66d46d34-18b6-4141-a119-fbc24afb8fff/05/temp_shuffle_450f1162-c18a-425e-8805-5bfc7d9a8f79 (没有那个文件或目录)
+	at java.io.FileOutputStream.open(Native Method)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:221)
+	at org.apache.spark.storage.DiskBlockObjectWriter.initialize(DiskBlockObjectWriter.scala:102)
+	at org.apache.spark.storage.DiskBlockObjectWriter.open(DiskBlockObjectWriter.scala:115)
+	at org.apache.spark.storage.DiskBlockObjectWriter.write(DiskBlockObjectWriter.scala:229)
+	at org.apache.spark.shuffle.sort.BypassMergeSortShuffleWriter.write(BypassMergeSortShuffleWriter.java:152)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:97)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:54)
+	at org.apache.spark.scheduler.Task.run(Task.scala:114)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:322)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+17/03/21 11:36:21 DEBUG DFSClient: DFSClient writeChunk allocating new packet seqno=35, src=/eventLogs/app-20170321113254-0003.lz4.inprogress, packetSize=65016, chunksPerPacket=126, bytesCurBlock=89088
+17/03/21 11:36:21 DEBUG DFSClient: DFSClient flush(): bytesCurBlock=97643 lastFlushOffset=89146 createNewBlock=false
+17/03/21 11:36:21 DEBUG DFSClient: Queued packet 35
+17/03/21 11:36:21 DEBUG DFSClient: Waiting for ack for: 35
+17/03/21 11:36:21 DEBUG DFSClient: DataStreamer block BP-519507147-172.21.15.90-1479901973323:blk_1073810363_69540 sending packet packet seqno: 35 offsetInBlock: 89088 lastPacketInBlock: false lastByteOffsetInBlock: 97643
+17/03/21 11:36:21 DEBUG DFSClient: DFSClient seqno: 35 reply: SUCCESS downstreamAckTimeNanos: 0 flag: 0
+17/03/21 11:36:21 DEBUG DFSClient: DFSClient writeChunk allocating new packet seqno=36, src=/eventLogs/app-20170321113254-0003.lz4.inprogress, packetSize=65016, chunksPerPacket=126, bytesCurBlock=97280
+17/03/21 11:36:21 DEBUG DFSClient: DFSClient flush(): bytesCurBlock=97643 lastFlushOffset=97643 createNewBlock=false
+17/03/21 11:36:21 DEBUG DFSClient: Waiting for ack for: 35
+17/03/21 11:36:21 DEBUG DFSClient: DFSClient writeChunk allocating new packet seqno=37, src=/eventLogs/app-20170321113254-0003.lz4.inprogress, packetSize=65016, chunksPerPacket=126, bytesCurBlock=97280
+17/03/21 11:36:21 DEBUG DFSClient: DFSClient flush(): bytesCurBlock=97643 lastFlushOffset=97643 createNewBlock=false
+17/03/21 11:36:21 DEBUG DFSClient: Waiting for ack for: 35
+17/03/21 11:36:21 DEBUG DFSClient: DFSClient writeChunk allocating new packet seqno=38, src=/eventLogs/app-20170321113254-0003.lz4.inprogress, packetSize=65016, chunksPerPacket=126, bytesCurBlock=97280
+17/03/21 11:36:21 DEBUG DFSClient: DFSClient flush(): bytesCurBlock=97643 lastFlushOffset=97643 createNewBlock=false
+17/03/21 11:36:21 DEBUG DFSClient: Waiting for ack for: 35
+17/03/21 11:36:21 DEBUG DFSClient: DFSClient writeChunk allocating new packet seqno=39, src=/eventLogs/app-20170321113254-0003.lz4.inprogress, packetSize=65016, chunksPerPacket=126, bytesCurBlock=97280
+17/03/21 11:36:21 DEBUG DFSClient: Queued packet 39
+17/03/21 11:36:21 DEBUG DFSClient: Queued packet 40
+17/03/21 11:36:21 DEBUG DFSClient: Waiting for ack for: 40
+17/03/21 11:36:21 DEBUG DFSClient: DataStreamer block BP-519507147-172.21.15.90-1479901973323:blk_1073810363_69540 sending packet packet seqno: 39 offsetInBlock: 97280 lastPacketInBlock: false lastByteOffsetInBlock: 101837
+17/03/21 11:36:21 DEBUG DFSClient: DFSClient seqno: 39 reply: SUCCESS downstreamAckTimeNanos: 0 flag: 0
+17/03/21 11:36:21 DEBUG DFSClient: DataStreamer block BP-519507147-172.21.15.90-1479901973323:blk_1073810363_69540 sending packet packet seqno: 40 offsetInBlock: 101837 lastPacketInBlock: true lastByteOffsetInBlock: 101837
+17/03/21 11:36:22 WARN TaskSetManager: Lost task 2.0 in stage 9.2 (TID 117, 172.21.15.173, executor 1): java.io.FileNotFoundException: /tmp/spark-e08e0921-612c-40ba-9b94-a2c327b4280e/executor-0352dfe3-ced0-4670-a8cb-120ff0b76434/blockmgr-66d46d34-18b6-4141-a119-fbc24afb8fff/34/temp_shuffle_fa02e851-8a5b-4a0a-9a00-ca7d00576ff8 (没有那个文件或目录)
+	at java.io.FileOutputStream.open(Native Method)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:221)
+	at org.apache.spark.storage.DiskBlockObjectWriter.initialize(DiskBlockObjectWriter.scala:102)
+	at org.apache.spark.storage.DiskBlockObjectWriter.open(DiskBlockObjectWriter.scala:115)
+	at org.apache.spark.storage.DiskBlockObjectWriter.write(DiskBlockObjectWriter.scala:229)
+	at org.apache.spark.shuffle.sort.BypassMergeSortShuffleWriter.write(BypassMergeSortShuffleWriter.java:152)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:97)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:54)
+	at org.apache.spark.scheduler.Task.run(Task.scala:114)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:322)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+
+17/03/21 11:36:22 ERROR LiveListenerBus: SparkListenerBus has already stopped! Dropping event SparkListenerTaskEnd(9,2,ShuffleMapTask,ExceptionFailure(java.io.FileNotFoundException,/tmp/spark-e08e0921-612c-40ba-9b94-a2c327b4280e/executor-0352dfe3-ced0-4670-a8cb-120ff0b76434/blockmgr-66d46d34-18b6-4141-a119-fbc24afb8fff/34/temp_shuffle_fa02e851-8a5b-4a0a-9a00-ca7d00576ff8 (没有那个文件或目录),[Ljava.lang.StackTraceElement;@56fab261,java.io.FileNotFoundException: /tmp/spark-e08e0921-612c-40ba-9b94-a2c327b4280e/executor-0352dfe3-ced0-4670-a8cb-120ff0b76434/blockmgr-66d46d34-18b6-4141-a119-fbc24afb8fff/34/temp_shuffle_fa02e851-8a5b-4a0a-9a00-ca7d00576ff8 (没有那个文件或目录)
+	at java.io.FileOutputStream.open(Native Method)
+	at java.io.FileOutputStream.<init>(FileOutputStream.java:221)
+	at org.apache.spark.storage.DiskBlockObjectWriter.initialize(DiskBlockObjectWriter.scala:102)
+	at org.apache.spark.storage.DiskBlockObjectWriter.open(DiskBlockObjectWriter.scala:115)
+	at org.apache.spark.storage.DiskBlockObjectWriter.write(DiskBlockObjectWriter.scala:229)
+	at org.apache.spark.shuffle.sort.BypassMergeSortShuffleWriter.write(BypassMergeSortShuffleWriter.java:152)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:97)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:54)
+	at org.apache.spark.scheduler.Task.run(Task.scala:114)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:322)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+,Some(org.apache.spark.ThrowableSerializationWrapper@64d52ae3),Vector(AccumulableInfo(3122,Some(internal.metrics.executorRunTime),Some(241),None,true,true,None), AccumulableInfo(3124,Some(internal.metrics.resultSize),Some(0),None,true,true,None), AccumulableInfo(3139,Some(internal.metrics.shuffle.write.writeTime),Some(362444),None,true,true,None), AccumulableInfo(3140,Some(internal.metrics.input.bytesRead),Some(65536),None,true,true,None), AccumulableInfo(3141,Some(internal.metrics.input.recordsRead),Some(1),None,true,true,None)),Vector(LongAccumulator(id: 3122, name: Some(internal.metrics.executorRunTime), value: 241), LongAccumulator(id: 3124, name: Some(internal.metrics.resultSize), value: 0), LongAccumulator(id: 3139, name: Some(internal.metrics.shuffle.write.writeTime), value: 362444), LongAccumulator(id: 3140, name: Some(internal.metrics.input.bytesRead), value: 65536), LongAccumulator(id: 3141, name: Some(internal.metrics.input.recordsRead), value: 1))),org.apache.spark.scheduler.TaskInfo@66f2d0cc,org.apache.spark.executor.TaskMetrics@4f6a35e1)
+17/03/21 11:36:22 DEBUG DFSClient: DFSClient seqno: 40 reply: SUCCESS downstreamAckTimeNanos: 0 flag: 0
+17/03/21 11:36:22 DEBUG DFSClient: Closing old block BP-519507147-172.21.15.90-1479901973323:blk_1073810363_69540
+17/03/21 11:36:22 DEBUG Client: The ping interval is 60000 ms.
+17/03/21 11:36:22 DEBUG Client: Connecting to spark1/172.21.15.90:9000
+17/03/21 11:36:22 DEBUG Client: IPC Client (607260577) connection to spark1/172.21.15.90:9000 from hadoop: starting, having connections 1
+17/03/21 11:36:22 DEBUG Client: IPC Client (607260577) connection to spark1/172.21.15.90:9000 from hadoop sending #14
+17/03/21 11:36:22 DEBUG Client: IPC Client (607260577) connection to spark1/172.21.15.90:9000 from hadoop got value #14
+17/03/21 11:36:22 DEBUG ProtobufRpcEngine: Call: complete took 92ms
+17/03/21 11:36:22 DEBUG Client: IPC Client (607260577) connection to spark1/172.21.15.90:9000 from hadoop sending #15
+17/03/21 11:36:22 DEBUG Client: IPC Client (607260577) connection to spark1/172.21.15.90:9000 from hadoop got value #15
+17/03/21 11:36:22 DEBUG ProtobufRpcEngine: Call: getFileInfo took 4ms
+17/03/21 11:36:22 DEBUG Client: IPC Client (607260577) connection to spark1/172.21.15.90:9000 from hadoop sending #16
+17/03/21 11:36:22 DEBUG Client: IPC Client (607260577) connection to spark1/172.21.15.90:9000 from hadoop got value #16
+17/03/21 11:36:22 DEBUG ProtobufRpcEngine: Call: rename took 12ms
+17/03/21 11:36:22 DEBUG Client: IPC Client (607260577) connection to spark1/172.21.15.90:9000 from hadoop sending #17
+17/03/21 11:36:22 DEBUG Client: IPC Client (607260577) connection to spark1/172.21.15.90:9000 from hadoop got value #17
+17/03/21 11:36:22 DEBUG ProtobufRpcEngine: Call: setTimes took 10ms
+17/03/21 11:36:22 DEBUG PoolThreadCache: Freed 23 thread-local buffer(s) from thread: shuffle-server-6-2
+17/03/21 11:36:22 DEBUG PoolThreadCache: Freed 2 thread-local buffer(s) from thread: rpc-server-3-4
+17/03/21 11:36:22 DEBUG Client: stopping client from cache: org.apache.hadoop.ipc.Client@4bf2ba51
+17/03/21 11:36:22 DEBUG Client: removing client from cache: org.apache.hadoop.ipc.Client@4bf2ba51
+17/03/21 11:36:22 DEBUG Client: stopping actual client because no more references remain: org.apache.hadoop.ipc.Client@4bf2ba51
+17/03/21 11:36:22 DEBUG Client: Stopping client
+17/03/21 11:36:22 DEBUG Client: IPC Client (607260577) connection to spark1/172.21.15.90:9000 from hadoop: closed
+17/03/21 11:36:22 DEBUG Client: IPC Client (607260577) connection to spark1/172.21.15.90:9000 from hadoop: stopped, remaining connections 0

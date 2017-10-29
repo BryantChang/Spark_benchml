@@ -1,0 +1,15 @@
+log4j:ERROR Could not find value for key log4j.appender.DEBUG
+log4j:ERROR Could not instantiate appender named "DEBUG".
+log4j:ERROR Could not find value for key log4j.appender.INFO
+log4j:ERROR Could not instantiate appender named "INFO".
+log4j:ERROR Could not find value for key log4j.appender.console
+log4j:ERROR Could not instantiate appender named "console".
+===========================================================================
+===========================================================================
+Input size: 840MB
+Total number of records: 8400000
+Number of output partitions: 10
+Number of records/ partition:   840000
+===========================================================================
+===========================================================================
+[Stage 0:>                                                         (0 + 6) / 10][Stage 0:=====>                                                    (1 + 6) / 10][Stage 0:===========>                                              (2 + 6) / 10][Stage 0:=================>                                        (3 + 6) / 10][Stage 0:=============================>                            (5 + 5) / 10][Stage 0:==================================>                       (6 + 4) / 10][Stage 0:========================================>                 (7 + 3) / 10][Stage 0:==============================================>           (8 + 2) / 10]                                                                                [Stage 1:>                                                         (0 + 6) / 10][Stage 1:=====>                                                    (1 + 6) / 10][Stage 1:==================================>                       (6 + 4) / 10][Stage 1:====================================================>     (9 + 1) / 10]                                                                                Number of records written: 8400000

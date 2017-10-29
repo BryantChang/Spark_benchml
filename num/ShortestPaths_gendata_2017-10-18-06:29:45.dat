@@ -1,0 +1,19 @@
+log4j:ERROR Could not find value for key log4j.appender.DEBUG
+log4j:ERROR Could not instantiate appender named "DEBUG".
+log4j:ERROR Could not find value for key log4j.appender.INFO
+log4j:ERROR Could not instantiate appender named "INFO".
+log4j:ERROR Could not find value for key log4j.appender.console
+log4j:ERROR Could not instantiate appender named "console".
+Warning: Local jar /home/zc/bryantchang/SparkBench/ShortestPaths/../common/target/Common-1.0.jar does not exist, skipping.
+java.lang.ClassNotFoundException: DataGen.src.main.scala.GraphDataGen
+	at java.net.URLClassLoader.findClass(URLClassLoader.java:381)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:424)
+	at java.lang.ClassLoader.loadClass(ClassLoader.java:357)
+	at java.lang.Class.forName0(Native Method)
+	at java.lang.Class.forName(Class.java:348)
+	at org.apache.spark.util.Utils$.classForName(Utils.scala:232)
+	at org.apache.spark.deploy.SparkSubmit$.org$apache$spark$deploy$SparkSubmit$$runMain(SparkSubmit.scala:738)
+	at org.apache.spark.deploy.SparkSubmit$.doRunMain$1(SparkSubmit.scala:184)
+	at org.apache.spark.deploy.SparkSubmit$.submit(SparkSubmit.scala:209)
+	at org.apache.spark.deploy.SparkSubmit$.main(SparkSubmit.scala:123)
+	at org.apache.spark.deploy.SparkSubmit.main(SparkSubmit.scala)

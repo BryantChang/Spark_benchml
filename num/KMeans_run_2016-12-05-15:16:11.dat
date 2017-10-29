@@ -1,0 +1,113 @@
+5
+Using Spark's default log4j profile: org/apache/spark/log4j-defaults.properties
+16/12/05 15:16:12 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+16/12/05 15:16:12 WARN SparkConf: Detected deprecated memory fraction settings: [spark.storage.memoryFraction]. As of Spark 1.6, execution and storage memory management are unified. All memory fractions used in the old model are now deprecated and no longer read. If you wish to use the old memory management, you may explicitly enable `spark.memory.useLegacyMode` (not recommended).
+app-20161205151613-0020
+16/12/05 15:16:14 INFO FileInputFormat: Total input paths to process : 10
+[Stage 0:>                                                         (0 + 4) / 30][Stage 0:=>                                                        (1 + 4) / 30][Stage 0:=====>                                                    (3 + 4) / 30][Stage 0:=======>                                                  (4 + 4) / 30][Stage 0:=========>                                                (5 + 4) / 30][Stage 0:===========>                                              (6 + 4) / 30][Stage 0:===============>                                          (8 + 4) / 30][Stage 0:===============>                                          (8 + 5) / 30][Stage 0:=================>                                        (9 + 4) / 30][Stage 0:===================>                                     (10 + 4) / 30][Stage 0:====================>                                    (11 + 4) / 30][Stage 0:======================>                                  (12 + 4) / 30][Stage 0:========================>                                (13 + 4) / 30][Stage 0:==========================>                              (14 + 4) / 30][Stage 0:============================>                            (15 + 4) / 30][Stage 0:==============================>                          (16 + 4) / 30]16/12/05 15:17:33 WARN DFSClient: Slow ReadProcessor read fields took 78538ms (threshold=30000ms); ack: seqno: 5 reply: SUCCESS downstreamAckTimeNanos: 0 flag: 0, targets: [DatanodeInfoWithStorage[172.21.15.173:50010,DS-bcd3842f-7acc-473a-9a24-360950418375,DISK]]
+[Stage 0:================================>                        (17 + 4) / 30]16/12/05 15:17:34 ERROR StandaloneSchedulerBackend: Application has been killed. Reason: Master removed our application: KILLED
+Exception in thread "main" org.apache.spark.SparkException: Job aborted due to stage failure: Master removed our application: KILLED
+	at org.apache.spark.scheduler.DAGScheduler.org$apache$spark$scheduler$DAGScheduler$$failJobAndIndependentStages(DAGScheduler.scala:1454)
+	at org.apache.spark.scheduler.DAGScheduler$$anonfun$abortStage$1.apply(DAGScheduler.scala:1442)
+	at org.apache.spark.scheduler.DAGScheduler$$anonfun$abortStage$1.apply(DAGScheduler.scala:1441)
+	at scala.collection.mutable.ResizableArray$class.foreach(ResizableArray.scala:59)
+	at scala.collection.mutable.ArrayBuffer.foreach(ArrayBuffer.scala:48)
+	at org.apache.spark.scheduler.DAGScheduler.abortStage(DAGScheduler.scala:1441)
+	at org.apache.spark.scheduler.DAGScheduler$$anonfun$handleTaskSetFailed$1.apply(DAGScheduler.scala:811)
+	at org.apache.spark.scheduler.DAGScheduler$$anonfun$handleTaskSetFailed$1.apply(DAGScheduler.scala:811)
+	at scala.Option.foreach(Option.scala:257)
+	at org.apache.spark.scheduler.DAGScheduler.handleTaskSetFailed(DAGScheduler.scala:811)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.doOnReceive(DAGScheduler.scala:1667)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.onReceive(DAGScheduler.scala:1622)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.onReceive(DAGScheduler.scala:1611)
+	at org.apache.spark.util.EventLoop$$anon$1.run(EventLoop.scala:48)
+	at org.apache.spark.scheduler.DAGScheduler.runJob(DAGScheduler.scala:632)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:1873)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:1886)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:1899)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:1913)
+	at org.apache.spark.rdd.RDD.count(RDD.scala:1134)
+	at org.apache.spark.rdd.RDD$$anonfun$takeSample$1.apply(RDD.scala:558)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:151)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:112)
+	at org.apache.spark.rdd.RDD.withScope(RDD.scala:358)
+	at org.apache.spark.rdd.RDD.takeSample(RDD.scala:547)
+	at org.apache.spark.mllib.clustering.KMeans.initKMeansParallel(KMeans.scala:386)
+	at org.apache.spark.mllib.clustering.KMeans.runAlgorithm(KMeans.scala:256)
+	at org.apache.spark.mllib.clustering.KMeans.run(KMeans.scala:219)
+	at org.apache.spark.mllib.clustering.KMeans.run(KMeans.scala:201)
+	at org.apache.spark.mllib.clustering.KMeans$.train(KMeans.scala:516)
+	at KmeansApp$.main(kmeans.scala:52)
+	at KmeansApp.main(kmeans.scala)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.apache.spark.deploy.SparkSubmit$.org$apache$spark$deploy$SparkSubmit$$runMain(SparkSubmit.scala:736)
+	at org.apache.spark.deploy.SparkSubmit$.doRunMain$1(SparkSubmit.scala:185)
+	at org.apache.spark.deploy.SparkSubmit$.submit(SparkSubmit.scala:210)
+	at org.apache.spark.deploy.SparkSubmit$.main(SparkSubmit.scala:124)
+	at org.apache.spark.deploy.SparkSubmit.main(SparkSubmit.scala)
+16/12/05 15:17:34 ERROR LiveListenerBus: SparkListenerBus has already stopped! Dropping event SparkListenerJobEnd(0,1480922254956,JobFailed(org.apache.spark.SparkException: Job aborted due to stage failure: Master removed our application: KILLED))
+16/12/05 15:17:34 ERROR LiveListenerBus: SparkListenerBus has already stopped! Dropping event SparkListenerBlockUpdated(BlockUpdatedInfo(BlockManagerId(0, 172.21.15.173, 46296),rdd_2_17,StorageLevel(1 replicas),0,0))
+16/12/05 15:17:34 ERROR LiveListenerBus: SparkListenerBus has already stopped! Dropping event SparkListenerBlockUpdated(BlockUpdatedInfo(BlockManagerId(0, 172.21.15.173, 46296),rdd_2_18,StorageLevel(1 replicas),0,0))
+16/12/05 15:17:34 ERROR LiveListenerBus: SparkListenerBus has already stopped! Dropping event SparkListenerBlockUpdated(BlockUpdatedInfo(BlockManagerId(0, 172.21.15.173, 46296),rdd_2_20,StorageLevel(1 replicas),0,0))
+16/12/05 15:17:34 ERROR LiveListenerBus: SparkListenerBus has already stopped! Dropping event SparkListenerBlockUpdated(BlockUpdatedInfo(BlockManagerId(0, 172.21.15.173, 46296),rdd_2_19,StorageLevel(1 replicas),0,0))
+16/12/05 15:17:34 ERROR LiveListenerBus: SparkListenerBus has already stopped! Dropping event SparkListenerBlockUpdated(BlockUpdatedInfo(BlockManagerId(0, 172.21.15.173, 46296),rdd_3_18,StorageLevel(1 replicas),0,0))
+16/12/05 15:17:35 WARN TaskSetManager: Lost task 18.0 in stage 0.0 (TID 18, 172.21.15.173): TaskKilled (killed intentionally)
+16/12/05 15:17:35 WARN TaskSetManager: Lost task 19.0 in stage 0.0 (TID 19, 172.21.15.173): TaskKilled (killed intentionally)
+16/12/05 15:17:35 WARN TaskSetManager: Lost task 17.0 in stage 0.0 (TID 17, 172.21.15.173): TaskKilled (killed intentionally)
+16/12/05 15:17:35 ERROR LiveListenerBus: SparkListenerBus has already stopped! Dropping event SparkListenerTaskEnd(0,0,ResultTask,TaskKilled,org.apache.spark.scheduler.TaskInfo@92c0969,null)
+16/12/05 15:17:35 WARN TaskSetManager: Lost task 20.0 in stage 0.0 (TID 20, 172.21.15.173): TaskKilled (killed intentionally)
+16/12/05 15:17:35 ERROR LiveListenerBus: SparkListenerBus has already stopped! Dropping event SparkListenerTaskEnd(0,0,ResultTask,TaskKilled,org.apache.spark.scheduler.TaskInfo@2a1dd133,null)
+16/12/05 15:17:35 ERROR LiveListenerBus: SparkListenerBus has already stopped! Dropping event SparkListenerTaskEnd(0,0,ResultTask,TaskKilled,org.apache.spark.scheduler.TaskInfo@b9180df,null)
+16/12/05 15:17:35 ERROR LiveListenerBus: SparkListenerBus has already stopped! Dropping event SparkListenerTaskEnd(0,0,ResultTask,TaskKilled,org.apache.spark.scheduler.TaskInfo@5912cb53,null)
+16/12/05 15:17:35 ERROR LiveListenerBus: Listener EventLoggingListener threw an exception
+java.io.IOException: Filesystem closed
+	at org.apache.hadoop.hdfs.DFSClient.checkOpen(DFSClient.java:808)
+	at org.apache.hadoop.hdfs.DFSOutputStream.flushOrSync(DFSOutputStream.java:1966)
+	at org.apache.hadoop.hdfs.DFSOutputStream.hflush(DFSOutputStream.java:1912)
+	at org.apache.hadoop.fs.FSDataOutputStream.hflush(FSDataOutputStream.java:130)
+	at org.apache.spark.scheduler.EventLoggingListener$$anonfun$logEvent$3.apply(EventLoggingListener.scala:143)
+	at org.apache.spark.scheduler.EventLoggingListener$$anonfun$logEvent$3.apply(EventLoggingListener.scala:143)
+	at scala.Option.foreach(Option.scala:257)
+	at org.apache.spark.scheduler.EventLoggingListener.logEvent(EventLoggingListener.scala:143)
+	at org.apache.spark.scheduler.EventLoggingListener.onStageCompleted(EventLoggingListener.scala:163)
+	at org.apache.spark.scheduler.SparkListenerBus$class.doPostEvent(SparkListenerBus.scala:35)
+	at org.apache.spark.scheduler.LiveListenerBus.doPostEvent(LiveListenerBus.scala:36)
+	at org.apache.spark.scheduler.LiveListenerBus.doPostEvent(LiveListenerBus.scala:36)
+	at org.apache.spark.util.ListenerBus$class.postToAll(ListenerBus.scala:63)
+	at org.apache.spark.scheduler.LiveListenerBus.postToAll(LiveListenerBus.scala:36)
+	at org.apache.spark.scheduler.LiveListenerBus$$anon$1$$anonfun$run$1$$anonfun$apply$mcV$sp$1.apply$mcV$sp(LiveListenerBus.scala:94)
+	at org.apache.spark.scheduler.LiveListenerBus$$anon$1$$anonfun$run$1$$anonfun$apply$mcV$sp$1.apply(LiveListenerBus.scala:79)
+	at org.apache.spark.scheduler.LiveListenerBus$$anon$1$$anonfun$run$1$$anonfun$apply$mcV$sp$1.apply(LiveListenerBus.scala:79)
+	at scala.util.DynamicVariable.withValue(DynamicVariable.scala:58)
+	at org.apache.spark.scheduler.LiveListenerBus$$anon$1$$anonfun$run$1.apply$mcV$sp(LiveListenerBus.scala:78)
+	at org.apache.spark.util.Utils$.tryOrStopSparkContext(Utils.scala:1252)
+	at org.apache.spark.scheduler.LiveListenerBus$$anon$1.run(LiveListenerBus.scala:77)
+16/12/05 15:17:35 ERROR Utils: Uncaught exception in thread dispatcher-event-loop-1
+java.io.IOException: Filesystem closed
+	at org.apache.hadoop.hdfs.DFSClient.checkOpen(DFSClient.java:808)
+	at org.apache.hadoop.hdfs.DFSClient.getFileInfo(DFSClient.java:2105)
+	at org.apache.hadoop.hdfs.DistributedFileSystem$22.doCall(DistributedFileSystem.java:1305)
+	at org.apache.hadoop.hdfs.DistributedFileSystem$22.doCall(DistributedFileSystem.java:1301)
+	at org.apache.hadoop.fs.FileSystemLinkResolver.resolve(FileSystemLinkResolver.java:81)
+	at org.apache.hadoop.hdfs.DistributedFileSystem.getFileStatus(DistributedFileSystem.java:1317)
+	at org.apache.hadoop.fs.FileSystem.exists(FileSystem.java:1426)
+	at org.apache.spark.scheduler.EventLoggingListener.stop(EventLoggingListener.scala:217)
+	at org.apache.spark.SparkContext$$anonfun$stop$7$$anonfun$apply$mcV$sp$5.apply(SparkContext.scala:1777)
+	at org.apache.spark.SparkContext$$anonfun$stop$7$$anonfun$apply$mcV$sp$5.apply(SparkContext.scala:1777)
+	at scala.Option.foreach(Option.scala:257)
+	at org.apache.spark.SparkContext$$anonfun$stop$7.apply$mcV$sp(SparkContext.scala:1777)
+	at org.apache.spark.util.Utils$.tryLogNonFatalError(Utils.scala:1290)
+	at org.apache.spark.SparkContext.stop(SparkContext.scala:1776)
+	at org.apache.spark.scheduler.cluster.StandaloneSchedulerBackend.dead(StandaloneSchedulerBackend.scala:142)
+	at org.apache.spark.deploy.client.StandaloneAppClient$ClientEndpoint.markDead(StandaloneAppClient.scala:254)
+	at org.apache.spark.deploy.client.StandaloneAppClient$ClientEndpoint$$anonfun$receive$1.applyOrElse(StandaloneAppClient.scala:168)
+	at org.apache.spark.rpc.netty.Inbox$$anonfun$process$1.apply$mcV$sp(Inbox.scala:117)
+	at org.apache.spark.rpc.netty.Inbox.safelyCall(Inbox.scala:205)
+	at org.apache.spark.rpc.netty.Inbox.process(Inbox.scala:101)
+	at org.apache.spark.rpc.netty.Dispatcher$MessageLoop.run(Dispatcher.scala:213)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)

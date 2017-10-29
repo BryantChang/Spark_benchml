@@ -1,0 +1,11 @@
+ls: 无法访问/home/hadoop/bryantchang/platforms/spark-2.0.2-bin-hadoop2.7/lib/spark-assembly-*.jar: 没有那个文件或目录
+Starting Hive Metastore Server
+16/12/07 13:11:31 WARN conf.HiveConf: DEPRECATED: hive.metastore.ds.retry.* no longer has any effect.  Use hive.hmshandler.retry.* instead
+16/12/07 13:11:31 WARN conf.HiveConf: HiveConf of name hive.server2.thrift.http.min.worker.threads does not exist
+16/12/07 13:11:31 WARN conf.HiveConf: HiveConf of name hive.mapjoin.optimized.keys does not exist
+16/12/07 13:11:31 WARN conf.HiveConf: HiveConf of name hive.mapjoin.lazy.hashtable does not exist
+16/12/07 13:11:31 WARN conf.HiveConf: HiveConf of name hive.metastore.ds.retry.attempts does not exist
+16/12/07 13:11:31 WARN conf.HiveConf: HiveConf of name hive.server2.thrift.http.max.worker.threads does not exist
+16/12/07 13:11:31 WARN conf.HiveConf: HiveConf of name hive.optimize.multigroupby.common.distincts does not exist
+16/12/07 13:11:31 WARN conf.HiveConf: HiveConf of name hive.metastore.ds.retry.interval does not exist
+16/12/07 13:11:31 WARN conf.HiveConf: HiveConf of name hive.stats.map.parallelism does not exist

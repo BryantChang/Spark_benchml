@@ -1,0 +1,7 @@
+log4j:ERROR Could not find value for key log4j.appender.DEBUG
+log4j:ERROR Could not instantiate appender named "DEBUG".
+log4j:ERROR Could not find value for key log4j.appender.INFO
+log4j:ERROR Could not instantiate appender named "INFO".
+log4j:ERROR Could not find value for key log4j.appender.console
+log4j:ERROR Could not instantiate appender named "console".
+[Stage 0:>                                                         (0 + 0) / 60][Stage 0:>                                                         (0 + 6) / 60][Stage 0:>                                                        (1 + 11) / 60][Stage 0:=====>                                                    (6 + 6) / 60][Stage 0:===========>                                             (12 + 6) / 60][Stage 0:=============>                                           (14 + 6) / 60][Stage 0:=================>                                       (18 + 6) / 60][Stage 0:=====================>                                   (23 + 6) / 60][Stage 0:==============================>                          (32 + 6) / 60][Stage 0:=====================================>                   (39 + 6) / 60][Stage 0:==========================================>              (45 + 6) / 60][Stage 0:================================================>        (51 + 6) / 60]                                                                                

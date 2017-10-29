@@ -1,0 +1,70 @@
+17/03/08 14:50:08 WARN SparkContext: Support for Java 7 is deprecated as of Spark 2.0.0
+17/03/08 14:50:08 DEBUG MutableMetricsFactory: field org.apache.hadoop.metrics2.lib.MutableRate org.apache.hadoop.security.UserGroupInformation$UgiMetrics.loginSuccess with annotation @org.apache.hadoop.metrics2.annotation.Metric(value=[Rate of successful kerberos logins and latency (milliseconds)], valueName=Time, about=, type=DEFAULT, always=false, sampleName=Ops)
+17/03/08 14:50:08 DEBUG MutableMetricsFactory: field org.apache.hadoop.metrics2.lib.MutableRate org.apache.hadoop.security.UserGroupInformation$UgiMetrics.loginFailure with annotation @org.apache.hadoop.metrics2.annotation.Metric(value=[Rate of failed kerberos logins and latency (milliseconds)], valueName=Time, about=, type=DEFAULT, always=false, sampleName=Ops)
+17/03/08 14:50:08 DEBUG MutableMetricsFactory: field org.apache.hadoop.metrics2.lib.MutableRate org.apache.hadoop.security.UserGroupInformation$UgiMetrics.getGroups with annotation @org.apache.hadoop.metrics2.annotation.Metric(value=[GetGroups], valueName=Time, about=, type=DEFAULT, always=false, sampleName=Ops)
+17/03/08 14:50:08 DEBUG MetricsSystemImpl: UgiMetrics, User and group related metrics
+17/03/08 14:50:09 DEBUG Shell: setsid exited with exit code 0
+17/03/08 14:50:09 DEBUG Groups:  Creating new Groups object
+17/03/08 14:50:09 DEBUG NativeCodeLoader: Trying to load the custom-built native-hadoop library...
+17/03/08 14:50:09 DEBUG NativeCodeLoader: Failed to load native-hadoop with error: java.lang.UnsatisfiedLinkError: no hadoop in java.library.path
+17/03/08 14:50:09 DEBUG NativeCodeLoader: java.library.path=/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib
+17/03/08 14:50:09 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+17/03/08 14:50:09 DEBUG PerformanceAdvisory: Falling back to shell based
+17/03/08 14:50:09 DEBUG JniBasedUnixGroupsMappingWithFallback: Group mapping impl=org.apache.hadoop.security.ShellBasedUnixGroupsMapping
+17/03/08 14:50:09 DEBUG Groups: Group mapping impl=org.apache.hadoop.security.JniBasedUnixGroupsMappingWithFallback; cacheTimeout=300000; warningDeltaMs=5000
+17/03/08 14:50:09 DEBUG UserGroupInformation: hadoop login
+17/03/08 14:50:09 DEBUG UserGroupInformation: hadoop login commit
+17/03/08 14:50:09 DEBUG UserGroupInformation: using local user:UnixPrincipal: hadoop
+17/03/08 14:50:09 DEBUG UserGroupInformation: Using user: "UnixPrincipal: hadoop" with name hadoop
+17/03/08 14:50:09 DEBUG UserGroupInformation: User entry: "hadoop"
+17/03/08 14:50:09 DEBUG UserGroupInformation: UGI loginUser:hadoop (auth:SIMPLE)
+17/03/08 14:50:09 WARN SparkConf: Detected deprecated memory fraction settings: [spark.storage.memoryFraction]. As of Spark 1.6, execution and storage memory management are unified. All memory fractions used in the old model are now deprecated and no longer read. If you wish to use the old memory management, you may explicitly enable `spark.memory.useLegacyMode` (not recommended).
+17/03/08 14:50:09 WARN SparkConf: 
+SPARK_CLASSPATH was detected (set to '/home/hadoop/bryantchang/platforms/spark2.0/lib/mysql-connector-java-5.1.40-bin.jar:').
+This is deprecated in Spark 1.0+.
+
+Please instead use:
+ - ./spark-submit with --driver-class-path to augment the driver classpath
+ - spark.executor.extraClassPath to augment the executor classpath
+        
+17/03/08 14:50:09 WARN SparkConf: Setting 'spark.executor.extraClassPath' to '/home/hadoop/bryantchang/platforms/spark2.0/lib/mysql-connector-java-5.1.40-bin.jar:' as a work-around.
+17/03/08 14:50:09 WARN SparkConf: Setting 'spark.driver.extraClassPath' to '/home/hadoop/bryantchang/platforms/spark2.0/lib/mysql-connector-java-5.1.40-bin.jar:' as a work-around.
+17/03/08 14:50:09 DEBUG InternalLoggerFactory: Using SLF4J as the default logging framework
+17/03/08 14:50:09 DEBUG PlatformDependent0: java.nio.Buffer.address: available
+17/03/08 14:50:09 DEBUG PlatformDependent0: sun.misc.Unsafe.theUnsafe: available
+17/03/08 14:50:09 DEBUG PlatformDependent0: sun.misc.Unsafe.copyMemory: available
+17/03/08 14:50:09 DEBUG PlatformDependent0: direct buffer constructor: available
+17/03/08 14:50:09 DEBUG PlatformDependent0: java.nio.Bits.unaligned: available, true
+17/03/08 14:50:09 DEBUG PlatformDependent0: java.nio.DirectByteBuffer.<init>(long, int): available
+17/03/08 14:50:09 DEBUG Cleaner0: java.nio.ByteBuffer.cleaner(): available
+17/03/08 14:50:09 DEBUG PlatformDependent: Java version: 7
+17/03/08 14:50:09 DEBUG PlatformDependent: -Dio.netty.noUnsafe: false
+17/03/08 14:50:09 DEBUG PlatformDependent: sun.misc.Unsafe: available
+17/03/08 14:50:09 DEBUG PlatformDependent: -Dio.netty.noJavassist: false
+17/03/08 14:50:09 DEBUG PlatformDependent: Javassist: available
+17/03/08 14:50:09 DEBUG PlatformDependent: -Dio.netty.tmpdir: /tmp (java.io.tmpdir)
+17/03/08 14:50:09 DEBUG PlatformDependent: -Dio.netty.bitMode: 64 (sun.arch.data.model)
+17/03/08 14:50:09 DEBUG PlatformDependent: -Dio.netty.noPreferDirect: false
+17/03/08 14:50:09 DEBUG PlatformDependent: io.netty.maxDirectMemory: 954728448 bytes
+17/03/08 14:50:09 DEBUG JavassistTypeParameterMatcherGenerator: Generated: io.netty.util.internal.__matchers__.org.apache.spark.network.protocol.MessageMatcher
+17/03/08 14:50:09 DEBUG JavassistTypeParameterMatcherGenerator: Generated: io.netty.util.internal.__matchers__.io.netty.buffer.ByteBufMatcher
+17/03/08 14:50:09 DEBUG MultithreadEventLoopGroup: -Dio.netty.eventLoopThreads: 8
+17/03/08 14:50:09 DEBUG NioEventLoop: -Dio.netty.noKeySetOptimization: false
+17/03/08 14:50:09 DEBUG NioEventLoop: -Dio.netty.selectorAutoRebuildThreshold: 512
+17/03/08 14:50:09 DEBUG PlatformDependent: org.jctools-core.MpscChunkedArrayQueue: available
+17/03/08 14:50:09 DEBUG PooledByteBufAllocator: -Dio.netty.allocator.numHeapArenas: 8
+17/03/08 14:50:09 DEBUG PooledByteBufAllocator: -Dio.netty.allocator.numDirectArenas: 8
+17/03/08 14:50:09 DEBUG PooledByteBufAllocator: -Dio.netty.allocator.pageSize: 8192
+17/03/08 14:50:09 DEBUG PooledByteBufAllocator: -Dio.netty.allocator.maxOrder: 11
+17/03/08 14:50:09 DEBUG PooledByteBufAllocator: -Dio.netty.allocator.chunkSize: 16777216
+17/03/08 14:50:09 DEBUG PooledByteBufAllocator: -Dio.netty.allocator.tinyCacheSize: 512
+17/03/08 14:50:09 DEBUG PooledByteBufAllocator: -Dio.netty.allocator.smallCacheSize: 256
+17/03/08 14:50:09 DEBUG PooledByteBufAllocator: -Dio.netty.allocator.normalCacheSize: 64
+17/03/08 14:50:09 DEBUG PooledByteBufAllocator: -Dio.netty.allocator.maxCachedBufferCapacity: 32768
+17/03/08 14:50:09 DEBUG PooledByteBufAllocator: -Dio.netty.allocator.cacheTrimInterval: 8192
+17/03/08 14:50:09 DEBUG ThreadLocalRandom: -Dio.netty.initialSeedUniquifier: 0xb03f5a82d80657c7 (took 0 ms)
+17/03/08 14:50:09 DEBUG ByteBufUtil: -Dio.netty.allocator.type: unpooled
+17/03/08 14:50:09 DEBUG ByteBufUtil: -Dio.netty.threadLocalDirectBufferSize: 65536
+17/03/08 14:50:09 DEBUG ByteBufUtil: -Dio.netty.maxThreadLocalCharBufferSize: 16384
+17/03/08 14:50:09 DEBUG NetUtil: Loopback interface: lo (lo, 0:0:0:0:0:0:0:1%1)
+17/03/08 14:50:09 DEBUG NetUtil: /proc/sys/net/core/somaxconn: 128

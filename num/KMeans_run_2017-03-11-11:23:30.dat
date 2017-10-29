@@ -1,0 +1,391 @@
+6
+17/03/11 11:23:31 WARN SparkContext: Support for Java 7 is deprecated as of Spark 2.0.0
+17/03/11 11:23:31 DEBUG MutableMetricsFactory: field org.apache.hadoop.metrics2.lib.MutableRate org.apache.hadoop.security.UserGroupInformation$UgiMetrics.loginSuccess with annotation @org.apache.hadoop.metrics2.annotation.Metric(value=[Rate of successful kerberos logins and latency (milliseconds)], valueName=Time, about=, type=DEFAULT, always=false, sampleName=Ops)
+17/03/11 11:23:31 DEBUG MutableMetricsFactory: field org.apache.hadoop.metrics2.lib.MutableRate org.apache.hadoop.security.UserGroupInformation$UgiMetrics.loginFailure with annotation @org.apache.hadoop.metrics2.annotation.Metric(value=[Rate of failed kerberos logins and latency (milliseconds)], valueName=Time, about=, type=DEFAULT, always=false, sampleName=Ops)
+17/03/11 11:23:31 DEBUG MutableMetricsFactory: field org.apache.hadoop.metrics2.lib.MutableRate org.apache.hadoop.security.UserGroupInformation$UgiMetrics.getGroups with annotation @org.apache.hadoop.metrics2.annotation.Metric(value=[GetGroups], valueName=Time, about=, type=DEFAULT, always=false, sampleName=Ops)
+17/03/11 11:23:31 DEBUG MetricsSystemImpl: UgiMetrics, User and group related metrics
+17/03/11 11:23:31 DEBUG Shell: setsid exited with exit code 0
+17/03/11 11:23:31 DEBUG Groups:  Creating new Groups object
+17/03/11 11:23:31 DEBUG NativeCodeLoader: Trying to load the custom-built native-hadoop library...
+17/03/11 11:23:31 DEBUG NativeCodeLoader: Failed to load native-hadoop with error: java.lang.UnsatisfiedLinkError: no hadoop in java.library.path
+17/03/11 11:23:31 DEBUG NativeCodeLoader: java.library.path=/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib
+17/03/11 11:23:31 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+17/03/11 11:23:31 DEBUG PerformanceAdvisory: Falling back to shell based
+17/03/11 11:23:31 DEBUG JniBasedUnixGroupsMappingWithFallback: Group mapping impl=org.apache.hadoop.security.ShellBasedUnixGroupsMapping
+17/03/11 11:23:31 DEBUG Groups: Group mapping impl=org.apache.hadoop.security.JniBasedUnixGroupsMappingWithFallback; cacheTimeout=300000; warningDeltaMs=5000
+17/03/11 11:23:31 DEBUG UserGroupInformation: hadoop login
+17/03/11 11:23:31 DEBUG UserGroupInformation: hadoop login commit
+17/03/11 11:23:31 DEBUG UserGroupInformation: using local user:UnixPrincipal: hadoop
+17/03/11 11:23:31 DEBUG UserGroupInformation: Using user: "UnixPrincipal: hadoop" with name hadoop
+17/03/11 11:23:31 DEBUG UserGroupInformation: User entry: "hadoop"
+17/03/11 11:23:31 DEBUG UserGroupInformation: UGI loginUser:hadoop (auth:SIMPLE)
+17/03/11 11:23:31 WARN SparkConf: Detected deprecated memory fraction settings: [spark.storage.memoryFraction]. As of Spark 1.6, execution and storage memory management are unified. All memory fractions used in the old model are now deprecated and no longer read. If you wish to use the old memory management, you may explicitly enable `spark.memory.useLegacyMode` (not recommended).
+17/03/11 11:23:31 WARN SparkConf: 
+SPARK_CLASSPATH was detected (set to '/home/hadoop/bryantchang/platforms/spark2.0/lib/mysql-connector-java-5.1.40-bin.jar:').
+This is deprecated in Spark 1.0+.
+
+Please instead use:
+ - ./spark-submit with --driver-class-path to augment the driver classpath
+ - spark.executor.extraClassPath to augment the executor classpath
+        
+17/03/11 11:23:31 WARN SparkConf: Setting 'spark.executor.extraClassPath' to '/home/hadoop/bryantchang/platforms/spark2.0/lib/mysql-connector-java-5.1.40-bin.jar:' as a work-around.
+17/03/11 11:23:31 WARN SparkConf: Setting 'spark.driver.extraClassPath' to '/home/hadoop/bryantchang/platforms/spark2.0/lib/mysql-connector-java-5.1.40-bin.jar:' as a work-around.
+17/03/11 11:23:31 DEBUG InternalLoggerFactory: Using SLF4J as the default logging framework
+17/03/11 11:23:31 DEBUG PlatformDependent0: java.nio.Buffer.address: available
+17/03/11 11:23:31 DEBUG PlatformDependent0: sun.misc.Unsafe.theUnsafe: available
+17/03/11 11:23:31 DEBUG PlatformDependent0: sun.misc.Unsafe.copyMemory: available
+17/03/11 11:23:31 DEBUG PlatformDependent0: direct buffer constructor: available
+17/03/11 11:23:31 DEBUG PlatformDependent0: java.nio.Bits.unaligned: available, true
+17/03/11 11:23:31 DEBUG PlatformDependent0: java.nio.DirectByteBuffer.<init>(long, int): available
+17/03/11 11:23:31 DEBUG Cleaner0: java.nio.ByteBuffer.cleaner(): available
+17/03/11 11:23:31 DEBUG PlatformDependent: Java version: 7
+17/03/11 11:23:31 DEBUG PlatformDependent: -Dio.netty.noUnsafe: false
+17/03/11 11:23:31 DEBUG PlatformDependent: sun.misc.Unsafe: available
+17/03/11 11:23:31 DEBUG PlatformDependent: -Dio.netty.noJavassist: false
+17/03/11 11:23:31 DEBUG PlatformDependent: Javassist: available
+17/03/11 11:23:31 DEBUG PlatformDependent: -Dio.netty.tmpdir: /tmp (java.io.tmpdir)
+17/03/11 11:23:31 DEBUG PlatformDependent: -Dio.netty.bitMode: 64 (sun.arch.data.model)
+17/03/11 11:23:31 DEBUG PlatformDependent: -Dio.netty.noPreferDirect: false
+17/03/11 11:23:31 DEBUG PlatformDependent: io.netty.maxDirectMemory: 954728448 bytes
+17/03/11 11:23:31 DEBUG JavassistTypeParameterMatcherGenerator: Generated: io.netty.util.internal.__matchers__.org.apache.spark.network.protocol.MessageMatcher
+17/03/11 11:23:31 DEBUG JavassistTypeParameterMatcherGenerator: Generated: io.netty.util.internal.__matchers__.io.netty.buffer.ByteBufMatcher
+17/03/11 11:23:31 DEBUG MultithreadEventLoopGroup: -Dio.netty.eventLoopThreads: 8
+17/03/11 11:23:31 DEBUG NioEventLoop: -Dio.netty.noKeySetOptimization: false
+17/03/11 11:23:31 DEBUG NioEventLoop: -Dio.netty.selectorAutoRebuildThreshold: 512
+17/03/11 11:23:31 DEBUG PlatformDependent: org.jctools-core.MpscChunkedArrayQueue: available
+17/03/11 11:23:31 DEBUG PooledByteBufAllocator: -Dio.netty.allocator.numHeapArenas: 8
+17/03/11 11:23:31 DEBUG PooledByteBufAllocator: -Dio.netty.allocator.numDirectArenas: 8
+17/03/11 11:23:31 DEBUG PooledByteBufAllocator: -Dio.netty.allocator.pageSize: 8192
+17/03/11 11:23:31 DEBUG PooledByteBufAllocator: -Dio.netty.allocator.maxOrder: 11
+17/03/11 11:23:31 DEBUG PooledByteBufAllocator: -Dio.netty.allocator.chunkSize: 16777216
+17/03/11 11:23:31 DEBUG PooledByteBufAllocator: -Dio.netty.allocator.tinyCacheSize: 512
+17/03/11 11:23:31 DEBUG PooledByteBufAllocator: -Dio.netty.allocator.smallCacheSize: 256
+17/03/11 11:23:31 DEBUG PooledByteBufAllocator: -Dio.netty.allocator.normalCacheSize: 64
+17/03/11 11:23:31 DEBUG PooledByteBufAllocator: -Dio.netty.allocator.maxCachedBufferCapacity: 32768
+17/03/11 11:23:31 DEBUG PooledByteBufAllocator: -Dio.netty.allocator.cacheTrimInterval: 8192
+17/03/11 11:23:31 DEBUG ThreadLocalRandom: -Dio.netty.initialSeedUniquifier: 0x7d83df54790fb240 (took 0 ms)
+17/03/11 11:23:31 DEBUG ByteBufUtil: -Dio.netty.allocator.type: unpooled
+17/03/11 11:23:31 DEBUG ByteBufUtil: -Dio.netty.threadLocalDirectBufferSize: 65536
+17/03/11 11:23:31 DEBUG ByteBufUtil: -Dio.netty.maxThreadLocalCharBufferSize: 16384
+17/03/11 11:23:31 DEBUG NetUtil: Loopback interface: lo (lo, 0:0:0:0:0:0:0:1%1)
+17/03/11 11:23:31 DEBUG NetUtil: /proc/sys/net/core/somaxconn: 128
+17/03/11 11:23:32 DEBUG AbstractByteBuf: -Dio.netty.buffer.bytebuf.checkAccessible: true
+17/03/11 11:23:32 DEBUG ResourceLeakDetector: -Dio.netty.leakDetection.level: simple
+17/03/11 11:23:32 DEBUG ResourceLeakDetector: -Dio.netty.leakDetection.maxRecords: 4
+17/03/11 11:23:32 DEBUG ResourceLeakDetectorFactory: Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@153f2c35
+17/03/11 11:23:32 DEBUG Recycler: -Dio.netty.recycler.maxCapacity.default: 32768
+17/03/11 11:23:32 DEBUG Recycler: -Dio.netty.recycler.maxSharedCapacityFactor: 2
+17/03/11 11:23:32 DEBUG Recycler: -Dio.netty.recycler.linkCapacity: 16
+17/03/11 11:23:32 DEBUG Recycler: -Dio.netty.recycler.ratio: 8
+17/03/11 11:23:32 DEBUG BlockReaderLocal: dfs.client.use.legacy.blockreader.local = false
+17/03/11 11:23:32 DEBUG BlockReaderLocal: dfs.client.read.shortcircuit = false
+17/03/11 11:23:32 DEBUG BlockReaderLocal: dfs.client.domain.socket.data.traffic = false
+17/03/11 11:23:32 DEBUG BlockReaderLocal: dfs.domain.socket.path = 
+17/03/11 11:23:32 DEBUG RetryUtils: multipleLinearRandomRetry = null
+17/03/11 11:23:32 DEBUG Server: rpcKind=RPC_PROTOCOL_BUFFER, rpcRequestWrapperClass=class org.apache.hadoop.ipc.ProtobufRpcEngine$RpcRequestWrapper, rpcInvoker=org.apache.hadoop.ipc.ProtobufRpcEngine$Server$ProtoBufRpcInvoker@1b3f459d
+17/03/11 11:23:32 DEBUG Client: getting client out of cache: org.apache.hadoop.ipc.Client@4dabde1e
+17/03/11 11:23:32 DEBUG PerformanceAdvisory: Both short-circuit local reads and UNIX domain socket are disabled.
+17/03/11 11:23:32 DEBUG DataTransferSaslUtil: DataTransferProtocol not using SaslPropertiesResolver, no QOP found in configuration for dfs.data.transfer.protection
+17/03/11 11:23:32 DEBUG Client: The ping interval is 60000 ms.
+17/03/11 11:23:32 DEBUG Client: Connecting to spark1/172.21.15.90:9000
+17/03/11 11:23:32 DEBUG Client: IPC Client (1740587962) connection to spark1/172.21.15.90:9000 from hadoop: starting, having connections 1
+17/03/11 11:23:32 DEBUG Client: IPC Client (1740587962) connection to spark1/172.21.15.90:9000 from hadoop sending #0
+17/03/11 11:23:32 DEBUG Client: IPC Client (1740587962) connection to spark1/172.21.15.90:9000 from hadoop got value #0
+17/03/11 11:23:32 DEBUG ProtobufRpcEngine: Call: getFileInfo took 25ms
+17/03/11 11:23:32 DEBUG DFSClient: /eventLogs/app-20170311112332-0040.lz4.inprogress: masked=rw-r--r--
+17/03/11 11:23:32 DEBUG Client: IPC Client (1740587962) connection to spark1/172.21.15.90:9000 from hadoop sending #1
+17/03/11 11:23:32 DEBUG Client: IPC Client (1740587962) connection to spark1/172.21.15.90:9000 from hadoop got value #1
+17/03/11 11:23:32 DEBUG ProtobufRpcEngine: Call: create took 39ms
+17/03/11 11:23:32 DEBUG DFSClient: computePacketChunkSize: src=/eventLogs/app-20170311112332-0040.lz4.inprogress, chunkSize=516, chunksPerPacket=126, packetSize=65016
+17/03/11 11:23:32 DEBUG LeaseRenewer: Lease renewer daemon for [DFSClient_NONMAPREDUCE_-595668945_1] with renew id 1 started
+17/03/11 11:23:33 DEBUG Client: IPC Client (1740587962) connection to spark1/172.21.15.90:9000 from hadoop sending #2
+17/03/11 11:23:33 DEBUG Client: IPC Client (1740587962) connection to spark1/172.21.15.90:9000 from hadoop got value #2
+17/03/11 11:23:33 DEBUG ProtobufRpcEngine: Call: setPermission took 10ms
+17/03/11 11:23:33 DEBUG DFSClient: DFSClient flush(): bytesCurBlock=0 lastFlushOffset=0 createNewBlock=false
+17/03/11 11:23:33 DEBUG DFSClient: Waiting for ack for: -1
+17/03/11 11:23:33 DEBUG DFSClient: DFSClient flush(): bytesCurBlock=0 lastFlushOffset=0 createNewBlock=false
+17/03/11 11:23:33 DEBUG DFSClient: Waiting for ack for: -1
+17/03/11 11:23:33 DEBUG Client: IPC Client (1740587962) connection to spark1/172.21.15.90:9000 from hadoop sending #3
+17/03/11 11:23:33 DEBUG Client: IPC Client (1740587962) connection to spark1/172.21.15.90:9000 from hadoop got value #3
+17/03/11 11:23:33 DEBUG ProtobufRpcEngine: Call: getFileInfo took 1ms
+17/03/11 11:23:33 DEBUG Client: IPC Client (1740587962) connection to spark1/172.21.15.90:9000 from hadoop sending #4
+17/03/11 11:23:33 DEBUG Client: IPC Client (1740587962) connection to spark1/172.21.15.90:9000 from hadoop got value #4
+17/03/11 11:23:33 DEBUG ProtobufRpcEngine: Call: getListing took 2ms
+17/03/11 11:23:33 DEBUG FileInputFormat: Time taken to get FileStatuses: 28
+17/03/11 11:23:33 INFO FileInputFormat: Total input paths to process : 10
+17/03/11 11:23:33 INFO NetworkTopology: Adding a new node: /default-rack/172.21.15.173:50010
+17/03/11 11:23:33 DEBUG NetworkTopology: NetworkTopology became:
+Number of racks: 1
+Expected number of leaves:1
+/default-rack/172.21.15.173:50010
+
+17/03/11 11:23:33 DEBUG FileInputFormat: Total # of splits generated by getSplits: 40, TimeTaken: 34
+17/03/11 11:23:33 DEBUG DFSClient: DFSClient flush(): bytesCurBlock=0 lastFlushOffset=0 createNewBlock=false
+17/03/11 11:23:33 DEBUG DFSClient: Waiting for ack for: -1
+[Stage 0:>                                                         (0 + 0) / 40]17/03/11 11:23:36 DEBUG DFSClient: DFSClient writeChunk allocating new packet seqno=0, src=/eventLogs/app-20170311112332-0040.lz4.inprogress, packetSize=65016, chunksPerPacket=126, bytesCurBlock=0
+17/03/11 11:23:36 DEBUG DFSClient: DFSClient flush(): bytesCurBlock=6268 lastFlushOffset=0 createNewBlock=false
+17/03/11 11:23:36 DEBUG DFSClient: Queued packet 0
+17/03/11 11:23:36 DEBUG DFSClient: Waiting for ack for: 0
+17/03/11 11:23:36 DEBUG DFSClient: Allocating new block
+17/03/11 11:23:36 DEBUG Client: IPC Client (1740587962) connection to spark1/172.21.15.90:9000 from hadoop sending #5
+17/03/11 11:23:36 DEBUG Client: IPC Client (1740587962) connection to spark1/172.21.15.90:9000 from hadoop got value #5
+17/03/11 11:23:36 DEBUG ProtobufRpcEngine: Call: addBlock took 22ms
+17/03/11 11:23:36 DEBUG DFSClient: pipeline = DatanodeInfoWithStorage[172.21.15.173:50010,DS-bcd3842f-7acc-473a-9a24-360950418375,DISK]
+17/03/11 11:23:36 DEBUG DFSClient: Connecting to datanode 172.21.15.173:50010
+17/03/11 11:23:36 DEBUG DFSClient: Send buf size 124928
+17/03/11 11:23:36 DEBUG Client: IPC Client (1740587962) connection to spark1/172.21.15.90:9000 from hadoop sending #6
+17/03/11 11:23:36 DEBUG Client: IPC Client (1740587962) connection to spark1/172.21.15.90:9000 from hadoop got value #6
+17/03/11 11:23:36 DEBUG ProtobufRpcEngine: Call: getServerDefaults took 0ms
+17/03/11 11:23:36 DEBUG SaslDataTransferClient: SASL client skipping handshake in unsecured configuration for addr = /172.21.15.173, datanodeId = DatanodeInfoWithStorage[172.21.15.173:50010,DS-bcd3842f-7acc-473a-9a24-360950418375,DISK]
+17/03/11 11:23:36 DEBUG DFSClient: DataStreamer block BP-519507147-172.21.15.90-1479901973323:blk_1073808040_67217 sending packet packet seqno: 0 offsetInBlock: 0 lastPacketInBlock: false lastByteOffsetInBlock: 6268
+17/03/11 11:23:36 DEBUG DFSClient: DFSClient seqno: 0 reply: SUCCESS downstreamAckTimeNanos: 0 flag: 0
+17/03/11 11:23:36 DEBUG Client: IPC Client (1740587962) connection to spark1/172.21.15.90:9000 from hadoop sending #7
+17/03/11 11:23:36 DEBUG Client: IPC Client (1740587962) connection to spark1/172.21.15.90:9000 from hadoop got value #7
+17/03/11 11:23:36 DEBUG ProtobufRpcEngine: Call: fsync took 5ms
+[Stage 0:>                                                         (0 + 3) / 40]17/03/11 11:23:36 DEBUG DFSClient: DFSClient writeChunk allocating new packet seqno=1, src=/eventLogs/app-20170311112332-0040.lz4.inprogress, packetSize=65016, chunksPerPacket=126, bytesCurBlock=6144
+17/03/11 11:23:36 DEBUG DFSClient: DFSClient flush(): bytesCurBlock=6268 lastFlushOffset=6268 createNewBlock=false
+17/03/11 11:23:36 DEBUG DFSClient: Waiting for ack for: 0
+[Stage 0:>                                                         (0 + 4) / 40]17/03/11 11:23:46 DEBUG Client: IPC Client (1740587962) connection to spark1/172.21.15.90:9000 from hadoop: closed
+17/03/11 11:23:46 DEBUG Client: IPC Client (1740587962) connection to spark1/172.21.15.90:9000 from hadoop: stopped, remaining connections 0
+[Stage 0:=>                                                        (1 + 4) / 40][Stage 0:====>                                                     (3 + 4) / 40][Stage 0:=====>                                                    (4 + 4) / 40]17/03/11 11:24:02 DEBUG Client: The ping interval is 60000 ms.
+17/03/11 11:24:02 DEBUG Client: Connecting to spark1/172.21.15.90:9000
+17/03/11 11:24:02 DEBUG Client: IPC Client (1740587962) connection to spark1/172.21.15.90:9000 from hadoop: starting, having connections 1
+17/03/11 11:24:02 DEBUG Client: IPC Client (1740587962) connection to spark1/172.21.15.90:9000 from hadoop sending #8
+17/03/11 11:24:02 DEBUG Client: IPC Client (1740587962) connection to spark1/172.21.15.90:9000 from hadoop got value #8
+17/03/11 11:24:02 DEBUG ProtobufRpcEngine: Call: renewLease took 9ms
+17/03/11 11:24:02 DEBUG LeaseRenewer: Lease renewed for client DFSClient_NONMAPREDUCE_-595668945_1
+17/03/11 11:24:02 DEBUG LeaseRenewer: Lease renewer daemon for [DFSClient_NONMAPREDUCE_-595668945_1] with renew id 1 executed
+[Stage 0:========>                                                 (6 + 4) / 40][Stage 0:===========>                                              (8 + 2) / 40][Stage 0:===========>                                              (8 + 4) / 40]17/03/11 11:24:12 DEBUG Client: IPC Client (1740587962) connection to spark1/172.21.15.90:9000 from hadoop: closed
+17/03/11 11:24:12 DEBUG Client: IPC Client (1740587962) connection to spark1/172.21.15.90:9000 from hadoop: stopped, remaining connections 0
+[Stage 0:=============>                                            (9 + 4) / 40][Stage 0:==============>                                          (10 + 4) / 40][Stage 0:===============>                                         (11 + 4) / 40][Stage 0:=================>                                       (12 + 4) / 40][Stage 0:==================>                                      (13 + 4) / 40][Stage 0:===================>                                     (14 + 4) / 40]17/03/11 11:24:33 DEBUG Client: The ping interval is 60000 ms.
+17/03/11 11:24:33 DEBUG Client: Connecting to spark1/172.21.15.90:9000
+17/03/11 11:24:33 DEBUG Client: IPC Client (1740587962) connection to spark1/172.21.15.90:9000 from hadoop: starting, having connections 1
+17/03/11 11:24:33 DEBUG Client: IPC Client (1740587962) connection to spark1/172.21.15.90:9000 from hadoop sending #9
+17/03/11 11:24:33 DEBUG Client: IPC Client (1740587962) connection to spark1/172.21.15.90:9000 from hadoop got value #9
+17/03/11 11:24:33 DEBUG ProtobufRpcEngine: Call: renewLease took 7ms
+17/03/11 11:24:33 DEBUG LeaseRenewer: Lease renewed for client DFSClient_NONMAPREDUCE_-595668945_1
+17/03/11 11:24:33 DEBUG LeaseRenewer: Lease renewer daemon for [DFSClient_NONMAPREDUCE_-595668945_1] with renew id 1 executed
+[Stage 0:=====================>                                   (15 + 4) / 40][Stage 0:======================>                                  (16 + 4) / 40]17/03/11 11:24:43 DEBUG Client: IPC Client (1740587962) connection to spark1/172.21.15.90:9000 from hadoop: closed
+17/03/11 11:24:43 DEBUG Client: IPC Client (1740587962) connection to spark1/172.21.15.90:9000 from hadoop: stopped, remaining connections 0
+[Stage 0:========================>                                (17 + 4) / 40][Stage 0:=========================>                               (18 + 4) / 40][Stage 0:===========================>                             (19 + 4) / 40][Stage 0:============================>                            (20 + 4) / 40][Stage 0:=============================>                           (21 + 4) / 40]17/03/11 11:24:59 DEBUG DFSClient: DFSClient writeChunk allocating new packet seqno=2, src=/eventLogs/app-20170311112332-0040.lz4.inprogress, packetSize=65016, chunksPerPacket=126, bytesCurBlock=6144
+[Stage 0:===============================>                         (22 + 4) / 40]17/03/11 11:25:03 DEBUG Client: The ping interval is 60000 ms.
+17/03/11 11:25:03 DEBUG Client: Connecting to spark1/172.21.15.90:9000
+17/03/11 11:25:03 DEBUG Client: IPC Client (1740587962) connection to spark1/172.21.15.90:9000 from hadoop: starting, having connections 1
+17/03/11 11:25:03 DEBUG Client: IPC Client (1740587962) connection to spark1/172.21.15.90:9000 from hadoop sending #10
+17/03/11 11:25:03 DEBUG Client: IPC Client (1740587962) connection to spark1/172.21.15.90:9000 from hadoop got value #10
+17/03/11 11:25:03 DEBUG ProtobufRpcEngine: Call: renewLease took 7ms
+17/03/11 11:25:03 DEBUG LeaseRenewer: Lease renewed for client DFSClient_NONMAPREDUCE_-595668945_1
+17/03/11 11:25:03 DEBUG LeaseRenewer: Lease renewer daemon for [DFSClient_NONMAPREDUCE_-595668945_1] with renew id 1 executed
+[Stage 0:================================>                        (23 + 4) / 40][Stage 0:==================================>                      (24 + 4) / 40][Stage 0:===================================>                     (25 + 4) / 40][Stage 0:=====================================>                   (26 + 4) / 40]17/03/11 11:25:13 DEBUG Client: IPC Client (1740587962) connection to spark1/172.21.15.90:9000 from hadoop: closed
+17/03/11 11:25:13 DEBUG Client: IPC Client (1740587962) connection to spark1/172.21.15.90:9000 from hadoop: stopped, remaining connections 0
+[Stage 0:======================================>                  (27 + 4) / 40][Stage 0:=======================================>                 (28 + 4) / 40][Stage 0:=========================================>               (29 + 4) / 40][Stage 0:==========================================>              (30 + 4) / 40][Stage 0:============================================>            (31 + 4) / 40][Stage 0:=============================================>           (32 + 4) / 40]17/03/11 11:25:33 DEBUG Client: The ping interval is 60000 ms.
+17/03/11 11:25:33 DEBUG Client: Connecting to spark1/172.21.15.90:9000
+17/03/11 11:25:33 DEBUG Client: IPC Client (1740587962) connection to spark1/172.21.15.90:9000 from hadoop: starting, having connections 1
+17/03/11 11:25:33 DEBUG Client: IPC Client (1740587962) connection to spark1/172.21.15.90:9000 from hadoop sending #11
+17/03/11 11:25:33 DEBUG Client: IPC Client (1740587962) connection to spark1/172.21.15.90:9000 from hadoop got value #11
+17/03/11 11:25:33 DEBUG ProtobufRpcEngine: Call: renewLease took 7ms
+17/03/11 11:25:33 DEBUG LeaseRenewer: Lease renewed for client DFSClient_NONMAPREDUCE_-595668945_1
+17/03/11 11:25:33 DEBUG LeaseRenewer: Lease renewer daemon for [DFSClient_NONMAPREDUCE_-595668945_1] with renew id 1 executed
+[Stage 0:===============================================>         (33 + 4) / 40][Stage 0:================================================>        (34 + 4) / 40]17/03/11 11:25:43 DEBUG Client: IPC Client (1740587962) connection to spark1/172.21.15.90:9000 from hadoop: closed
+17/03/11 11:25:43 DEBUG Client: IPC Client (1740587962) connection to spark1/172.21.15.90:9000 from hadoop: stopped, remaining connections 0
+[Stage 0:=================================================>       (35 + 4) / 40][Stage 0:===================================================>     (36 + 4) / 40][Stage 0:====================================================>    (37 + 3) / 40][Stage 0:======================================================>  (38 + 2) / 40][Stage 0:=======================================================> (39 + 1) / 40]                                                                                17/03/11 11:25:54 DEBUG DFSClient: DFSClient flush(): bytesCurBlock=30311 lastFlushOffset=6268 createNewBlock=false
+17/03/11 11:25:54 DEBUG DFSClient: Queued packet 2
+17/03/11 11:25:54 DEBUG DFSClient: Waiting for ack for: 2
+17/03/11 11:25:54 DEBUG DFSClient: DataStreamer block BP-519507147-172.21.15.90-1479901973323:blk_1073808040_67217 sending packet packet seqno: 2 offsetInBlock: 6144 lastPacketInBlock: false lastByteOffsetInBlock: 30311
+17/03/11 11:25:54 WARN DFSClient: Slow ReadProcessor read fields took 137953ms (threshold=30000ms); ack: seqno: 2 reply: SUCCESS downstreamAckTimeNanos: 0 flag: 0, targets: [DatanodeInfoWithStorage[172.21.15.173:50010,DS-bcd3842f-7acc-473a-9a24-360950418375,DISK]]
+17/03/11 11:25:54 DEBUG DFSClient: DFSClient writeChunk allocating new packet seqno=3, src=/eventLogs/app-20170311112332-0040.lz4.inprogress, packetSize=65016, chunksPerPacket=126, bytesCurBlock=30208
+17/03/11 11:25:54 DEBUG DFSClient: DFSClient flush(): bytesCurBlock=30311 lastFlushOffset=30311 createNewBlock=false
+17/03/11 11:25:54 DEBUG DFSClient: Waiting for ack for: 2
+17/03/11 11:25:54 DEBUG DFSClient: DFSClient writeChunk allocating new packet seqno=4, src=/eventLogs/app-20170311112332-0040.lz4.inprogress, packetSize=65016, chunksPerPacket=126, bytesCurBlock=30208
+17/03/11 11:25:54 DEBUG DFSClient: DFSClient flush(): bytesCurBlock=33866 lastFlushOffset=30311 createNewBlock=false
+17/03/11 11:25:54 DEBUG DFSClient: Queued packet 4
+17/03/11 11:25:54 DEBUG DFSClient: Waiting for ack for: 4
+17/03/11 11:25:54 DEBUG DFSClient: DataStreamer block BP-519507147-172.21.15.90-1479901973323:blk_1073808040_67217 sending packet packet seqno: 4 offsetInBlock: 30208 lastPacketInBlock: false lastByteOffsetInBlock: 33866
+17/03/11 11:25:54 DEBUG DFSClient: DFSClient seqno: 4 reply: SUCCESS downstreamAckTimeNanos: 0 flag: 0
+[Stage 1:>                                                         (0 + 4) / 40][Stage 1:=======>                                                  (5 + 4) / 40][Stage 1:========>                                                 (6 + 4) / 40][Stage 1:==========>                                               (7 + 4) / 40][Stage 1:=============>                                            (9 + 4) / 40][Stage 1:==============>                                          (10 + 4) / 40][Stage 1:===============>                                         (11 + 4) / 40][Stage 1:=================>                                       (12 + 4) / 40][Stage 1:==================>                                      (13 + 4) / 40][Stage 1:===================>                                     (14 + 4) / 40][Stage 1:=====================>                                   (15 + 4) / 40][Stage 1:========================>                                (17 + 4) / 40][Stage 1:=========================>                               (18 + 4) / 40][Stage 1:===========================>                             (19 + 4) / 40][Stage 1:=============================>                           (21 + 4) / 40]17/03/11 11:26:03 DEBUG Client: The ping interval is 60000 ms.
+17/03/11 11:26:03 DEBUG Client: Connecting to spark1/172.21.15.90:9000
+17/03/11 11:26:03 DEBUG Client: IPC Client (1740587962) connection to spark1/172.21.15.90:9000 from hadoop: starting, having connections 1
+17/03/11 11:26:03 DEBUG Client: IPC Client (1740587962) connection to spark1/172.21.15.90:9000 from hadoop sending #12
+17/03/11 11:26:03 DEBUG Client: IPC Client (1740587962) connection to spark1/172.21.15.90:9000 from hadoop got value #12
+17/03/11 11:26:03 DEBUG ProtobufRpcEngine: Call: renewLease took 6ms
+17/03/11 11:26:03 DEBUG LeaseRenewer: Lease renewed for client DFSClient_NONMAPREDUCE_-595668945_1
+17/03/11 11:26:03 DEBUG LeaseRenewer: Lease renewer daemon for [DFSClient_NONMAPREDUCE_-595668945_1] with renew id 1 executed
+[Stage 1:===============================>                         (22 + 4) / 40][Stage 1:================================>                        (23 + 4) / 40][Stage 1:==================================>                      (24 + 4) / 40][Stage 1:===================================>                     (25 + 4) / 40][Stage 1:=====================================>                   (26 + 4) / 40][Stage 1:=======================================>                 (28 + 4) / 40][Stage 1:=========================================>               (29 + 4) / 40][Stage 1:==========================================>              (30 + 4) / 40][Stage 1:============================================>            (31 + 4) / 40][Stage 1:=============================================>           (32 + 4) / 40][Stage 1:===============================================>         (33 + 4) / 40][Stage 1:================================================>        (34 + 4) / 40][Stage 1:=================================================>       (35 + 4) / 40][Stage 1:===================================================>     (36 + 4) / 40][Stage 1:=======================================================> (39 + 1) / 40]                                                                                17/03/11 11:26:09 DEBUG DFSClient: DFSClient writeChunk allocating new packet seqno=5, src=/eventLogs/app-20170311112332-0040.lz4.inprogress, packetSize=65016, chunksPerPacket=126, bytesCurBlock=33792
+17/03/11 11:26:09 DEBUG DFSClient: DFSClient flush(): bytesCurBlock=47045 lastFlushOffset=33866 createNewBlock=false
+17/03/11 11:26:09 DEBUG DFSClient: Queued packet 5
+17/03/11 11:26:09 DEBUG DFSClient: Waiting for ack for: 5
+17/03/11 11:26:09 DEBUG DFSClient: DataStreamer block BP-519507147-172.21.15.90-1479901973323:blk_1073808040_67217 sending packet packet seqno: 5 offsetInBlock: 33792 lastPacketInBlock: false lastByteOffsetInBlock: 47045
+17/03/11 11:26:09 DEBUG DFSClient: DFSClient seqno: 5 reply: SUCCESS downstreamAckTimeNanos: 0 flag: 0
+17/03/11 11:26:09 DEBUG DFSClient: DFSClient writeChunk allocating new packet seqno=6, src=/eventLogs/app-20170311112332-0040.lz4.inprogress, packetSize=65016, chunksPerPacket=126, bytesCurBlock=46592
+17/03/11 11:26:09 DEBUG DFSClient: DFSClient flush(): bytesCurBlock=47045 lastFlushOffset=47045 createNewBlock=false
+17/03/11 11:26:09 DEBUG DFSClient: Waiting for ack for: 5
+17/03/11 11:26:09 DEBUG DFSClient: DFSClient writeChunk allocating new packet seqno=7, src=/eventLogs/app-20170311112332-0040.lz4.inprogress, packetSize=65016, chunksPerPacket=126, bytesCurBlock=46592
+17/03/11 11:26:09 DEBUG DFSClient: DFSClient flush(): bytesCurBlock=47045 lastFlushOffset=47045 createNewBlock=false
+17/03/11 11:26:09 DEBUG DFSClient: Waiting for ack for: 5
+[Stage 2:>                                                         (0 + 4) / 40][Stage 2:=====>                                                    (4 + 4) / 40][Stage 2:=======>                                                  (5 + 4) / 40][Stage 2:========>                                                 (6 + 4) / 40]17/03/11 11:26:13 DEBUG Client: IPC Client (1740587962) connection to spark1/172.21.15.90:9000 from hadoop: closed
+17/03/11 11:26:13 DEBUG Client: IPC Client (1740587962) connection to spark1/172.21.15.90:9000 from hadoop: stopped, remaining connections 0
+[Stage 2:==========>                                               (7 + 4) / 40][Stage 2:=============>                                            (9 + 4) / 40][Stage 2:===============>                                         (11 + 4) / 40][Stage 2:=================>                                       (12 + 4) / 40][Stage 2:==================>                                      (13 + 4) / 40][Stage 2:=====================>                                   (15 + 4) / 40][Stage 2:======================>                                  (16 + 4) / 40][Stage 2:========================>                                (17 + 4) / 40][Stage 2:===========================>                             (19 + 4) / 40][Stage 2:============================>                            (20 + 4) / 40][Stage 2:=============================>                           (21 + 4) / 40][Stage 2:===============================>                         (22 + 4) / 40][Stage 2:================================>                        (23 + 4) / 40][Stage 2:==================================>                      (24 + 4) / 40][Stage 2:===================================>                     (25 + 4) / 40][Stage 2:=====================================>                   (26 + 4) / 40][Stage 2:======================================>                  (27 + 4) / 40][Stage 2:=======================================>                 (28 + 4) / 40][Stage 2:=========================================>               (29 + 4) / 40][Stage 2:==========================================>              (30 + 4) / 40][Stage 2:=============================================>           (32 + 4) / 40][Stage 2:===============================================>         (33 + 4) / 40][Stage 2:================================================>        (34 + 4) / 40]17/03/11 11:26:26 DEBUG DFSClient: DFSClient writeChunk allocating new packet seqno=8, src=/eventLogs/app-20170311112332-0040.lz4.inprogress, packetSize=65016, chunksPerPacket=126, bytesCurBlock=46592
+[Stage 2:=================================================>       (35 + 4) / 40][Stage 2:===================================================>     (36 + 4) / 40][Stage 2:====================================================>    (37 + 3) / 40][Stage 2:=======================================================> (39 + 1) / 40]17/03/11 11:26:27 DEBUG DFSClient: DFSClient flush(): bytesCurBlock=65630 lastFlushOffset=47045 createNewBlock=false
+17/03/11 11:26:27 DEBUG DFSClient: Queued packet 8
+17/03/11 11:26:27 DEBUG DFSClient: Waiting for ack for: 8
+17/03/11 11:26:27 DEBUG DFSClient: DataStreamer block BP-519507147-172.21.15.90-1479901973323:blk_1073808040_67217 sending packet packet seqno: 8 offsetInBlock: 46592 lastPacketInBlock: false lastByteOffsetInBlock: 65630
+17/03/11 11:26:27 DEBUG DFSClient: DFSClient seqno: 8 reply: SUCCESS downstreamAckTimeNanos: 0 flag: 0
+[Stage 3:=======>                                                  (5 + 4) / 40]17/03/11 11:26:28 DEBUG DFSClient: DFSClient writeChunk allocating new packet seqno=9, src=/eventLogs/app-20170311112332-0040.lz4.inprogress, packetSize=65016, chunksPerPacket=126, bytesCurBlock=65536
+                                                                                17/03/11 11:26:28 DEBUG DFSClient: DFSClient flush(): bytesCurBlock=79488 lastFlushOffset=65630 createNewBlock=false
+17/03/11 11:26:28 DEBUG DFSClient: Queued packet 9
+17/03/11 11:26:28 DEBUG DFSClient: Waiting for ack for: 9
+17/03/11 11:26:28 DEBUG DFSClient: DataStreamer block BP-519507147-172.21.15.90-1479901973323:blk_1073808040_67217 sending packet packet seqno: 9 offsetInBlock: 65536 lastPacketInBlock: false lastByteOffsetInBlock: 79488
+Finished iteration (num = 0)
+17/03/11 11:26:28 DEBUG DFSClient: DFSClient seqno: 9 reply: SUCCESS downstreamAckTimeNanos: 0 flag: 0
+17/03/11 11:26:28 DEBUG DFSClient: DFSClient writeChunk allocating new packet seqno=10, src=/eventLogs/app-20170311112332-0040.lz4.inprogress, packetSize=65016, chunksPerPacket=126, bytesCurBlock=79360
+17/03/11 11:26:28 DEBUG DFSClient: DFSClient flush(): bytesCurBlock=79488 lastFlushOffset=79488 createNewBlock=false
+17/03/11 11:26:28 DEBUG DFSClient: Waiting for ack for: 9
+17/03/11 11:26:28 DEBUG DFSClient: DFSClient writeChunk allocating new packet seqno=11, src=/eventLogs/app-20170311112332-0040.lz4.inprogress, packetSize=65016, chunksPerPacket=126, bytesCurBlock=79360
+17/03/11 11:26:28 DEBUG DFSClient: DFSClient flush(): bytesCurBlock=79488 lastFlushOffset=79488 createNewBlock=false
+17/03/11 11:26:28 DEBUG DFSClient: Waiting for ack for: 9
+[Stage 4:>                                                         (0 + 4) / 40][Stage 4:=====>                                                    (4 + 4) / 40][Stage 4:=======>                                                  (5 + 4) / 40][Stage 4:========>                                                 (6 + 4) / 40][Stage 4:==========>                                               (7 + 4) / 40][Stage 4:===========>                                              (8 + 4) / 40][Stage 4:=============>                                            (9 + 4) / 40][Stage 4:==============>                                          (10 + 4) / 40]17/03/11 11:26:33 DEBUG Client: The ping interval is 60000 ms.
+17/03/11 11:26:33 DEBUG Client: Connecting to spark1/172.21.15.90:9000
+17/03/11 11:26:33 DEBUG Client: IPC Client (1740587962) connection to spark1/172.21.15.90:9000 from hadoop: starting, having connections 1
+17/03/11 11:26:33 DEBUG Client: IPC Client (1740587962) connection to spark1/172.21.15.90:9000 from hadoop sending #13
+17/03/11 11:26:33 DEBUG Client: IPC Client (1740587962) connection to spark1/172.21.15.90:9000 from hadoop got value #13
+17/03/11 11:26:33 DEBUG ProtobufRpcEngine: Call: renewLease took 5ms
+17/03/11 11:26:33 DEBUG LeaseRenewer: Lease renewed for client DFSClient_NONMAPREDUCE_-595668945_1
+17/03/11 11:26:33 DEBUG LeaseRenewer: Lease renewer daemon for [DFSClient_NONMAPREDUCE_-595668945_1] with renew id 1 executed
+[Stage 4:===============>                                         (11 + 4) / 40][Stage 4:=================>                                       (12 + 4) / 40][Stage 4:==================>                                      (13 + 4) / 40][Stage 4:===================>                                     (14 + 4) / 40][Stage 4:=====================>                                   (15 + 4) / 40][Stage 4:======================>                                  (16 + 4) / 40][Stage 4:========================>                                (17 + 4) / 40][Stage 4:=========================>                               (18 + 4) / 40][Stage 4:===========================>                             (19 + 4) / 40][Stage 4:============================>                            (20 + 4) / 40][Stage 4:=============================>                           (21 + 4) / 40][Stage 4:================================>                        (23 + 4) / 40][Stage 4:===================================>                     (25 + 4) / 40][Stage 4:=====================================>                   (26 + 4) / 40][Stage 4:======================================>                  (27 + 4) / 40][Stage 4:=======================================>                 (28 + 4) / 40][Stage 4:==========================================>              (30 + 4) / 40]17/03/11 11:26:43 DEBUG Client: IPC Client (1740587962) connection to spark1/172.21.15.90:9000 from hadoop: closed
+17/03/11 11:26:43 DEBUG Client: IPC Client (1740587962) connection to spark1/172.21.15.90:9000 from hadoop: stopped, remaining connections 0
+[Stage 4:============================================>            (31 + 4) / 40][Stage 4:=============================================>           (32 + 4) / 40][Stage 4:===============================================>         (33 + 4) / 40]17/03/11 11:26:45 DEBUG DFSClient: DFSClient writeChunk allocating new packet seqno=12, src=/eventLogs/app-20170311112332-0040.lz4.inprogress, packetSize=65016, chunksPerPacket=126, bytesCurBlock=79360
+[Stage 4:=================================================>       (35 + 4) / 40][Stage 4:===================================================>     (36 + 4) / 40][Stage 4:======================================================>  (38 + 2) / 40]17/03/11 11:26:46 DEBUG DFSClient: DFSClient flush(): bytesCurBlock=97570 lastFlushOffset=79488 createNewBlock=false
+17/03/11 11:26:46 DEBUG DFSClient: Queued packet 12
+17/03/11 11:26:46 DEBUG DFSClient: Waiting for ack for: 12
+17/03/11 11:26:46 DEBUG DFSClient: DataStreamer block BP-519507147-172.21.15.90-1479901973323:blk_1073808040_67217 sending packet packet seqno: 12 offsetInBlock: 79360 lastPacketInBlock: false lastByteOffsetInBlock: 97570
+17/03/11 11:26:46 DEBUG DFSClient: DFSClient seqno: 12 reply: SUCCESS downstreamAckTimeNanos: 0 flag: 0
+17/03/11 11:26:47 DEBUG DFSClient: DFSClient writeChunk allocating new packet seqno=13, src=/eventLogs/app-20170311112332-0040.lz4.inprogress, packetSize=65016, chunksPerPacket=126, bytesCurBlock=97280
+                                                                                Finished iteration (num = 1)
+17/03/11 11:26:47 DEBUG DFSClient: DFSClient flush(): bytesCurBlock=111946 lastFlushOffset=97570 createNewBlock=false
+17/03/11 11:26:47 DEBUG DFSClient: Queued packet 13
+17/03/11 11:26:47 DEBUG DFSClient: Waiting for ack for: 13
+17/03/11 11:26:47 DEBUG DFSClient: DataStreamer block BP-519507147-172.21.15.90-1479901973323:blk_1073808040_67217 sending packet packet seqno: 13 offsetInBlock: 97280 lastPacketInBlock: false lastByteOffsetInBlock: 111946
+17/03/11 11:26:47 DEBUG DFSClient: DFSClient seqno: 13 reply: SUCCESS downstreamAckTimeNanos: 0 flag: 0
+17/03/11 11:26:47 DEBUG DFSClient: DFSClient writeChunk allocating new packet seqno=14, src=/eventLogs/app-20170311112332-0040.lz4.inprogress, packetSize=65016, chunksPerPacket=126, bytesCurBlock=111616
+17/03/11 11:26:47 DEBUG DFSClient: DFSClient flush(): bytesCurBlock=111946 lastFlushOffset=111946 createNewBlock=false
+17/03/11 11:26:47 DEBUG DFSClient: Waiting for ack for: 13
+17/03/11 11:26:47 DEBUG DFSClient: DFSClient writeChunk allocating new packet seqno=15, src=/eventLogs/app-20170311112332-0040.lz4.inprogress, packetSize=65016, chunksPerPacket=126, bytesCurBlock=111616
+17/03/11 11:26:47 DEBUG DFSClient: DFSClient flush(): bytesCurBlock=115781 lastFlushOffset=111946 createNewBlock=false
+17/03/11 11:26:47 DEBUG DFSClient: Queued packet 15
+17/03/11 11:26:47 DEBUG DFSClient: Waiting for ack for: 15
+17/03/11 11:26:47 DEBUG DFSClient: DataStreamer block BP-519507147-172.21.15.90-1479901973323:blk_1073808040_67217 sending packet packet seqno: 15 offsetInBlock: 111616 lastPacketInBlock: false lastByteOffsetInBlock: 115781
+17/03/11 11:26:47 DEBUG DFSClient: DFSClient seqno: 15 reply: SUCCESS downstreamAckTimeNanos: 0 flag: 0
+[Stage 6:>                                                         (0 + 4) / 40][Stage 6:=====>                                                    (4 + 4) / 40][Stage 6:=======>                                                  (5 + 4) / 40][Stage 6:========>                                                 (6 + 4) / 40][Stage 6:==========>                                               (7 + 4) / 40][Stage 6:===========>                                              (8 + 4) / 40][Stage 6:=============>                                            (9 + 4) / 40][Stage 6:===============>                                         (11 + 4) / 40][Stage 6:=================>                                       (12 + 4) / 40][Stage 6:===================>                                     (14 + 4) / 40][Stage 6:=====================>                                   (15 + 4) / 40][Stage 6:======================>                                  (16 + 4) / 40][Stage 6:=========================>                               (18 + 4) / 40][Stage 6:============================>                            (20 + 4) / 40][Stage 6:=============================>                           (21 + 4) / 40][Stage 6:===============================>                         (22 + 4) / 40][Stage 6:================================>                        (23 + 4) / 40][Stage 6:==================================>                      (24 + 4) / 40][Stage 6:===================================>                     (25 + 4) / 40][Stage 6:=====================================>                   (26 + 4) / 40][Stage 6:======================================>                  (27 + 4) / 40][Stage 6:=========================================>               (29 + 4) / 40][Stage 6:==========================================>              (30 + 4) / 40][Stage 6:============================================>            (31 + 4) / 40]17/03/11 11:27:03 DEBUG Client: The ping interval is 60000 ms.
+17/03/11 11:27:03 DEBUG Client: Connecting to spark1/172.21.15.90:9000
+17/03/11 11:27:03 DEBUG Client: IPC Client (1740587962) connection to spark1/172.21.15.90:9000 from hadoop: starting, having connections 1
+17/03/11 11:27:03 DEBUG Client: IPC Client (1740587962) connection to spark1/172.21.15.90:9000 from hadoop sending #14
+17/03/11 11:27:03 DEBUG Client: IPC Client (1740587962) connection to spark1/172.21.15.90:9000 from hadoop got value #14
+17/03/11 11:27:03 DEBUG ProtobufRpcEngine: Call: renewLease took 8ms
+17/03/11 11:27:03 DEBUG LeaseRenewer: Lease renewed for client DFSClient_NONMAPREDUCE_-595668945_1
+17/03/11 11:27:03 DEBUG LeaseRenewer: Lease renewer daemon for [DFSClient_NONMAPREDUCE_-595668945_1] with renew id 1 executed
+[Stage 6:===============================================>         (33 + 4) / 40][Stage 6:================================================>        (34 + 4) / 40]17/03/11 11:27:04 DEBUG DFSClient: DFSClient writeChunk allocating new packet seqno=16, src=/eventLogs/app-20170311112332-0040.lz4.inprogress, packetSize=65016, chunksPerPacket=126, bytesCurBlock=115712
+[Stage 6:=================================================>       (35 + 4) / 40][Stage 6:===================================================>     (36 + 4) / 40][Stage 6:====================================================>    (37 + 3) / 40][Stage 6:======================================================>  (38 + 2) / 40][Stage 6:=======================================================> (39 + 1) / 40]17/03/11 11:27:06 DEBUG DFSClient: DFSClient flush(): bytesCurBlock=134494 lastFlushOffset=115781 createNewBlock=false
+17/03/11 11:27:06 DEBUG DFSClient: Queued packet 16
+17/03/11 11:27:06 DEBUG DFSClient: Waiting for ack for: 16
+17/03/11 11:27:06 DEBUG DFSClient: DataStreamer block BP-519507147-172.21.15.90-1479901973323:blk_1073808040_67217 sending packet packet seqno: 16 offsetInBlock: 115712 lastPacketInBlock: false lastByteOffsetInBlock: 134494
+17/03/11 11:27:06 DEBUG DFSClient: DFSClient seqno: 16 reply: SUCCESS downstreamAckTimeNanos: 0 flag: 0
+17/03/11 11:27:06 DEBUG DFSClient: DFSClient writeChunk allocating new packet seqno=17, src=/eventLogs/app-20170311112332-0040.lz4.inprogress, packetSize=65016, chunksPerPacket=126, bytesCurBlock=134144
+                                                                                Finished iteration (num = 2)
+17/03/11 11:27:06 DEBUG DFSClient: DFSClient flush(): bytesCurBlock=147694 lastFlushOffset=134494 createNewBlock=false
+17/03/11 11:27:06 DEBUG DFSClient: Queued packet 17
+17/03/11 11:27:06 DEBUG DFSClient: Waiting for ack for: 17
+17/03/11 11:27:06 DEBUG DFSClient: DataStreamer block BP-519507147-172.21.15.90-1479901973323:blk_1073808040_67217 sending packet packet seqno: 17 offsetInBlock: 134144 lastPacketInBlock: false lastByteOffsetInBlock: 147694
+17/03/11 11:27:06 DEBUG DFSClient: DFSClient seqno: 17 reply: SUCCESS downstreamAckTimeNanos: 0 flag: 0
+17/03/11 11:27:06 DEBUG DFSClient: DFSClient writeChunk allocating new packet seqno=18, src=/eventLogs/app-20170311112332-0040.lz4.inprogress, packetSize=65016, chunksPerPacket=126, bytesCurBlock=147456
+17/03/11 11:27:06 DEBUG DFSClient: DFSClient flush(): bytesCurBlock=147694 lastFlushOffset=147694 createNewBlock=false
+17/03/11 11:27:06 DEBUG DFSClient: Waiting for ack for: 17
+17/03/11 11:27:06 DEBUG DFSClient: DFSClient writeChunk allocating new packet seqno=19, src=/eventLogs/app-20170311112332-0040.lz4.inprogress, packetSize=65016, chunksPerPacket=126, bytesCurBlock=147456
+17/03/11 11:27:06 DEBUG DFSClient: DFSClient flush(): bytesCurBlock=147694 lastFlushOffset=147694 createNewBlock=false
+17/03/11 11:27:06 DEBUG DFSClient: Waiting for ack for: 17
+[Stage 8:>                                                         (0 + 4) / 40][Stage 8:=====>                                                    (4 + 4) / 40][Stage 8:=======>                                                  (5 + 4) / 40][Stage 8:==========>                                               (7 + 4) / 40][Stage 8:===========>                                              (8 + 4) / 40][Stage 8:==============>                                          (10 + 4) / 40][Stage 8:==============>                                          (10 + 5) / 40][Stage 8:===============>                                         (11 + 4) / 40][Stage 8:==================>                                      (13 + 4) / 40][Stage 8:===================>                                     (14 + 4) / 40]17/03/11 11:27:13 DEBUG Client: IPC Client (1740587962) connection to spark1/172.21.15.90:9000 from hadoop: closed
+17/03/11 11:27:13 DEBUG Client: IPC Client (1740587962) connection to spark1/172.21.15.90:9000 from hadoop: stopped, remaining connections 0
+[Stage 8:=====================>                                   (15 + 4) / 40][Stage 8:======================>                                  (16 + 4) / 40][Stage 8:========================>                                (17 + 4) / 40][Stage 8:=========================>                               (18 + 4) / 40][Stage 8:===========================>                             (19 + 4) / 40][Stage 8:============================>                            (20 + 4) / 40][Stage 8:=============================>                           (21 + 4) / 40][Stage 8:===============================>                         (22 + 4) / 40][Stage 8:================================>                        (23 + 4) / 40][Stage 8:==================================>                      (24 + 4) / 40][Stage 8:===================================>                     (25 + 4) / 40][Stage 8:=====================================>                   (26 + 4) / 40][Stage 8:======================================>                  (27 + 4) / 40][Stage 8:=======================================>                 (28 + 4) / 40][Stage 8:==========================================>              (30 + 4) / 40][Stage 8:============================================>            (31 + 4) / 40][Stage 8:=============================================>           (32 + 4) / 40][Stage 8:================================================>        (34 + 4) / 40]17/03/11 11:27:22 DEBUG DFSClient: DFSClient writeChunk allocating new packet seqno=20, src=/eventLogs/app-20170311112332-0040.lz4.inprogress, packetSize=65016, chunksPerPacket=126, bytesCurBlock=147456
+[Stage 8:=================================================>       (35 + 4) / 40][Stage 8:====================================================>    (37 + 3) / 40][Stage 8:======================================================>  (38 + 2) / 40]17/03/11 11:27:23 DEBUG DFSClient: DFSClient flush(): bytesCurBlock=166084 lastFlushOffset=147694 createNewBlock=false
+17/03/11 11:27:23 DEBUG DFSClient: Queued packet 20
+17/03/11 11:27:23 DEBUG DFSClient: Waiting for ack for: 20
+17/03/11 11:27:23 DEBUG DFSClient: DataStreamer block BP-519507147-172.21.15.90-1479901973323:blk_1073808040_67217 sending packet packet seqno: 20 offsetInBlock: 147456 lastPacketInBlock: false lastByteOffsetInBlock: 166084
+17/03/11 11:27:24 DEBUG DFSClient: DFSClient seqno: 20 reply: SUCCESS downstreamAckTimeNanos: 0 flag: 0
+17/03/11 11:27:24 DEBUG DFSClient: DFSClient writeChunk allocating new packet seqno=21, src=/eventLogs/app-20170311112332-0040.lz4.inprogress, packetSize=65016, chunksPerPacket=126, bytesCurBlock=165888
+                                                                                Finished iteration (num = 3)
+17/03/11 11:27:24 DEBUG DFSClient: DFSClient flush(): bytesCurBlock=179988 lastFlushOffset=166084 createNewBlock=false
+17/03/11 11:27:24 DEBUG DFSClient: Queued packet 21
+17/03/11 11:27:24 DEBUG DFSClient: Waiting for ack for: 21
+17/03/11 11:27:24 DEBUG DFSClient: DataStreamer block BP-519507147-172.21.15.90-1479901973323:blk_1073808040_67217 sending packet packet seqno: 21 offsetInBlock: 165888 lastPacketInBlock: false lastByteOffsetInBlock: 179988
+17/03/11 11:27:24 DEBUG DFSClient: DFSClient seqno: 21 reply: SUCCESS downstreamAckTimeNanos: 0 flag: 0
+17/03/11 11:27:24 DEBUG DFSClient: DFSClient writeChunk allocating new packet seqno=22, src=/eventLogs/app-20170311112332-0040.lz4.inprogress, packetSize=65016, chunksPerPacket=126, bytesCurBlock=179712
+17/03/11 11:27:24 DEBUG DFSClient: DFSClient flush(): bytesCurBlock=179988 lastFlushOffset=179988 createNewBlock=false
+17/03/11 11:27:24 DEBUG DFSClient: Waiting for ack for: 21
+17/03/11 11:27:24 DEBUG DFSClient: DFSClient writeChunk allocating new packet seqno=23, src=/eventLogs/app-20170311112332-0040.lz4.inprogress, packetSize=65016, chunksPerPacket=126, bytesCurBlock=179712
+17/03/11 11:27:24 DEBUG DFSClient: DFSClient flush(): bytesCurBlock=179988 lastFlushOffset=179988 createNewBlock=false
+17/03/11 11:27:24 DEBUG DFSClient: Waiting for ack for: 21
+[Stage 10:>                                                        (0 + 4) / 40][Stage 10:=====>                                                   (4 + 4) / 40][Stage 10:=======>                                                 (5 + 4) / 40][Stage 10:========>                                                (6 + 4) / 40][Stage 10:=========>                                               (7 + 4) / 40][Stage 10:============>                                            (9 + 4) / 40][Stage 10:==============>                                         (10 + 4) / 40][Stage 10:==================>                                     (13 + 4) / 40][Stage 10:===================>                                    (14 + 4) / 40][Stage 10:=====================>                                  (15 + 4) / 40][Stage 10:======================>                                 (16 + 4) / 40][Stage 10:=======================>                                (17 + 4) / 40][Stage 10:=========================>                              (18 + 4) / 40][Stage 10:==========================>                             (19 + 4) / 40]17/03/11 11:27:33 DEBUG Client: The ping interval is 60000 ms.
+17/03/11 11:27:33 DEBUG Client: Connecting to spark1/172.21.15.90:9000
+17/03/11 11:27:33 DEBUG Client: IPC Client (1740587962) connection to spark1/172.21.15.90:9000 from hadoop: starting, having connections 1
+17/03/11 11:27:33 DEBUG Client: IPC Client (1740587962) connection to spark1/172.21.15.90:9000 from hadoop sending #15
+17/03/11 11:27:33 DEBUG Client: IPC Client (1740587962) connection to spark1/172.21.15.90:9000 from hadoop got value #15
+17/03/11 11:27:33 DEBUG ProtobufRpcEngine: Call: renewLease took 8ms
+17/03/11 11:27:33 DEBUG LeaseRenewer: Lease renewed for client DFSClient_NONMAPREDUCE_-595668945_1
+17/03/11 11:27:33 DEBUG LeaseRenewer: Lease renewer daemon for [DFSClient_NONMAPREDUCE_-595668945_1] with renew id 1 executed
+[Stage 10:============================>                           (20 + 4) / 40][Stage 10:=============================>                          (21 + 4) / 40][Stage 10:==============================>                         (22 + 4) / 40][Stage 10:================================>                       (23 + 4) / 40][Stage 10:=================================>                      (24 + 4) / 40][Stage 10:===================================>                    (25 + 4) / 40][Stage 10:====================================>                   (26 + 4) / 40][Stage 10:=====================================>                  (27 + 4) / 40][Stage 10:=======================================>                (28 + 4) / 40][Stage 10:========================================>               (29 + 4) / 40][Stage 10:==========================================>             (30 + 4) / 40][Stage 10:===========================================>            (31 + 4) / 40][Stage 10:============================================>           (32 + 4) / 40][Stage 10:==============================================>         (33 + 4) / 40][Stage 10:===============================================>        (34 + 4) / 40]17/03/11 11:27:40 DEBUG DFSClient: DFSClient writeChunk allocating new packet seqno=24, src=/eventLogs/app-20170311112332-0040.lz4.inprogress, packetSize=65016, chunksPerPacket=126, bytesCurBlock=179712
+[Stage 10:=================================================>      (35 + 4) / 40][Stage 10:==================================================>     (36 + 4) / 40][Stage 10:=====================================================>  (38 + 2) / 40][Stage 10:======================================================> (39 + 1) / 40]17/03/11 11:27:41 DEBUG DFSClient: DFSClient flush(): bytesCurBlock=197706 lastFlushOffset=179988 createNewBlock=false
+17/03/11 11:27:41 DEBUG DFSClient: Queued packet 24
+17/03/11 11:27:41 DEBUG DFSClient: Waiting for ack for: 24
+17/03/11 11:27:41 DEBUG DFSClient: DataStreamer block BP-519507147-172.21.15.90-1479901973323:blk_1073808040_67217 sending packet packet seqno: 24 offsetInBlock: 179712 lastPacketInBlock: false lastByteOffsetInBlock: 197706
+17/03/11 11:27:41 DEBUG DFSClient: DFSClient seqno: 24 reply: SUCCESS downstreamAckTimeNanos: 0 flag: 0
+17/03/11 11:27:42 DEBUG DFSClient: DFSClient writeChunk allocating new packet seqno=25, src=/eventLogs/app-20170311112332-0040.lz4.inprogress, packetSize=65016, chunksPerPacket=126, bytesCurBlock=197632
+                                                                                Finished iteration (num = 4)
+=====================Final centers:=================================
+17/03/11 11:27:42 DEBUG DFSClient: DFSClient flush(): bytesCurBlock=212145 lastFlushOffset=197706 createNewBlock=false
+17/03/11 11:27:42 DEBUG DFSClient: Queued packet 25
+17/03/11 11:27:42 DEBUG DFSClient: Waiting for ack for: 25
+17/03/11 11:27:42 DEBUG DFSClient: DataStreamer block BP-519507147-172.21.15.90-1479901973323:blk_1073808040_67217 sending packet packet seqno: 25 offsetInBlock: 197632 lastPacketInBlock: false lastByteOffsetInBlock: 212145
+DenseVector(-0.03582533070787733, -0.3094370868800226, 0.21641827910663408, -0.6975428984925509, -0.44161550737407396, 1.693938675206918, 0.15596413743911425, 1.0979161713389325, 0.2804199935380899, 0.6047267105007786, 0.5285052659412045, -0.32898601610193506, -1.4895844680222514, -0.004293654171167557, 0.08252139089529034, -0.5796558779983054, -1.397702141868325, 1.0093441208576486, 0.3743281541626222, 1.0131346110297568)
+DenseVector(0.6563257361469611, 0.4640356628160609, -0.6045851621613495, -0.9106576166635668, -0.20527108598158636, 0.29589032303971213, -0.4873743915410014, -0.7049740545399591, -0.20644035247425122, 0.8478744156247046, 0.2482868692472067, 0.011587654435519713, 0.86190694230863, -0.3288956503585191, -0.6374814339480712, 0.4066088040782089, -0.17722263060357224, 0.6027836298668952, -0.6569075778827047, 0.007280401484857327)
+DenseVector(0.3260043371722747, -0.3161668055717745, -0.203314002956849, -0.7569098952416875, -0.882731060715955, -0.5176647697404673, -0.1489168699588064, 0.2496358417654174, 0.21529820980039485, 0.3044082078950654, -0.5035524007934854, 0.3756786405834063, 0.28580246152196837, -0.4768454019749634, 0.635243135694616, 0.3299099615767863, 0.5704486184116265, 0.6469754146792005, 0.3720284917508279, -0.9208055979455866)
+DenseVector(1.3612976220792148, -0.3745762876774112, -1.210666419368506, 0.18741596894461143, 0.1519932886559461, -0.5577043240879064, -0.01698727022740338, -0.3002323445423692, -0.40693148598336354, -0.027498877306809395, 0.9979359815821572, -0.6833112432013102, 0.38430211372458145, -0.06600982946022631, 0.36576419261256643, 0.8235640045118748, 0.5410493198776307, 0.18363486150019304, 0.5658284233334322, -0.43052430985049656)
+DenseVector(-0.31132801955287476, -1.084676950670932, -0.06395209068122504, -0.5411686051174976, 0.35030238736643937, 0.31393508007226, -0.6495340242656084, 1.2381524361383367, 0.33916437833238006, -0.4654373746796249, 0.8903290165169855, -1.2659688866036662, -0.15878527955836863, 0.47908119330715315, 0.6318600443271073, -0.8278792679507989, -0.12038737504363863, 0.5185636270817876, -0.2835889827734602, 0.5010513208340647)
+DenseVector(0.14328562332334324, 0.5560883124952674, 0.8705713071564992, -0.8570542900945773, -1.1779967222537766, 0.817237820225297, -0.31884585465249854, 0.4560101097397934, 0.927238179866158, 0.6712745794445707, -0.15635407362168452, -1.344473008882967, 0.2718429784017167, 0.3751911391329468, -0.45526555192365253, 0.7656956917138499, 1.0890304135176967, 0.07165499453924062, 0.7976651328637876, -0.3506859828498295)
+17/03/11 11:27:42 DEBUG DFSClient: DFSClient seqno: 25 reply: SUCCESS downstreamAckTimeNanos: 0 flag: 0
+DenseVector(0.276083705512601, 0.7579407701479164, 0.428561560577835, -0.0687289290010531, 0.3391172816180782, 0.6324517739549405, 1.0587370943525114, 0.7066678285554161, 0.39806645269013313, 0.8668005873111134, -0.11855181363416553, -0.3405174861618087, 0.03897473050054056, -0.9405870408263286, 0.1072048577287321, 1.0334533499298117, 0.8056278669168636, -0.7587657390982523, 0.23038400914883236, 0.8230400896551753)
+DenseVector(0.9367150217928232, 0.2848847916847213, 0.2696405977737062, 0.8827272532597473, -0.16256538175208896, -0.04070082098249954, 0.7288667563052711, -0.21766474111348125, -0.11259481661379123, -1.0786886387044075, 0.8365094522440498, -0.8054323606934297, -1.1330424290927006, -0.5547912921405688, -1.5341507495494187, -0.9496600160748037, -0.06840838010476324, 0.7670463946989146, -0.16802103798694243, 0.15792547196058618)
+17/03/11 11:27:42 DEBUG DFSClient: DFSClient writeChunk allocating new packet seqno=26, src=/eventLogs/app-20170311112332-0040.lz4.inprogress, packetSize=65016, chunksPerPacket=126, bytesCurBlock=211968
+DenseVector(0.2175501829959181, -0.34565770228073656, -0.47652889887565913, 0.15109487925257728, 0.7945537842494237, 0.2696330367683941, -0.2707897260296966, 0.5955000185528216, 1.2965405316474934, -0.13601556840766668, -0.20550252384647535, -0.5330104723410785, 0.4152416240978661, -0.7269773779689286, 0.9923404446944818, -0.8768917607069407, 0.4119028361853968, 0.05935111153859168, 0.12909074564499207, 0.03709671024917075)
+17/03/11 11:27:42 DEBUG DFSClient: DFSClient flush(): bytesCurBlock=212145 lastFlushOffset=212145 createNewBlock=false
+DenseVector(0.0760361340388165, -0.7699040940226126, 1.0750868081101643, 0.2776874903055178, -0.2705377005104793, -1.202775115388707, 0.6788578790527903, -0.6465912931051199, 1.2085407541439297, 0.560551935208031, 0.8285188304925062, 1.740496184447741, -0.3048197508508809, -0.44212731258437027, 0.9338903305228909, -0.5306844473380546, -0.21257240404382488, -1.049040797601014, -0.32301228554003564, -1.5414074821110786)
+17/03/11 11:27:42 DEBUG DFSClient: Waiting for ack for: 25
+17/03/11 11:27:42 DEBUG DFSClient: DFSClient writeChunk allocating new packet seqno=27, src=/eventLogs/app-20170311112332-0040.lz4.inprogress, packetSize=65016, chunksPerPacket=126, bytesCurBlock=211968
+17/03/11 11:27:42 DEBUG DFSClient: DFSClient flush(): bytesCurBlock=212145 lastFlushOffset=212145 createNewBlock=false
+17/03/11 11:27:42 DEBUG DFSClient: Waiting for ack for: 25
+17/03/11 11:27:42 DEBUG DFSClient: DFSClient writeChunk allocating new packet seqno=28, src=/eventLogs/app-20170311112332-0040.lz4.inprogress, packetSize=65016, chunksPerPacket=126, bytesCurBlock=211968
+17/03/11 11:27:42 DEBUG DFSClient: Queued packet 28
+17/03/11 11:27:42 DEBUG DFSClient: Queued packet 29
+17/03/11 11:27:42 DEBUG DFSClient: Waiting for ack for: 29
+17/03/11 11:27:42 DEBUG DFSClient: DataStreamer block BP-519507147-172.21.15.90-1479901973323:blk_1073808040_67217 sending packet packet seqno: 28 offsetInBlock: 211968 lastPacketInBlock: false lastByteOffsetInBlock: 215827
+17/03/11 11:27:42 DEBUG DFSClient: DFSClient seqno: 28 reply: SUCCESS downstreamAckTimeNanos: 0 flag: 0
+17/03/11 11:27:42 DEBUG DFSClient: DataStreamer block BP-519507147-172.21.15.90-1479901973323:blk_1073808040_67217 sending packet packet seqno: 29 offsetInBlock: 215827 lastPacketInBlock: true lastByteOffsetInBlock: 215827
+17/03/11 11:27:42 DEBUG DFSClient: DFSClient seqno: 29 reply: SUCCESS downstreamAckTimeNanos: 0 flag: 0
+17/03/11 11:27:42 DEBUG DFSClient: Closing old block BP-519507147-172.21.15.90-1479901973323:blk_1073808040_67217
+17/03/11 11:27:42 DEBUG Client: IPC Client (1740587962) connection to spark1/172.21.15.90:9000 from hadoop sending #16
+17/03/11 11:27:42 DEBUG Client: IPC Client (1740587962) connection to spark1/172.21.15.90:9000 from hadoop got value #16
+17/03/11 11:27:42 DEBUG ProtobufRpcEngine: Call: complete took 11ms
+17/03/11 11:27:42 DEBUG Client: IPC Client (1740587962) connection to spark1/172.21.15.90:9000 from hadoop sending #17
+17/03/11 11:27:42 DEBUG Client: IPC Client (1740587962) connection to spark1/172.21.15.90:9000 from hadoop got value #17
+17/03/11 11:27:42 DEBUG ProtobufRpcEngine: Call: getFileInfo took 2ms
+17/03/11 11:27:42 DEBUG Client: IPC Client (1740587962) connection to spark1/172.21.15.90:9000 from hadoop sending #18
+17/03/11 11:27:42 DEBUG Client: IPC Client (1740587962) connection to spark1/172.21.15.90:9000 from hadoop got value #18
+17/03/11 11:27:42 DEBUG ProtobufRpcEngine: Call: rename took 6ms
+17/03/11 11:27:42 DEBUG Client: IPC Client (1740587962) connection to spark1/172.21.15.90:9000 from hadoop sending #19
+17/03/11 11:27:42 DEBUG Client: IPC Client (1740587962) connection to spark1/172.21.15.90:9000 from hadoop got value #19
+17/03/11 11:27:42 DEBUG ProtobufRpcEngine: Call: setTimes took 10ms
+17/03/11 11:27:42 DEBUG PoolThreadCache: Freed 6 thread-local buffer(s) from thread: rpc-server-3-2
+17/03/11 11:27:42 DEBUG Client: stopping client from cache: org.apache.hadoop.ipc.Client@4dabde1e
+17/03/11 11:27:42 DEBUG Client: removing client from cache: org.apache.hadoop.ipc.Client@4dabde1e
+17/03/11 11:27:42 DEBUG Client: stopping actual client because no more references remain: org.apache.hadoop.ipc.Client@4dabde1e
+17/03/11 11:27:42 DEBUG Client: Stopping client
+17/03/11 11:27:42 DEBUG Client: IPC Client (1740587962) connection to spark1/172.21.15.90:9000 from hadoop: closed
+17/03/11 11:27:42 DEBUG Client: IPC Client (1740587962) connection to spark1/172.21.15.90:9000 from hadoop: stopped, remaining connections 0

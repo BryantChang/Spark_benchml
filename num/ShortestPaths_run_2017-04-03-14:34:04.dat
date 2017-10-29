@@ -1,0 +1,843 @@
+17/04/03 14:34:04 WARN SparkContext: Support for Java 7 is deprecated as of Spark 2.0.0
+17/04/03 14:34:04 DEBUG MutableMetricsFactory: field org.apache.hadoop.metrics2.lib.MutableRate org.apache.hadoop.security.UserGroupInformation$UgiMetrics.loginSuccess with annotation @org.apache.hadoop.metrics2.annotation.Metric(value=[Rate of successful kerberos logins and latency (milliseconds)], valueName=Time, about=, type=DEFAULT, always=false, sampleName=Ops)
+17/04/03 14:34:04 DEBUG MutableMetricsFactory: field org.apache.hadoop.metrics2.lib.MutableRate org.apache.hadoop.security.UserGroupInformation$UgiMetrics.loginFailure with annotation @org.apache.hadoop.metrics2.annotation.Metric(value=[Rate of failed kerberos logins and latency (milliseconds)], valueName=Time, about=, type=DEFAULT, always=false, sampleName=Ops)
+17/04/03 14:34:04 DEBUG MutableMetricsFactory: field org.apache.hadoop.metrics2.lib.MutableRate org.apache.hadoop.security.UserGroupInformation$UgiMetrics.getGroups with annotation @org.apache.hadoop.metrics2.annotation.Metric(value=[GetGroups], valueName=Time, about=, type=DEFAULT, always=false, sampleName=Ops)
+17/04/03 14:34:04 DEBUG MetricsSystemImpl: UgiMetrics, User and group related metrics
+17/04/03 14:34:05 DEBUG Shell: setsid exited with exit code 0
+17/04/03 14:34:05 DEBUG Groups:  Creating new Groups object
+17/04/03 14:34:05 DEBUG NativeCodeLoader: Trying to load the custom-built native-hadoop library...
+17/04/03 14:34:05 DEBUG NativeCodeLoader: Failed to load native-hadoop with error: java.lang.UnsatisfiedLinkError: no hadoop in java.library.path
+17/04/03 14:34:05 DEBUG NativeCodeLoader: java.library.path=/usr/java/packages/lib/amd64:/usr/lib64:/lib64:/lib:/usr/lib
+17/04/03 14:34:05 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+17/04/03 14:34:05 DEBUG PerformanceAdvisory: Falling back to shell based
+17/04/03 14:34:05 DEBUG JniBasedUnixGroupsMappingWithFallback: Group mapping impl=org.apache.hadoop.security.ShellBasedUnixGroupsMapping
+17/04/03 14:34:05 DEBUG Groups: Group mapping impl=org.apache.hadoop.security.JniBasedUnixGroupsMappingWithFallback; cacheTimeout=300000; warningDeltaMs=5000
+17/04/03 14:34:05 DEBUG UserGroupInformation: hadoop login
+17/04/03 14:34:05 DEBUG UserGroupInformation: hadoop login commit
+17/04/03 14:34:05 DEBUG UserGroupInformation: using local user:UnixPrincipal: hadoop
+17/04/03 14:34:05 DEBUG UserGroupInformation: Using user: "UnixPrincipal: hadoop" with name hadoop
+17/04/03 14:34:05 DEBUG UserGroupInformation: User entry: "hadoop"
+17/04/03 14:34:05 DEBUG UserGroupInformation: UGI loginUser:hadoop (auth:SIMPLE)
+17/04/03 14:34:05 WARN SparkConf: Detected deprecated memory fraction settings: [spark.shuffle.memoryFraction, spark.storage.memoryFraction, spark.storage.unrollFraction]. As of Spark 1.6, execution and storage memory management are unified. All memory fractions used in the old model are now deprecated and no longer read. If you wish to use the old memory management, you may explicitly enable `spark.memory.useLegacyMode` (not recommended).
+17/04/03 14:34:05 WARN SparkConf: 
+SPARK_CLASSPATH was detected (set to '/home/hadoop/bryantchang/platforms/spark2.0/lib/mysql-connector-java-5.1.40-bin.jar:').
+This is deprecated in Spark 1.0+.
+
+Please instead use:
+ - ./spark-submit with --driver-class-path to augment the driver classpath
+ - spark.executor.extraClassPath to augment the executor classpath
+        
+17/04/03 14:34:05 WARN SparkConf: Setting 'spark.executor.extraClassPath' to '/home/hadoop/bryantchang/platforms/spark2.0/lib/mysql-connector-java-5.1.40-bin.jar:' as a work-around.
+17/04/03 14:34:05 WARN SparkConf: Setting 'spark.driver.extraClassPath' to '/home/hadoop/bryantchang/platforms/spark2.0/lib/mysql-connector-java-5.1.40-bin.jar:' as a work-around.
+17/04/03 14:34:05 DEBUG InternalLoggerFactory: Using SLF4J as the default logging framework
+17/04/03 14:34:05 DEBUG PlatformDependent0: java.nio.Buffer.address: available
+17/04/03 14:34:05 DEBUG PlatformDependent0: sun.misc.Unsafe.theUnsafe: available
+17/04/03 14:34:05 DEBUG PlatformDependent0: sun.misc.Unsafe.copyMemory: available
+17/04/03 14:34:05 DEBUG PlatformDependent0: direct buffer constructor: available
+17/04/03 14:34:05 DEBUG PlatformDependent0: java.nio.Bits.unaligned: available, true
+17/04/03 14:34:05 DEBUG PlatformDependent0: java.nio.DirectByteBuffer.<init>(long, int): available
+17/04/03 14:34:05 DEBUG Cleaner0: java.nio.ByteBuffer.cleaner(): available
+17/04/03 14:34:05 DEBUG PlatformDependent: Java version: 7
+17/04/03 14:34:05 DEBUG PlatformDependent: -Dio.netty.noUnsafe: false
+17/04/03 14:34:05 DEBUG PlatformDependent: sun.misc.Unsafe: available
+17/04/03 14:34:05 DEBUG PlatformDependent: -Dio.netty.noJavassist: false
+17/04/03 14:34:05 DEBUG PlatformDependent: Javassist: available
+17/04/03 14:34:05 DEBUG PlatformDependent: -Dio.netty.tmpdir: /tmp (java.io.tmpdir)
+17/04/03 14:34:05 DEBUG PlatformDependent: -Dio.netty.bitMode: 64 (sun.arch.data.model)
+17/04/03 14:34:05 DEBUG PlatformDependent: -Dio.netty.noPreferDirect: false
+17/04/03 14:34:05 DEBUG PlatformDependent: io.netty.maxDirectMemory: 1342177280 bytes
+17/04/03 14:34:05 DEBUG JavassistTypeParameterMatcherGenerator: Generated: io.netty.util.internal.__matchers__.org.apache.spark.network.protocol.MessageMatcher
+17/04/03 14:34:05 DEBUG JavassistTypeParameterMatcherGenerator: Generated: io.netty.util.internal.__matchers__.io.netty.buffer.ByteBufMatcher
+17/04/03 14:34:05 DEBUG MultithreadEventLoopGroup: -Dio.netty.eventLoopThreads: 8
+17/04/03 14:34:05 DEBUG NioEventLoop: -Dio.netty.noKeySetOptimization: false
+17/04/03 14:34:05 DEBUG NioEventLoop: -Dio.netty.selectorAutoRebuildThreshold: 512
+17/04/03 14:34:05 DEBUG PlatformDependent: org.jctools-core.MpscChunkedArrayQueue: available
+17/04/03 14:34:05 DEBUG PooledByteBufAllocator: -Dio.netty.allocator.numHeapArenas: 8
+17/04/03 14:34:05 DEBUG PooledByteBufAllocator: -Dio.netty.allocator.numDirectArenas: 8
+17/04/03 14:34:05 DEBUG PooledByteBufAllocator: -Dio.netty.allocator.pageSize: 8192
+17/04/03 14:34:05 DEBUG PooledByteBufAllocator: -Dio.netty.allocator.maxOrder: 11
+17/04/03 14:34:05 DEBUG PooledByteBufAllocator: -Dio.netty.allocator.chunkSize: 16777216
+17/04/03 14:34:05 DEBUG PooledByteBufAllocator: -Dio.netty.allocator.tinyCacheSize: 512
+17/04/03 14:34:05 DEBUG PooledByteBufAllocator: -Dio.netty.allocator.smallCacheSize: 256
+17/04/03 14:34:05 DEBUG PooledByteBufAllocator: -Dio.netty.allocator.normalCacheSize: 64
+17/04/03 14:34:05 DEBUG PooledByteBufAllocator: -Dio.netty.allocator.maxCachedBufferCapacity: 32768
+17/04/03 14:34:05 DEBUG PooledByteBufAllocator: -Dio.netty.allocator.cacheTrimInterval: 8192
+17/04/03 14:34:05 DEBUG ThreadLocalRandom: -Dio.netty.initialSeedUniquifier: 0x1aa8857c9f6b41db (took 0 ms)
+17/04/03 14:34:05 DEBUG ByteBufUtil: -Dio.netty.allocator.type: unpooled
+17/04/03 14:34:05 DEBUG ByteBufUtil: -Dio.netty.threadLocalDirectBufferSize: 65536
+17/04/03 14:34:05 DEBUG ByteBufUtil: -Dio.netty.maxThreadLocalCharBufferSize: 16384
+17/04/03 14:34:05 DEBUG NetUtil: Loopback interface: lo (lo, 0:0:0:0:0:0:0:1%1)
+17/04/03 14:34:05 DEBUG NetUtil: /proc/sys/net/core/somaxconn: 128
+17/04/03 14:34:05 DEBUG AbstractByteBuf: -Dio.netty.buffer.bytebuf.checkAccessible: true
+17/04/03 14:34:05 DEBUG ResourceLeakDetector: -Dio.netty.leakDetection.level: simple
+17/04/03 14:34:05 DEBUG ResourceLeakDetector: -Dio.netty.leakDetection.maxRecords: 4
+17/04/03 14:34:05 DEBUG ResourceLeakDetectorFactory: Loaded default ResourceLeakDetector: io.netty.util.ResourceLeakDetector@3d36315d
+17/04/03 14:34:05 DEBUG Recycler: -Dio.netty.recycler.maxCapacity.default: 32768
+17/04/03 14:34:05 DEBUG Recycler: -Dio.netty.recycler.maxSharedCapacityFactor: 2
+17/04/03 14:34:05 DEBUG Recycler: -Dio.netty.recycler.linkCapacity: 16
+17/04/03 14:34:05 DEBUG Recycler: -Dio.netty.recycler.ratio: 8
+17/04/03 14:34:06 DEBUG BlockReaderLocal: dfs.client.use.legacy.blockreader.local = false
+17/04/03 14:34:06 DEBUG BlockReaderLocal: dfs.client.read.shortcircuit = false
+17/04/03 14:34:06 DEBUG BlockReaderLocal: dfs.client.domain.socket.data.traffic = false
+17/04/03 14:34:06 DEBUG BlockReaderLocal: dfs.domain.socket.path = 
+17/04/03 14:34:06 DEBUG RetryUtils: multipleLinearRandomRetry = null
+17/04/03 14:34:06 DEBUG Server: rpcKind=RPC_PROTOCOL_BUFFER, rpcRequestWrapperClass=class org.apache.hadoop.ipc.ProtobufRpcEngine$RpcRequestWrapper, rpcInvoker=org.apache.hadoop.ipc.ProtobufRpcEngine$Server$ProtoBufRpcInvoker@60e5272b
+17/04/03 14:34:06 DEBUG Client: getting client out of cache: org.apache.hadoop.ipc.Client@1a43c7a0
+17/04/03 14:34:06 DEBUG PerformanceAdvisory: Both short-circuit local reads and UNIX domain socket are disabled.
+17/04/03 14:34:06 DEBUG DataTransferSaslUtil: DataTransferProtocol not using SaslPropertiesResolver, no QOP found in configuration for dfs.data.transfer.protection
+17/04/03 14:34:06 DEBUG Client: The ping interval is 60000 ms.
+17/04/03 14:34:06 DEBUG Client: Connecting to spark1/172.21.15.90:9000
+17/04/03 14:34:06 DEBUG Client: IPC Client (239305256) connection to spark1/172.21.15.90:9000 from hadoop: starting, having connections 1
+17/04/03 14:34:06 DEBUG Client: IPC Client (239305256) connection to spark1/172.21.15.90:9000 from hadoop sending #0
+17/04/03 14:34:06 DEBUG Client: IPC Client (239305256) connection to spark1/172.21.15.90:9000 from hadoop got value #0
+17/04/03 14:34:06 DEBUG ProtobufRpcEngine: Call: getFileInfo took 25ms
+17/04/03 14:34:06 DEBUG DFSClient: /eventLogs/app-20170403143405-0002.lz4.inprogress: masked=rw-r--r--
+17/04/03 14:34:06 DEBUG Client: IPC Client (239305256) connection to spark1/172.21.15.90:9000 from hadoop sending #1
+17/04/03 14:34:06 DEBUG Client: IPC Client (239305256) connection to spark1/172.21.15.90:9000 from hadoop got value #1
+17/04/03 14:34:06 DEBUG ProtobufRpcEngine: Call: create took 29ms
+17/04/03 14:34:06 DEBUG DFSClient: computePacketChunkSize: src=/eventLogs/app-20170403143405-0002.lz4.inprogress, chunkSize=516, chunksPerPacket=126, packetSize=65016
+17/04/03 14:34:06 DEBUG LeaseRenewer: Lease renewer daemon for [DFSClient_NONMAPREDUCE_611152811_1] with renew id 1 started
+17/04/03 14:34:06 DEBUG Client: IPC Client (239305256) connection to spark1/172.21.15.90:9000 from hadoop sending #2
+17/04/03 14:34:06 DEBUG Client: IPC Client (239305256) connection to spark1/172.21.15.90:9000 from hadoop got value #2
+17/04/03 14:34:06 DEBUG ProtobufRpcEngine: Call: setPermission took 4ms
+17/04/03 14:34:06 DEBUG DFSClient: DFSClient flush(): bytesCurBlock=0 lastFlushOffset=0 createNewBlock=false
+17/04/03 14:34:06 DEBUG DFSClient: Waiting for ack for: -1
+17/04/03 14:34:06 DEBUG DFSClient: DFSClient flush(): bytesCurBlock=0 lastFlushOffset=0 createNewBlock=false
+17/04/03 14:34:06 DEBUG DFSClient: Waiting for ack for: -1
+17/04/03 14:34:06 DEBUG Client: IPC Client (239305256) connection to spark1/172.21.15.90:9000 from hadoop sending #3
+17/04/03 14:34:06 DEBUG Client: IPC Client (239305256) connection to spark1/172.21.15.90:9000 from hadoop got value #3
+17/04/03 14:34:06 DEBUG ProtobufRpcEngine: Call: getFileInfo took 1ms
+17/04/03 14:34:06 DEBUG Client: IPC Client (239305256) connection to spark1/172.21.15.90:9000 from hadoop sending #4
+17/04/03 14:34:06 DEBUG Client: IPC Client (239305256) connection to spark1/172.21.15.90:9000 from hadoop got value #4
+17/04/03 14:34:06 DEBUG ProtobufRpcEngine: Call: getListing took 2ms
+17/04/03 14:34:06 DEBUG FileInputFormat: Time taken to get FileStatuses: 23
+17/04/03 14:34:06 INFO FileInputFormat: Total input paths to process : 10
+17/04/03 14:34:06 DEBUG FileInputFormat: Total # of splits generated by getSplits: 11, TimeTaken: 27
+17/04/03 14:34:07 DEBUG DFSClient: DFSClient flush(): bytesCurBlock=0 lastFlushOffset=0 createNewBlock=false
+17/04/03 14:34:07 DEBUG DFSClient: Waiting for ack for: -1
+17/04/03 14:34:07 DEBUG DFSClient: DFSClient writeChunk allocating new packet seqno=0, src=/eventLogs/app-20170403143405-0002.lz4.inprogress, packetSize=65016, chunksPerPacket=126, bytesCurBlock=0
+17/04/03 14:34:07 DEBUG DFSClient: DFSClient flush(): bytesCurBlock=6308 lastFlushOffset=0 createNewBlock=false
+17/04/03 14:34:07 DEBUG DFSClient: Queued packet 0
+17/04/03 14:34:07 DEBUG DFSClient: Waiting for ack for: 0
+17/04/03 14:34:07 DEBUG DFSClient: Allocating new block
+17/04/03 14:34:07 DEBUG Client: IPC Client (239305256) connection to spark1/172.21.15.90:9000 from hadoop sending #5
+17/04/03 14:34:07 DEBUG Client: IPC Client (239305256) connection to spark1/172.21.15.90:9000 from hadoop got value #5
+17/04/03 14:34:07 DEBUG ProtobufRpcEngine: Call: addBlock took 10ms
+17/04/03 14:34:07 DEBUG DFSClient: pipeline = DatanodeInfoWithStorage[172.21.15.173:50010,DS-bcd3842f-7acc-473a-9a24-360950418375,DISK]
+17/04/03 14:34:07 DEBUG DFSClient: Connecting to datanode 172.21.15.173:50010
+17/04/03 14:34:07 DEBUG DFSClient: Send buf size 124928
+17/04/03 14:34:07 DEBUG Client: IPC Client (239305256) connection to spark1/172.21.15.90:9000 from hadoop sending #6
+17/04/03 14:34:07 DEBUG Client: IPC Client (239305256) connection to spark1/172.21.15.90:9000 from hadoop got value #6
+17/04/03 14:34:07 DEBUG ProtobufRpcEngine: Call: getServerDefaults took 0ms
+17/04/03 14:34:07 DEBUG SaslDataTransferClient: SASL client skipping handshake in unsecured configuration for addr = /172.21.15.173, datanodeId = DatanodeInfoWithStorage[172.21.15.173:50010,DS-bcd3842f-7acc-473a-9a24-360950418375,DISK]
+17/04/03 14:34:07 DEBUG DFSClient: DataStreamer block BP-519507147-172.21.15.90-1479901973323:blk_1073812537_71715 sending packet packet seqno: 0 offsetInBlock: 0 lastPacketInBlock: false lastByteOffsetInBlock: 6308
+17/04/03 14:34:07 DEBUG DFSClient: DFSClient seqno: 0 reply: SUCCESS downstreamAckTimeNanos: 0 flag: 0
+17/04/03 14:34:07 DEBUG Client: IPC Client (239305256) connection to spark1/172.21.15.90:9000 from hadoop sending #7
+17/04/03 14:34:07 DEBUG Client: IPC Client (239305256) connection to spark1/172.21.15.90:9000 from hadoop got value #7
+17/04/03 14:34:07 DEBUG ProtobufRpcEngine: Call: fsync took 9ms
+17/04/03 14:34:07 DEBUG DFSClient: DFSClient writeChunk allocating new packet seqno=1, src=/eventLogs/app-20170403143405-0002.lz4.inprogress, packetSize=65016, chunksPerPacket=126, bytesCurBlock=6144
+17/04/03 14:34:07 DEBUG DFSClient: DFSClient flush(): bytesCurBlock=6308 lastFlushOffset=6308 createNewBlock=false
+17/04/03 14:34:07 DEBUG DFSClient: Waiting for ack for: 0
+17/04/03 14:34:07 DEBUG DFSClient: DFSClient writeChunk allocating new packet seqno=2, src=/eventLogs/app-20170403143405-0002.lz4.inprogress, packetSize=65016, chunksPerPacket=126, bytesCurBlock=6144
+17/04/03 14:34:07 DEBUG DFSClient: DFSClient flush(): bytesCurBlock=6308 lastFlushOffset=6308 createNewBlock=false
+17/04/03 14:34:07 DEBUG DFSClient: Waiting for ack for: 0
+17/04/03 14:34:07 DEBUG DFSClient: DFSClient writeChunk allocating new packet seqno=3, src=/eventLogs/app-20170403143405-0002.lz4.inprogress, packetSize=65016, chunksPerPacket=126, bytesCurBlock=6144
+17/04/03 14:34:07 DEBUG DFSClient: DFSClient flush(): bytesCurBlock=6308 lastFlushOffset=6308 createNewBlock=false
+17/04/03 14:34:07 DEBUG DFSClient: Waiting for ack for: 0
+[Stage 0:>                                                         (0 + 4) / 10]17/04/03 14:34:17 DEBUG Client: IPC Client (239305256) connection to spark1/172.21.15.90:9000 from hadoop: closed
+17/04/03 14:34:17 DEBUG Client: IPC Client (239305256) connection to spark1/172.21.15.90:9000 from hadoop: stopped, remaining connections 0
+[Stage 0:=====>                                                    (1 + 4) / 10][Stage 0:===========>                                              (2 + 4) / 10][Stage 0:=================>                                        (3 + 4) / 10][Stage 0:=======================>                                  (4 + 4) / 10]17/04/03 14:34:36 DEBUG Client: The ping interval is 60000 ms.
+17/04/03 14:34:36 DEBUG Client: Connecting to spark1/172.21.15.90:9000
+17/04/03 14:34:36 DEBUG Client: IPC Client (239305256) connection to spark1/172.21.15.90:9000 from hadoop: starting, having connections 1
+17/04/03 14:34:36 DEBUG Client: IPC Client (239305256) connection to spark1/172.21.15.90:9000 from hadoop sending #8
+17/04/03 14:34:36 DEBUG Client: IPC Client (239305256) connection to spark1/172.21.15.90:9000 from hadoop got value #8
+17/04/03 14:34:36 DEBUG ProtobufRpcEngine: Call: renewLease took 7ms
+17/04/03 14:34:36 DEBUG LeaseRenewer: Lease renewed for client DFSClient_NONMAPREDUCE_611152811_1
+17/04/03 14:34:36 DEBUG LeaseRenewer: Lease renewer daemon for [DFSClient_NONMAPREDUCE_611152811_1] with renew id 1 executed
+17/04/03 14:34:46 DEBUG Client: IPC Client (239305256) connection to spark1/172.21.15.90:9000 from hadoop: closed
+17/04/03 14:34:46 DEBUG Client: IPC Client (239305256) connection to spark1/172.21.15.90:9000 from hadoop: stopped, remaining connections 0
+17/04/03 14:34:50 WARN TaskSetManager: Lost task 4.0 in stage 0.0 (TID 4, 172.21.15.173, executor 0): java.lang.OutOfMemoryError: Java heap space
+	at scala.reflect.ManifestFactory$$anon$9.newArray(Manifest.scala:117)
+	at scala.reflect.ManifestFactory$$anon$9.newArray(Manifest.scala:115)
+	at org.apache.spark.graphx.impl.EdgePartitionBuilder$mcI$sp.toEdgePartition$mcI$sp(EdgePartitionBuilder.scala:43)
+	at org.apache.spark.graphx.GraphLoader$$anonfun$1.apply(GraphLoader.scala:92)
+	at org.apache.spark.graphx.GraphLoader$$anonfun$1.apply(GraphLoader.scala:75)
+	at org.apache.spark.rdd.RDD$$anonfun$mapPartitionsWithIndex$1$$anonfun$apply$26.apply(RDD.scala:845)
+	at org.apache.spark.rdd.RDD$$anonfun$mapPartitionsWithIndex$1$$anonfun$apply$26.apply(RDD.scala:845)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:38)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:323)
+	at org.apache.spark.rdd.RDD$$anonfun$8.apply(RDD.scala:338)
+	at org.apache.spark.rdd.RDD$$anonfun$8.apply(RDD.scala:336)
+	at org.apache.spark.storage.BlockManager$$anonfun$doPutIterator$1.apply(BlockManager.scala:958)
+	at org.apache.spark.storage.BlockManager$$anonfun$doPutIterator$1.apply(BlockManager.scala:949)
+	at org.apache.spark.storage.BlockManager.doPut(BlockManager.scala:889)
+	at org.apache.spark.storage.BlockManager.doPutIterator(BlockManager.scala:949)
+	at org.apache.spark.storage.BlockManager.getOrElseUpdate(BlockManager.scala:695)
+	at org.apache.spark.rdd.RDD.getOrCompute(RDD.scala:336)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:285)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:88)
+	at org.apache.spark.scheduler.Task.run(Task.scala:114)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:322)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+
+17/04/03 14:34:51 ERROR TaskSchedulerImpl: Lost executor 0 on 172.21.15.173: Remote RPC client disassociated. Likely due to containers exceeding thresholds, or network issues. Check driver logs for WARN messages.
+17/04/03 14:34:51 WARN TaskSetManager: Lost task 8.0 in stage 0.0 (TID 8, 172.21.15.173, executor 0): ExecutorLostFailure (executor 0 exited caused by one of the running tasks) Reason: Remote RPC client disassociated. Likely due to containers exceeding thresholds, or network issues. Check driver logs for WARN messages.
+17/04/03 14:34:51 WARN TaskSetManager: Lost task 6.0 in stage 0.0 (TID 6, 172.21.15.173, executor 0): ExecutorLostFailure (executor 0 exited caused by one of the running tasks) Reason: Remote RPC client disassociated. Likely due to containers exceeding thresholds, or network issues. Check driver logs for WARN messages.
+17/04/03 14:34:51 DEBUG DFSClient: DFSClient writeChunk allocating new packet seqno=4, src=/eventLogs/app-20170403143405-0002.lz4.inprogress, packetSize=65016, chunksPerPacket=126, bytesCurBlock=6144
+17/04/03 14:34:51 DEBUG DFSClient: DFSClient flush(): bytesCurBlock=11227 lastFlushOffset=6308 createNewBlock=false
+17/04/03 14:34:51 DEBUG DFSClient: Queued packet 4
+17/04/03 14:34:51 DEBUG DFSClient: Waiting for ack for: 4
+17/04/03 14:34:51 DEBUG DFSClient: DataStreamer block BP-519507147-172.21.15.90-1479901973323:blk_1073812537_71715 sending packet packet seqno: 4 offsetInBlock: 6144 lastPacketInBlock: false lastByteOffsetInBlock: 11227
+17/04/03 14:34:51 WARN DFSClient: Slow ReadProcessor read fields took 43710ms (threshold=30000ms); ack: seqno: 4 reply: SUCCESS downstreamAckTimeNanos: 0 flag: 0, targets: [DatanodeInfoWithStorage[172.21.15.173:50010,DS-bcd3842f-7acc-473a-9a24-360950418375,DISK]]
+17/04/03 14:34:51 DEBUG DFSClient: DFSClient writeChunk allocating new packet seqno=5, src=/eventLogs/app-20170403143405-0002.lz4.inprogress, packetSize=65016, chunksPerPacket=126, bytesCurBlock=10752
+17/04/03 14:34:51 DEBUG DFSClient: DFSClient flush(): bytesCurBlock=11227 lastFlushOffset=11227 createNewBlock=false
+17/04/03 14:34:51 DEBUG DFSClient: Waiting for ack for: 4
+[Stage 0:=======================>                                  (4 + 2) / 10]17/04/03 14:34:53 DEBUG DFSClient: DFSClient writeChunk allocating new packet seqno=6, src=/eventLogs/app-20170403143405-0002.lz4.inprogress, packetSize=65016, chunksPerPacket=126, bytesCurBlock=10752
+17/04/03 14:34:53 DEBUG DFSClient: DFSClient flush(): bytesCurBlock=11227 lastFlushOffset=11227 createNewBlock=false
+17/04/03 14:34:53 DEBUG DFSClient: Waiting for ack for: 4
+17/04/03 14:34:53 DEBUG DFSClient: DFSClient writeChunk allocating new packet seqno=7, src=/eventLogs/app-20170403143405-0002.lz4.inprogress, packetSize=65016, chunksPerPacket=126, bytesCurBlock=10752
+17/04/03 14:34:53 DEBUG DFSClient: DFSClient flush(): bytesCurBlock=11227 lastFlushOffset=11227 createNewBlock=false
+17/04/03 14:34:53 DEBUG DFSClient: Waiting for ack for: 4
+[Stage 0:=======================>                                  (4 + 4) / 10]17/04/03 14:35:06 DEBUG Client: The ping interval is 60000 ms.
+17/04/03 14:35:06 DEBUG Client: Connecting to spark1/172.21.15.90:9000
+17/04/03 14:35:06 DEBUG Client: IPC Client (239305256) connection to spark1/172.21.15.90:9000 from hadoop: starting, having connections 1
+17/04/03 14:35:06 DEBUG Client: IPC Client (239305256) connection to spark1/172.21.15.90:9000 from hadoop sending #9
+17/04/03 14:35:06 DEBUG Client: IPC Client (239305256) connection to spark1/172.21.15.90:9000 from hadoop got value #9
+17/04/03 14:35:06 DEBUG ProtobufRpcEngine: Call: renewLease took 7ms
+17/04/03 14:35:06 DEBUG LeaseRenewer: Lease renewed for client DFSClient_NONMAPREDUCE_611152811_1
+17/04/03 14:35:06 DEBUG LeaseRenewer: Lease renewer daemon for [DFSClient_NONMAPREDUCE_611152811_1] with renew id 1 executed
+17/04/03 14:35:08 WARN TaskSetManager: Lost task 7.0 in stage 0.0 (TID 7, 172.21.15.173, executor 1): java.lang.OutOfMemoryError: Java heap space
+	at org.apache.spark.graphx.Edge$$anon$2.allocate(Edge.scala:95)
+	at org.apache.spark.graphx.Edge$$anon$2.allocate(Edge.scala:71)
+	at org.apache.spark.util.collection.TimSort$SortState.ensureCapacity(TimSort.java:951)
+	at org.apache.spark.util.collection.TimSort$SortState.mergeHi(TimSort.java:819)
+	at org.apache.spark.util.collection.TimSort$SortState.mergeAt(TimSort.java:527)
+	at org.apache.spark.util.collection.TimSort$SortState.mergeCollapse(TimSort.java:453)
+	at org.apache.spark.util.collection.TimSort$SortState.access$200(TimSort.java:325)
+	at org.apache.spark.util.collection.TimSort.sort(TimSort.java:153)
+	at org.apache.spark.util.collection.Sorter.sort(Sorter.scala:37)
+	at org.apache.spark.graphx.impl.EdgePartitionBuilder$mcI$sp.toEdgePartition$mcI$sp(EdgePartitionBuilder.scala:40)
+	at org.apache.spark.graphx.GraphLoader$$anonfun$1.apply(GraphLoader.scala:92)
+	at org.apache.spark.graphx.GraphLoader$$anonfun$1.apply(GraphLoader.scala:75)
+	at org.apache.spark.rdd.RDD$$anonfun$mapPartitionsWithIndex$1$$anonfun$apply$26.apply(RDD.scala:845)
+	at org.apache.spark.rdd.RDD$$anonfun$mapPartitionsWithIndex$1$$anonfun$apply$26.apply(RDD.scala:845)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:38)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:323)
+	at org.apache.spark.rdd.RDD$$anonfun$8.apply(RDD.scala:338)
+	at org.apache.spark.rdd.RDD$$anonfun$8.apply(RDD.scala:336)
+	at org.apache.spark.storage.BlockManager$$anonfun$doPutIterator$1.apply(BlockManager.scala:958)
+	at org.apache.spark.storage.BlockManager$$anonfun$doPutIterator$1.apply(BlockManager.scala:949)
+	at org.apache.spark.storage.BlockManager.doPut(BlockManager.scala:889)
+	at org.apache.spark.storage.BlockManager.doPutIterator(BlockManager.scala:949)
+	at org.apache.spark.storage.BlockManager.getOrElseUpdate(BlockManager.scala:695)
+	at org.apache.spark.rdd.RDD.getOrCompute(RDD.scala:336)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:285)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:88)
+	at org.apache.spark.scheduler.Task.run(Task.scala:114)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:322)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+
+17/04/03 14:35:09 ERROR TaskSchedulerImpl: Lost executor 1 on 172.21.15.173: Remote RPC client disassociated. Likely due to containers exceeding thresholds, or network issues. Check driver logs for WARN messages.
+17/04/03 14:35:09 WARN TaskSetManager: Lost task 4.1 in stage 0.0 (TID 11, 172.21.15.173, executor 1): ExecutorLostFailure (executor 1 exited caused by one of the running tasks) Reason: Remote RPC client disassociated. Likely due to containers exceeding thresholds, or network issues. Check driver logs for WARN messages.
+17/04/03 14:35:09 WARN TaskSetManager: Lost task 5.0 in stage 0.0 (TID 5, 172.21.15.173, executor 1): ExecutorLostFailure (executor 1 exited caused by one of the running tasks) Reason: Remote RPC client disassociated. Likely due to containers exceeding thresholds, or network issues. Check driver logs for WARN messages.
+17/04/03 14:35:09 DEBUG DFSClient: DFSClient writeChunk allocating new packet seqno=8, src=/eventLogs/app-20170403143405-0002.lz4.inprogress, packetSize=65016, chunksPerPacket=126, bytesCurBlock=10752
+17/04/03 14:35:09 DEBUG DFSClient: DFSClient flush(): bytesCurBlock=11227 lastFlushOffset=11227 createNewBlock=false
+17/04/03 14:35:09 DEBUG DFSClient: Waiting for ack for: 4
+17/04/03 14:35:09 DEBUG DFSClient: DFSClient writeChunk allocating new packet seqno=9, src=/eventLogs/app-20170403143405-0002.lz4.inprogress, packetSize=65016, chunksPerPacket=126, bytesCurBlock=10752
+17/04/03 14:35:09 DEBUG DFSClient: DFSClient flush(): bytesCurBlock=11227 lastFlushOffset=11227 createNewBlock=false
+17/04/03 14:35:09 DEBUG DFSClient: Waiting for ack for: 4
+[Stage 0:=======================>                                  (4 + 2) / 10]17/04/03 14:35:11 DEBUG DFSClient: DFSClient writeChunk allocating new packet seqno=10, src=/eventLogs/app-20170403143405-0002.lz4.inprogress, packetSize=65016, chunksPerPacket=126, bytesCurBlock=10752
+17/04/03 14:35:11 DEBUG DFSClient: DFSClient flush(): bytesCurBlock=11227 lastFlushOffset=11227 createNewBlock=false
+17/04/03 14:35:11 DEBUG DFSClient: Waiting for ack for: 4
+17/04/03 14:35:11 DEBUG DFSClient: DFSClient writeChunk allocating new packet seqno=11, src=/eventLogs/app-20170403143405-0002.lz4.inprogress, packetSize=65016, chunksPerPacket=126, bytesCurBlock=10752
+17/04/03 14:35:11 DEBUG DFSClient: DFSClient flush(): bytesCurBlock=11227 lastFlushOffset=11227 createNewBlock=false
+17/04/03 14:35:11 DEBUG DFSClient: Waiting for ack for: 4
+[Stage 0:=======================>                                  (4 + 4) / 10]17/04/03 14:35:16 DEBUG Client: IPC Client (239305256) connection to spark1/172.21.15.90:9000 from hadoop: closed
+17/04/03 14:35:16 DEBUG Client: IPC Client (239305256) connection to spark1/172.21.15.90:9000 from hadoop: stopped, remaining connections 0
+[Stage 0:=============================>                            (5 + 4) / 10][Stage 0:==================================>                       (6 + 4) / 10]17/04/03 14:35:36 DEBUG Client: The ping interval is 60000 ms.
+17/04/03 14:35:36 DEBUG Client: Connecting to spark1/172.21.15.90:9000
+17/04/03 14:35:36 DEBUG Client: IPC Client (239305256) connection to spark1/172.21.15.90:9000 from hadoop: starting, having connections 1
+17/04/03 14:35:36 DEBUG Client: IPC Client (239305256) connection to spark1/172.21.15.90:9000 from hadoop sending #10
+17/04/03 14:35:36 DEBUG Client: IPC Client (239305256) connection to spark1/172.21.15.90:9000 from hadoop got value #10
+17/04/03 14:35:36 DEBUG ProtobufRpcEngine: Call: renewLease took 6ms
+17/04/03 14:35:36 DEBUG LeaseRenewer: Lease renewed for client DFSClient_NONMAPREDUCE_611152811_1
+17/04/03 14:35:36 DEBUG LeaseRenewer: Lease renewer daemon for [DFSClient_NONMAPREDUCE_611152811_1] with renew id 1 executed
+[Stage 0:========================================>                 (7 + 3) / 10][Stage 0:==============================================>           (8 + 2) / 10]17/04/03 14:35:46 DEBUG Client: IPC Client (239305256) connection to spark1/172.21.15.90:9000 from hadoop: closed
+17/04/03 14:35:46 DEBUG Client: IPC Client (239305256) connection to spark1/172.21.15.90:9000 from hadoop: stopped, remaining connections 0
+17/04/03 14:35:57 WARN TaskSetManager: Lost task 7.1 in stage 0.0 (TID 14, 172.21.15.173, executor 2): java.lang.OutOfMemoryError: Java heap space
+	at java.lang.reflect.Array.newArray(Native Method)
+	at java.lang.reflect.Array.newInstance(Array.java:70)
+	at scala.reflect.ClassTag$class.newArray(ClassTag.scala:61)
+	at scala.reflect.ClassTag$$anon$1.newArray(ClassTag.scala:152)
+	at org.apache.spark.util.collection.PrimitiveVector.copyArrayWithLength(PrimitiveVector.scala:87)
+	at org.apache.spark.util.collection.PrimitiveVector.resize(PrimitiveVector.scala:74)
+	at org.apache.spark.util.collection.PrimitiveVector.trim(PrimitiveVector.scala:70)
+	at org.apache.spark.graphx.impl.EdgePartitionBuilder$mcI$sp.toEdgePartition$mcI$sp(EdgePartitionBuilder.scala:38)
+	at org.apache.spark.graphx.GraphLoader$$anonfun$1.apply(GraphLoader.scala:92)
+	at org.apache.spark.graphx.GraphLoader$$anonfun$1.apply(GraphLoader.scala:75)
+	at org.apache.spark.rdd.RDD$$anonfun$mapPartitionsWithIndex$1$$anonfun$apply$26.apply(RDD.scala:845)
+	at org.apache.spark.rdd.RDD$$anonfun$mapPartitionsWithIndex$1$$anonfun$apply$26.apply(RDD.scala:845)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:38)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:323)
+	at org.apache.spark.rdd.RDD$$anonfun$8.apply(RDD.scala:338)
+	at org.apache.spark.rdd.RDD$$anonfun$8.apply(RDD.scala:336)
+	at org.apache.spark.storage.BlockManager$$anonfun$doPutIterator$1.apply(BlockManager.scala:958)
+	at org.apache.spark.storage.BlockManager$$anonfun$doPutIterator$1.apply(BlockManager.scala:949)
+	at org.apache.spark.storage.BlockManager.doPut(BlockManager.scala:889)
+	at org.apache.spark.storage.BlockManager.doPutIterator(BlockManager.scala:949)
+	at org.apache.spark.storage.BlockManager.getOrElseUpdate(BlockManager.scala:695)
+	at org.apache.spark.rdd.RDD.getOrCompute(RDD.scala:336)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:285)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:88)
+	at org.apache.spark.scheduler.Task.run(Task.scala:114)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:322)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+
+17/04/03 14:35:58 ERROR TaskSchedulerImpl: Lost executor 2 on 172.21.15.173: Remote RPC client disassociated. Likely due to containers exceeding thresholds, or network issues. Check driver logs for WARN messages.
+17/04/03 14:35:58 WARN TaskSetManager: Lost task 9.0 in stage 0.0 (TID 15, 172.21.15.173, executor 2): ExecutorLostFailure (executor 2 exited caused by one of the running tasks) Reason: Remote RPC client disassociated. Likely due to containers exceeding thresholds, or network issues. Check driver logs for WARN messages.
+17/04/03 14:35:58 DEBUG DFSClient: DFSClient writeChunk allocating new packet seqno=12, src=/eventLogs/app-20170403143405-0002.lz4.inprogress, packetSize=65016, chunksPerPacket=126, bytesCurBlock=10752
+17/04/03 14:35:58 DEBUG DFSClient: DFSClient flush(): bytesCurBlock=16042 lastFlushOffset=11227 createNewBlock=false
+17/04/03 14:35:58 DEBUG DFSClient: Queued packet 12
+17/04/03 14:35:58 DEBUG DFSClient: DataStreamer block BP-519507147-172.21.15.90-1479901973323:blk_1073812537_71715 sending packet packet seqno: 12 offsetInBlock: 10752 lastPacketInBlock: false lastByteOffsetInBlock: 16042
+17/04/03 14:35:58 DEBUG DFSClient: Waiting for ack for: 12
+17/04/03 14:35:58 WARN DFSClient: Slow ReadProcessor read fields took 66802ms (threshold=30000ms); ack: seqno: 12 reply: SUCCESS downstreamAckTimeNanos: 0 flag: 0, targets: [DatanodeInfoWithStorage[172.21.15.173:50010,DS-bcd3842f-7acc-473a-9a24-360950418375,DISK]]
+17/04/03 14:35:58 DEBUG DFSClient: DFSClient writeChunk allocating new packet seqno=13, src=/eventLogs/app-20170403143405-0002.lz4.inprogress, packetSize=65016, chunksPerPacket=126, bytesCurBlock=15872
+17/04/03 14:35:58 DEBUG DFSClient: DFSClient flush(): bytesCurBlock=16042 lastFlushOffset=16042 createNewBlock=false
+17/04/03 14:35:58 DEBUG DFSClient: Waiting for ack for: 12
+17/04/03 14:35:59 DEBUG DFSClient: DFSClient writeChunk allocating new packet seqno=14, src=/eventLogs/app-20170403143405-0002.lz4.inprogress, packetSize=65016, chunksPerPacket=126, bytesCurBlock=15872
+17/04/03 14:35:59 DEBUG DFSClient: DFSClient flush(): bytesCurBlock=16042 lastFlushOffset=16042 createNewBlock=false
+17/04/03 14:35:59 DEBUG DFSClient: Waiting for ack for: 12
+17/04/03 14:35:59 DEBUG DFSClient: DFSClient writeChunk allocating new packet seqno=15, src=/eventLogs/app-20170403143405-0002.lz4.inprogress, packetSize=65016, chunksPerPacket=126, bytesCurBlock=15872
+17/04/03 14:35:59 DEBUG DFSClient: DFSClient flush(): bytesCurBlock=16042 lastFlushOffset=16042 createNewBlock=false
+17/04/03 14:35:59 DEBUG DFSClient: Waiting for ack for: 12
+17/04/03 14:36:06 DEBUG Client: The ping interval is 60000 ms.
+17/04/03 14:36:06 DEBUG Client: Connecting to spark1/172.21.15.90:9000
+17/04/03 14:36:06 DEBUG Client: IPC Client (239305256) connection to spark1/172.21.15.90:9000 from hadoop: starting, having connections 1
+17/04/03 14:36:06 DEBUG Client: IPC Client (239305256) connection to spark1/172.21.15.90:9000 from hadoop sending #11
+17/04/03 14:36:06 DEBUG Client: IPC Client (239305256) connection to spark1/172.21.15.90:9000 from hadoop got value #11
+17/04/03 14:36:06 DEBUG ProtobufRpcEngine: Call: renewLease took 7ms
+17/04/03 14:36:06 DEBUG LeaseRenewer: Lease renewed for client DFSClient_NONMAPREDUCE_611152811_1
+17/04/03 14:36:06 DEBUG LeaseRenewer: Lease renewer daemon for [DFSClient_NONMAPREDUCE_611152811_1] with renew id 1 executed
+17/04/03 14:36:12 WARN TaskSetManager: Lost task 7.2 in stage 0.0 (TID 16, 172.21.15.173, executor 3): java.lang.OutOfMemoryError: Java heap space
+	at scala.reflect.ManifestFactory$$anon$9.newArray(Manifest.scala:117)
+	at scala.reflect.ManifestFactory$$anon$9.newArray(Manifest.scala:115)
+	at org.apache.spark.graphx.impl.EdgePartitionBuilder$mcI$sp.toEdgePartition$mcI$sp(EdgePartitionBuilder.scala:43)
+	at org.apache.spark.graphx.GraphLoader$$anonfun$1.apply(GraphLoader.scala:92)
+	at org.apache.spark.graphx.GraphLoader$$anonfun$1.apply(GraphLoader.scala:75)
+	at org.apache.spark.rdd.RDD$$anonfun$mapPartitionsWithIndex$1$$anonfun$apply$26.apply(RDD.scala:845)
+	at org.apache.spark.rdd.RDD$$anonfun$mapPartitionsWithIndex$1$$anonfun$apply$26.apply(RDD.scala:845)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:38)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:323)
+	at org.apache.spark.rdd.RDD$$anonfun$8.apply(RDD.scala:338)
+	at org.apache.spark.rdd.RDD$$anonfun$8.apply(RDD.scala:336)
+	at org.apache.spark.storage.BlockManager$$anonfun$doPutIterator$1.apply(BlockManager.scala:958)
+	at org.apache.spark.storage.BlockManager$$anonfun$doPutIterator$1.apply(BlockManager.scala:949)
+	at org.apache.spark.storage.BlockManager.doPut(BlockManager.scala:889)
+	at org.apache.spark.storage.BlockManager.doPutIterator(BlockManager.scala:949)
+	at org.apache.spark.storage.BlockManager.getOrElseUpdate(BlockManager.scala:695)
+	at org.apache.spark.rdd.RDD.getOrCompute(RDD.scala:336)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:285)
+	at org.apache.spark.scheduler.ResultTask.runTask(ResultTask.scala:88)
+	at org.apache.spark.scheduler.Task.run(Task.scala:114)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:322)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+
+17/04/03 14:36:12 ERROR TaskSchedulerImpl: Lost executor 3 on 172.21.15.173: Remote RPC client disassociated. Likely due to containers exceeding thresholds, or network issues. Check driver logs for WARN messages.
+17/04/03 14:36:12 WARN TaskSetManager: Lost task 9.1 in stage 0.0 (TID 17, 172.21.15.173, executor 3): ExecutorLostFailure (executor 3 exited caused by one of the running tasks) Reason: Remote RPC client disassociated. Likely due to containers exceeding thresholds, or network issues. Check driver logs for WARN messages.
+17/04/03 14:36:12 DEBUG DFSClient: DFSClient writeChunk allocating new packet seqno=16, src=/eventLogs/app-20170403143405-0002.lz4.inprogress, packetSize=65016, chunksPerPacket=126, bytesCurBlock=15872
+17/04/03 14:36:12 DEBUG DFSClient: DFSClient flush(): bytesCurBlock=20602 lastFlushOffset=16042 createNewBlock=false
+17/04/03 14:36:12 DEBUG DFSClient: Queued packet 16
+17/04/03 14:36:12 DEBUG DFSClient: Waiting for ack for: 16
+17/04/03 14:36:12 DEBUG DFSClient: DataStreamer block BP-519507147-172.21.15.90-1479901973323:blk_1073812537_71715 sending packet packet seqno: 16 offsetInBlock: 15872 lastPacketInBlock: false lastByteOffsetInBlock: 20602
+17/04/03 14:36:12 DEBUG DFSClient: DFSClient seqno: 16 reply: SUCCESS downstreamAckTimeNanos: 0 flag: 0
+17/04/03 14:36:12 DEBUG DFSClient: DFSClient writeChunk allocating new packet seqno=17, src=/eventLogs/app-20170403143405-0002.lz4.inprogress, packetSize=65016, chunksPerPacket=126, bytesCurBlock=20480
+17/04/03 14:36:12 DEBUG DFSClient: DFSClient flush(): bytesCurBlock=20602 lastFlushOffset=20602 createNewBlock=false
+17/04/03 14:36:12 DEBUG DFSClient: Waiting for ack for: 16
+17/04/03 14:36:14 DEBUG DFSClient: DFSClient writeChunk allocating new packet seqno=18, src=/eventLogs/app-20170403143405-0002.lz4.inprogress, packetSize=65016, chunksPerPacket=126, bytesCurBlock=20480
+17/04/03 14:36:14 DEBUG DFSClient: DFSClient flush(): bytesCurBlock=20602 lastFlushOffset=20602 createNewBlock=false
+17/04/03 14:36:14 DEBUG DFSClient: Waiting for ack for: 16
+17/04/03 14:36:14 DEBUG DFSClient: DFSClient writeChunk allocating new packet seqno=19, src=/eventLogs/app-20170403143405-0002.lz4.inprogress, packetSize=65016, chunksPerPacket=126, bytesCurBlock=20480
+17/04/03 14:36:14 DEBUG DFSClient: DFSClient flush(): bytesCurBlock=20602 lastFlushOffset=20602 createNewBlock=false
+17/04/03 14:36:14 DEBUG DFSClient: Waiting for ack for: 16
+17/04/03 14:36:16 DEBUG Client: IPC Client (239305256) connection to spark1/172.21.15.90:9000 from hadoop: closed
+17/04/03 14:36:16 DEBUG Client: IPC Client (239305256) connection to spark1/172.21.15.90:9000 from hadoop: stopped, remaining connections 0
+17/04/03 14:36:36 DEBUG Client: The ping interval is 60000 ms.
+17/04/03 14:36:36 DEBUG Client: Connecting to spark1/172.21.15.90:9000
+17/04/03 14:36:36 DEBUG Client: IPC Client (239305256) connection to spark1/172.21.15.90:9000 from hadoop: starting, having connections 1
+17/04/03 14:36:36 DEBUG Client: IPC Client (239305256) connection to spark1/172.21.15.90:9000 from hadoop sending #12
+17/04/03 14:36:36 DEBUG Client: IPC Client (239305256) connection to spark1/172.21.15.90:9000 from hadoop got value #12
+17/04/03 14:36:36 DEBUG ProtobufRpcEngine: Call: renewLease took 6ms
+17/04/03 14:36:36 DEBUG LeaseRenewer: Lease renewed for client DFSClient_NONMAPREDUCE_611152811_1
+17/04/03 14:36:36 DEBUG LeaseRenewer: Lease renewer daemon for [DFSClient_NONMAPREDUCE_611152811_1] with renew id 1 executed
+[Stage 0:==============================================>           (8 + 2) / 10][Stage 0:====================================================>     (9 + 1) / 10]                                                                                17/04/03 14:36:45 DEBUG DFSClient: DFSClient writeChunk allocating new packet seqno=20, src=/eventLogs/app-20170403143405-0002.lz4.inprogress, packetSize=65016, chunksPerPacket=126, bytesCurBlock=20480
+17/04/03 14:36:45 DEBUG DFSClient: DFSClient flush(): bytesCurBlock=24705 lastFlushOffset=20602 createNewBlock=false
+17/04/03 14:36:45 DEBUG DFSClient: Queued packet 20
+17/04/03 14:36:45 DEBUG DFSClient: Waiting for ack for: 20
+17/04/03 14:36:45 DEBUG DFSClient: DataStreamer block BP-519507147-172.21.15.90-1479901973323:blk_1073812537_71715 sending packet packet seqno: 20 offsetInBlock: 20480 lastPacketInBlock: false lastByteOffsetInBlock: 24705
+17/04/03 14:36:45 WARN DFSClient: Slow ReadProcessor read fields took 32522ms (threshold=30000ms); ack: seqno: 20 reply: SUCCESS downstreamAckTimeNanos: 0 flag: 0, targets: [DatanodeInfoWithStorage[172.21.15.173:50010,DS-bcd3842f-7acc-473a-9a24-360950418375,DISK]]
+17/04/03 14:36:45 DEBUG DFSClient: DFSClient writeChunk allocating new packet seqno=21, src=/eventLogs/app-20170403143405-0002.lz4.inprogress, packetSize=65016, chunksPerPacket=126, bytesCurBlock=24576
+17/04/03 14:36:45 DEBUG DFSClient: DFSClient flush(): bytesCurBlock=24705 lastFlushOffset=24705 createNewBlock=false
+17/04/03 14:36:45 DEBUG DFSClient: Waiting for ack for: 20
+17/04/03 14:36:45 DEBUG DFSClient: DFSClient writeChunk allocating new packet seqno=22, src=/eventLogs/app-20170403143405-0002.lz4.inprogress, packetSize=65016, chunksPerPacket=126, bytesCurBlock=24576
+17/04/03 14:36:45 DEBUG DFSClient: DFSClient flush(): bytesCurBlock=24705 lastFlushOffset=24705 createNewBlock=false
+17/04/03 14:36:45 DEBUG DFSClient: Waiting for ack for: 20
+[Stage 1:>                                                         (0 + 2) / 10][Stage 1:===========>                                              (2 + 0) / 10]17/04/03 14:36:46 DEBUG Client: IPC Client (239305256) connection to spark1/172.21.15.90:9000 from hadoop: closed
+17/04/03 14:36:46 DEBUG Client: IPC Client (239305256) connection to spark1/172.21.15.90:9000 from hadoop: stopped, remaining connections 0
+[Stage 1:===========>                                              (2 + 4) / 10]17/04/03 14:37:06 DEBUG Client: The ping interval is 60000 ms.
+17/04/03 14:37:06 DEBUG Client: Connecting to spark1/172.21.15.90:9000
+17/04/03 14:37:06 DEBUG Client: IPC Client (239305256) connection to spark1/172.21.15.90:9000 from hadoop: starting, having connections 1
+17/04/03 14:37:06 DEBUG Client: IPC Client (239305256) connection to spark1/172.21.15.90:9000 from hadoop sending #13
+17/04/03 14:37:06 DEBUG Client: IPC Client (239305256) connection to spark1/172.21.15.90:9000 from hadoop got value #13
+17/04/03 14:37:06 DEBUG ProtobufRpcEngine: Call: renewLease took 6ms
+17/04/03 14:37:06 DEBUG LeaseRenewer: Lease renewed for client DFSClient_NONMAPREDUCE_611152811_1
+17/04/03 14:37:06 DEBUG LeaseRenewer: Lease renewer daemon for [DFSClient_NONMAPREDUCE_611152811_1] with renew id 1 executed
+17/04/03 14:37:16 DEBUG Client: IPC Client (239305256) connection to spark1/172.21.15.90:9000 from hadoop: closed
+17/04/03 14:37:16 DEBUG Client: IPC Client (239305256) connection to spark1/172.21.15.90:9000 from hadoop: stopped, remaining connections 0
+[Stage 1:=================>                                        (3 + 4) / 10][Stage 1:=======================>                                  (4 + 4) / 10]17/04/03 14:37:28 WARN TaskSetManager: Lost task 1.0 in stage 1.0 (TID 23, 172.21.15.173, executor 4): java.lang.OutOfMemoryError: Java heap space
+	at org.apache.spark.graphx.Edge$$anon$2.allocate(Edge.scala:95)
+	at org.apache.spark.graphx.Edge$$anon$2.allocate(Edge.scala:71)
+	at org.apache.spark.util.collection.TimSort$SortState.ensureCapacity(TimSort.java:951)
+	at org.apache.spark.util.collection.TimSort$SortState.mergeLo(TimSort.java:699)
+	at org.apache.spark.util.collection.TimSort$SortState.mergeAt(TimSort.java:525)
+	at org.apache.spark.util.collection.TimSort$SortState.mergeCollapse(TimSort.java:453)
+	at org.apache.spark.util.collection.TimSort$SortState.access$200(TimSort.java:325)
+	at org.apache.spark.util.collection.TimSort.sort(TimSort.java:153)
+	at org.apache.spark.util.collection.Sorter.sort(Sorter.scala:37)
+	at org.apache.spark.graphx.impl.EdgePartitionBuilder$mcI$sp.toEdgePartition$mcI$sp(EdgePartitionBuilder.scala:40)
+	at org.apache.spark.graphx.GraphLoader$$anonfun$1.apply(GraphLoader.scala:92)
+	at org.apache.spark.graphx.GraphLoader$$anonfun$1.apply(GraphLoader.scala:75)
+	at org.apache.spark.rdd.RDD$$anonfun$mapPartitionsWithIndex$1$$anonfun$apply$26.apply(RDD.scala:845)
+	at org.apache.spark.rdd.RDD$$anonfun$mapPartitionsWithIndex$1$$anonfun$apply$26.apply(RDD.scala:845)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:38)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:323)
+	at org.apache.spark.rdd.RDD$$anonfun$8.apply(RDD.scala:338)
+	at org.apache.spark.rdd.RDD$$anonfun$8.apply(RDD.scala:336)
+	at org.apache.spark.storage.BlockManager$$anonfun$doPutIterator$1.apply(BlockManager.scala:958)
+	at org.apache.spark.storage.BlockManager$$anonfun$doPutIterator$1.apply(BlockManager.scala:949)
+	at org.apache.spark.storage.BlockManager.doPut(BlockManager.scala:889)
+	at org.apache.spark.storage.BlockManager.doPutIterator(BlockManager.scala:949)
+	at org.apache.spark.storage.BlockManager.getOrElseUpdate(BlockManager.scala:695)
+	at org.apache.spark.rdd.RDD.getOrCompute(RDD.scala:336)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:285)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:38)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:323)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:287)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:97)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:54)
+	at org.apache.spark.scheduler.Task.run(Task.scala:114)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:322)
+
+17/04/03 14:37:28 ERROR TaskSchedulerImpl: Lost executor 4 on 172.21.15.173: Remote RPC client disassociated. Likely due to containers exceeding thresholds, or network issues. Check driver logs for WARN messages.
+17/04/03 14:37:28 WARN TaskSetManager: Lost task 3.0 in stage 1.0 (TID 25, 172.21.15.173, executor 4): ExecutorLostFailure (executor 4 exited caused by one of the running tasks) Reason: Remote RPC client disassociated. Likely due to containers exceeding thresholds, or network issues. Check driver logs for WARN messages.
+17/04/03 14:37:28 WARN TaskSetManager: Lost task 6.0 in stage 1.0 (TID 28, 172.21.15.173, executor 4): ExecutorLostFailure (executor 4 exited caused by one of the running tasks) Reason: Remote RPC client disassociated. Likely due to containers exceeding thresholds, or network issues. Check driver logs for WARN messages.
+17/04/03 14:37:28 DEBUG DFSClient: DFSClient writeChunk allocating new packet seqno=23, src=/eventLogs/app-20170403143405-0002.lz4.inprogress, packetSize=65016, chunksPerPacket=126, bytesCurBlock=24576
+17/04/03 14:37:28 DEBUG DFSClient: DFSClient flush(): bytesCurBlock=29371 lastFlushOffset=24705 createNewBlock=false
+17/04/03 14:37:28 DEBUG DFSClient: Queued packet 23
+17/04/03 14:37:28 DEBUG DFSClient: Waiting for ack for: 23
+17/04/03 14:37:28 DEBUG DFSClient: DataStreamer block BP-519507147-172.21.15.90-1479901973323:blk_1073812537_71715 sending packet packet seqno: 23 offsetInBlock: 24576 lastPacketInBlock: false lastByteOffsetInBlock: 29371
+17/04/03 14:37:28 WARN DFSClient: Slow ReadProcessor read fields took 43212ms (threshold=30000ms); ack: seqno: 23 reply: SUCCESS downstreamAckTimeNanos: 0 flag: 0, targets: [DatanodeInfoWithStorage[172.21.15.173:50010,DS-bcd3842f-7acc-473a-9a24-360950418375,DISK]]
+17/04/03 14:37:28 DEBUG DFSClient: DFSClient writeChunk allocating new packet seqno=24, src=/eventLogs/app-20170403143405-0002.lz4.inprogress, packetSize=65016, chunksPerPacket=126, bytesCurBlock=29184
+17/04/03 14:37:28 DEBUG DFSClient: DFSClient flush(): bytesCurBlock=29371 lastFlushOffset=29371 createNewBlock=false
+17/04/03 14:37:28 DEBUG DFSClient: Waiting for ack for: 23
+[Stage 1:=======================>                                  (4 + 0) / 10]17/04/03 14:37:30 DEBUG DFSClient: DFSClient writeChunk allocating new packet seqno=25, src=/eventLogs/app-20170403143405-0002.lz4.inprogress, packetSize=65016, chunksPerPacket=126, bytesCurBlock=29184
+17/04/03 14:37:30 DEBUG DFSClient: DFSClient flush(): bytesCurBlock=29371 lastFlushOffset=29371 createNewBlock=false
+17/04/03 14:37:30 DEBUG DFSClient: Waiting for ack for: 23
+17/04/03 14:37:30 DEBUG DFSClient: DFSClient writeChunk allocating new packet seqno=26, src=/eventLogs/app-20170403143405-0002.lz4.inprogress, packetSize=65016, chunksPerPacket=126, bytesCurBlock=29184
+17/04/03 14:37:30 DEBUG DFSClient: DFSClient flush(): bytesCurBlock=29371 lastFlushOffset=29371 createNewBlock=false
+17/04/03 14:37:30 DEBUG DFSClient: Waiting for ack for: 23
+[Stage 1:=======================>                                  (4 + 2) / 10]17/04/03 14:37:36 DEBUG Client: The ping interval is 60000 ms.
+17/04/03 14:37:36 DEBUG Client: Connecting to spark1/172.21.15.90:9000
+17/04/03 14:37:36 DEBUG Client: IPC Client (239305256) connection to spark1/172.21.15.90:9000 from hadoop: starting, having connections 1
+17/04/03 14:37:36 DEBUG Client: IPC Client (239305256) connection to spark1/172.21.15.90:9000 from hadoop sending #14
+17/04/03 14:37:36 DEBUG Client: IPC Client (239305256) connection to spark1/172.21.15.90:9000 from hadoop got value #14
+17/04/03 14:37:36 DEBUG ProtobufRpcEngine: Call: renewLease took 7ms
+17/04/03 14:37:36 DEBUG LeaseRenewer: Lease renewed for client DFSClient_NONMAPREDUCE_611152811_1
+17/04/03 14:37:36 DEBUG LeaseRenewer: Lease renewer daemon for [DFSClient_NONMAPREDUCE_611152811_1] with renew id 1 executed
+17/04/03 14:37:46 DEBUG Client: IPC Client (239305256) connection to spark1/172.21.15.90:9000 from hadoop: closed
+17/04/03 14:37:46 DEBUG Client: IPC Client (239305256) connection to spark1/172.21.15.90:9000 from hadoop: stopped, remaining connections 0
+[Stage 1:=============================>                            (5 + 2) / 10][Stage 1:==================================>                       (6 + 2) / 10]17/04/03 14:38:06 DEBUG Client: The ping interval is 60000 ms.
+17/04/03 14:38:06 DEBUG Client: Connecting to spark1/172.21.15.90:9000
+17/04/03 14:38:06 DEBUG Client: IPC Client (239305256) connection to spark1/172.21.15.90:9000 from hadoop: starting, having connections 1
+17/04/03 14:38:06 DEBUG Client: IPC Client (239305256) connection to spark1/172.21.15.90:9000 from hadoop sending #15
+17/04/03 14:38:06 DEBUG Client: IPC Client (239305256) connection to spark1/172.21.15.90:9000 from hadoop got value #15
+17/04/03 14:38:06 DEBUG ProtobufRpcEngine: Call: renewLease took 8ms
+17/04/03 14:38:06 DEBUG LeaseRenewer: Lease renewed for client DFSClient_NONMAPREDUCE_611152811_1
+17/04/03 14:38:06 DEBUG LeaseRenewer: Lease renewer daemon for [DFSClient_NONMAPREDUCE_611152811_1] with renew id 1 executed
+17/04/03 14:38:15 WARN TaskSetManager: Lost task 5.0 in stage 1.0 (TID 27, 172.21.15.173, executor 5): java.lang.OutOfMemoryError: Java heap space
+	at org.apache.spark.graphx.impl.EdgePartitionBuilder$mcI$sp.toEdgePartition$mcI$sp(EdgePartitionBuilder.scala:41)
+	at org.apache.spark.graphx.GraphLoader$$anonfun$1.apply(GraphLoader.scala:92)
+	at org.apache.spark.graphx.GraphLoader$$anonfun$1.apply(GraphLoader.scala:75)
+	at org.apache.spark.rdd.RDD$$anonfun$mapPartitionsWithIndex$1$$anonfun$apply$26.apply(RDD.scala:845)
+	at org.apache.spark.rdd.RDD$$anonfun$mapPartitionsWithIndex$1$$anonfun$apply$26.apply(RDD.scala:845)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:38)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:323)
+	at org.apache.spark.rdd.RDD$$anonfun$8.apply(RDD.scala:338)
+	at org.apache.spark.rdd.RDD$$anonfun$8.apply(RDD.scala:336)
+	at org.apache.spark.storage.BlockManager$$anonfun$doPutIterator$1.apply(BlockManager.scala:958)
+	at org.apache.spark.storage.BlockManager$$anonfun$doPutIterator$1.apply(BlockManager.scala:949)
+	at org.apache.spark.storage.BlockManager.doPut(BlockManager.scala:889)
+	at org.apache.spark.storage.BlockManager.doPutIterator(BlockManager.scala:949)
+	at org.apache.spark.storage.BlockManager.getOrElseUpdate(BlockManager.scala:695)
+	at org.apache.spark.rdd.RDD.getOrCompute(RDD.scala:336)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:285)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:38)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:323)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:287)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:97)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:54)
+	at org.apache.spark.scheduler.Task.run(Task.scala:114)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:322)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+
+17/04/03 14:38:15 ERROR TaskSchedulerImpl: Lost executor 5 on 172.21.15.173: Remote RPC client disassociated. Likely due to containers exceeding thresholds, or network issues. Check driver logs for WARN messages.
+17/04/03 14:38:15 WARN TaskSetManager: Lost task 4.0 in stage 1.0 (TID 26, 172.21.15.173, executor 5): ExecutorLostFailure (executor 5 exited caused by one of the running tasks) Reason: Remote RPC client disassociated. Likely due to containers exceeding thresholds, or network issues. Check driver logs for WARN messages.
+17/04/03 14:38:15 WARN TaskSetManager: Lost task 1.1 in stage 1.0 (TID 33, 172.21.15.173, executor 5): ExecutorLostFailure (executor 5 exited caused by one of the running tasks) Reason: Remote RPC client disassociated. Likely due to containers exceeding thresholds, or network issues. Check driver logs for WARN messages.
+17/04/03 14:38:15 DEBUG DFSClient: DFSClient writeChunk allocating new packet seqno=27, src=/eventLogs/app-20170403143405-0002.lz4.inprogress, packetSize=65016, chunksPerPacket=126, bytesCurBlock=29184
+17/04/03 14:38:15 DEBUG DFSClient: DFSClient flush(): bytesCurBlock=34642 lastFlushOffset=29371 createNewBlock=false
+17/04/03 14:38:15 DEBUG DFSClient: Queued packet 27
+17/04/03 14:38:15 DEBUG DFSClient: Waiting for ack for: 27
+17/04/03 14:38:15 DEBUG DFSClient: DataStreamer block BP-519507147-172.21.15.90-1479901973323:blk_1073812537_71715 sending packet packet seqno: 27 offsetInBlock: 29184 lastPacketInBlock: false lastByteOffsetInBlock: 34642
+17/04/03 14:38:15 WARN DFSClient: Slow ReadProcessor read fields took 47088ms (threshold=30000ms); ack: seqno: 27 reply: SUCCESS downstreamAckTimeNanos: 0 flag: 0, targets: [DatanodeInfoWithStorage[172.21.15.173:50010,DS-bcd3842f-7acc-473a-9a24-360950418375,DISK]]
+17/04/03 14:38:15 DEBUG DFSClient: DFSClient writeChunk allocating new packet seqno=28, src=/eventLogs/app-20170403143405-0002.lz4.inprogress, packetSize=65016, chunksPerPacket=126, bytesCurBlock=34304
+17/04/03 14:38:15 DEBUG DFSClient: DFSClient flush(): bytesCurBlock=34642 lastFlushOffset=34642 createNewBlock=false
+17/04/03 14:38:15 DEBUG DFSClient: Waiting for ack for: 27
+[Stage 1:==================================>                      (6 + -2) / 10]17/04/03 14:38:16 DEBUG Client: IPC Client (239305256) connection to spark1/172.21.15.90:9000 from hadoop: closed
+17/04/03 14:38:16 DEBUG Client: IPC Client (239305256) connection to spark1/172.21.15.90:9000 from hadoop: stopped, remaining connections 0
+17/04/03 14:38:17 DEBUG DFSClient: DFSClient writeChunk allocating new packet seqno=29, src=/eventLogs/app-20170403143405-0002.lz4.inprogress, packetSize=65016, chunksPerPacket=126, bytesCurBlock=34304
+17/04/03 14:38:17 DEBUG DFSClient: DFSClient flush(): bytesCurBlock=34642 lastFlushOffset=34642 createNewBlock=false
+17/04/03 14:38:17 DEBUG DFSClient: Waiting for ack for: 27
+17/04/03 14:38:17 DEBUG DFSClient: DFSClient writeChunk allocating new packet seqno=30, src=/eventLogs/app-20170403143405-0002.lz4.inprogress, packetSize=65016, chunksPerPacket=126, bytesCurBlock=34304
+17/04/03 14:38:17 DEBUG DFSClient: DFSClient flush(): bytesCurBlock=34642 lastFlushOffset=34642 createNewBlock=false
+17/04/03 14:38:17 DEBUG DFSClient: Waiting for ack for: 27
+[Stage 1:==================================>                       (6 + 0) / 10]17/04/03 14:38:36 DEBUG Client: The ping interval is 60000 ms.
+17/04/03 14:38:36 DEBUG Client: Connecting to spark1/172.21.15.90:9000
+17/04/03 14:38:36 DEBUG Client: IPC Client (239305256) connection to spark1/172.21.15.90:9000 from hadoop: starting, having connections 1
+17/04/03 14:38:36 DEBUG Client: IPC Client (239305256) connection to spark1/172.21.15.90:9000 from hadoop sending #16
+17/04/03 14:38:36 DEBUG Client: IPC Client (239305256) connection to spark1/172.21.15.90:9000 from hadoop got value #16
+17/04/03 14:38:36 DEBUG ProtobufRpcEngine: Call: renewLease took 6ms
+17/04/03 14:38:36 DEBUG LeaseRenewer: Lease renewed for client DFSClient_NONMAPREDUCE_611152811_1
+17/04/03 14:38:36 DEBUG LeaseRenewer: Lease renewer daemon for [DFSClient_NONMAPREDUCE_611152811_1] with renew id 1 executed
+[Stage 1:========================================>                 (7 + 0) / 10][Stage 1:==============================================>           (8 + 0) / 10]17/04/03 14:38:46 DEBUG Client: IPC Client (239305256) connection to spark1/172.21.15.90:9000 from hadoop: closed
+17/04/03 14:38:46 DEBUG Client: IPC Client (239305256) connection to spark1/172.21.15.90:9000 from hadoop: stopped, remaining connections 0
+17/04/03 14:38:53 WARN TaskSetManager: Lost task 6.1 in stage 1.0 (TID 31, 172.21.15.173, executor 6): java.lang.OutOfMemoryError: Java heap space
+	at java.lang.reflect.Array.newArray(Native Method)
+	at java.lang.reflect.Array.newInstance(Array.java:70)
+	at scala.reflect.ClassTag$class.newArray(ClassTag.scala:61)
+	at scala.reflect.ClassTag$$anon$1.newArray(ClassTag.scala:152)
+	at org.apache.spark.util.collection.PrimitiveVector.copyArrayWithLength(PrimitiveVector.scala:87)
+	at org.apache.spark.util.collection.PrimitiveVector.resize(PrimitiveVector.scala:74)
+	at org.apache.spark.util.collection.PrimitiveVector.trim(PrimitiveVector.scala:70)
+	at org.apache.spark.graphx.impl.EdgePartitionBuilder$mcI$sp.toEdgePartition$mcI$sp(EdgePartitionBuilder.scala:38)
+	at org.apache.spark.graphx.GraphLoader$$anonfun$1.apply(GraphLoader.scala:92)
+	at org.apache.spark.graphx.GraphLoader$$anonfun$1.apply(GraphLoader.scala:75)
+	at org.apache.spark.rdd.RDD$$anonfun$mapPartitionsWithIndex$1$$anonfun$apply$26.apply(RDD.scala:845)
+	at org.apache.spark.rdd.RDD$$anonfun$mapPartitionsWithIndex$1$$anonfun$apply$26.apply(RDD.scala:845)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:38)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:323)
+	at org.apache.spark.rdd.RDD$$anonfun$8.apply(RDD.scala:338)
+	at org.apache.spark.rdd.RDD$$anonfun$8.apply(RDD.scala:336)
+	at org.apache.spark.storage.BlockManager$$anonfun$doPutIterator$1.apply(BlockManager.scala:958)
+	at org.apache.spark.storage.BlockManager$$anonfun$doPutIterator$1.apply(BlockManager.scala:949)
+	at org.apache.spark.storage.BlockManager.doPut(BlockManager.scala:889)
+	at org.apache.spark.storage.BlockManager.doPutIterator(BlockManager.scala:949)
+	at org.apache.spark.storage.BlockManager.getOrElseUpdate(BlockManager.scala:695)
+	at org.apache.spark.rdd.RDD.getOrCompute(RDD.scala:336)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:285)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:38)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:323)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:287)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:97)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:54)
+	at org.apache.spark.scheduler.Task.run(Task.scala:114)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:322)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+
+17/04/03 14:38:54 ERROR TaskSchedulerImpl: Lost executor 6 on 172.21.15.173: Remote RPC client disassociated. Likely due to containers exceeding thresholds, or network issues. Check driver logs for WARN messages.
+17/04/03 14:38:54 WARN TaskSetManager: Lost task 3.1 in stage 1.0 (TID 32, 172.21.15.173, executor 6): ExecutorLostFailure (executor 6 exited caused by one of the running tasks) Reason: Remote RPC client disassociated. Likely due to containers exceeding thresholds, or network issues. Check driver logs for WARN messages.
+17/04/03 14:38:54 WARN TaskSetManager: Lost task 5.1 in stage 1.0 (TID 38, 172.21.15.173, executor 6): ExecutorLostFailure (executor 6 exited caused by one of the running tasks) Reason: Remote RPC client disassociated. Likely due to containers exceeding thresholds, or network issues. Check driver logs for WARN messages.
+17/04/03 14:38:54 DEBUG DFSClient: DFSClient writeChunk allocating new packet seqno=31, src=/eventLogs/app-20170403143405-0002.lz4.inprogress, packetSize=65016, chunksPerPacket=126, bytesCurBlock=34304
+17/04/03 14:38:54 DEBUG DFSClient: DFSClient flush(): bytesCurBlock=44021 lastFlushOffset=34642 createNewBlock=false
+17/04/03 14:38:54 DEBUG DFSClient: Queued packet 31
+17/04/03 14:38:54 DEBUG DFSClient: Waiting for ack for: 31
+17/04/03 14:38:54 DEBUG DFSClient: DataStreamer block BP-519507147-172.21.15.90-1479901973323:blk_1073812537_71715 sending packet packet seqno: 31 offsetInBlock: 34304 lastPacketInBlock: false lastByteOffsetInBlock: 44021
+17/04/03 14:38:54 WARN DFSClient: Slow ReadProcessor read fields took 38734ms (threshold=30000ms); ack: seqno: 31 reply: SUCCESS downstreamAckTimeNanos: 0 flag: 0, targets: [DatanodeInfoWithStorage[172.21.15.173:50010,DS-bcd3842f-7acc-473a-9a24-360950418375,DISK]]
+17/04/03 14:38:54 DEBUG DFSClient: DFSClient writeChunk allocating new packet seqno=32, src=/eventLogs/app-20170403143405-0002.lz4.inprogress, packetSize=65016, chunksPerPacket=126, bytesCurBlock=43520
+17/04/03 14:38:54 DEBUG DFSClient: DFSClient flush(): bytesCurBlock=44021 lastFlushOffset=44021 createNewBlock=false
+17/04/03 14:38:54 DEBUG DFSClient: Waiting for ack for: 31
+[Stage 1:=============================================>           (8 + -4) / 10]17/04/03 14:38:56 DEBUG DFSClient: DFSClient writeChunk allocating new packet seqno=33, src=/eventLogs/app-20170403143405-0002.lz4.inprogress, packetSize=65016, chunksPerPacket=126, bytesCurBlock=43520
+17/04/03 14:38:56 DEBUG DFSClient: DFSClient flush(): bytesCurBlock=44021 lastFlushOffset=44021 createNewBlock=false
+17/04/03 14:38:56 DEBUG DFSClient: Waiting for ack for: 31
+17/04/03 14:38:56 DEBUG DFSClient: DFSClient writeChunk allocating new packet seqno=34, src=/eventLogs/app-20170403143405-0002.lz4.inprogress, packetSize=65016, chunksPerPacket=126, bytesCurBlock=43520
+17/04/03 14:38:56 DEBUG DFSClient: DFSClient flush(): bytesCurBlock=44021 lastFlushOffset=44021 createNewBlock=false
+17/04/03 14:38:56 DEBUG DFSClient: Waiting for ack for: 31
+[Stage 1:=============================================>           (8 + -2) / 10]17/04/03 14:39:06 DEBUG Client: The ping interval is 60000 ms.
+17/04/03 14:39:06 DEBUG Client: Connecting to spark1/172.21.15.90:9000
+17/04/03 14:39:06 DEBUG Client: IPC Client (239305256) connection to spark1/172.21.15.90:9000 from hadoop: starting, having connections 1
+17/04/03 14:39:06 DEBUG Client: IPC Client (239305256) connection to spark1/172.21.15.90:9000 from hadoop sending #17
+17/04/03 14:39:06 DEBUG Client: IPC Client (239305256) connection to spark1/172.21.15.90:9000 from hadoop got value #17
+17/04/03 14:39:06 DEBUG ProtobufRpcEngine: Call: renewLease took 6ms
+17/04/03 14:39:06 DEBUG LeaseRenewer: Lease renewed for client DFSClient_NONMAPREDUCE_611152811_1
+17/04/03 14:39:06 DEBUG LeaseRenewer: Lease renewer daemon for [DFSClient_NONMAPREDUCE_611152811_1] with renew id 1 executed
+17/04/03 14:39:13 WARN TaskSetManager: Lost task 2.1 in stage 1.0 (TID 36, 172.21.15.173, executor 7): java.lang.OutOfMemoryError: Java heap space
+	at org.apache.spark.graphx.impl.EdgePartitionBuilder$mcI$sp.toEdgePartition$mcI$sp(EdgePartitionBuilder.scala:41)
+	at org.apache.spark.graphx.GraphLoader$$anonfun$1.apply(GraphLoader.scala:92)
+	at org.apache.spark.graphx.GraphLoader$$anonfun$1.apply(GraphLoader.scala:75)
+	at org.apache.spark.rdd.RDD$$anonfun$mapPartitionsWithIndex$1$$anonfun$apply$26.apply(RDD.scala:845)
+	at org.apache.spark.rdd.RDD$$anonfun$mapPartitionsWithIndex$1$$anonfun$apply$26.apply(RDD.scala:845)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:38)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:323)
+	at org.apache.spark.rdd.RDD$$anonfun$8.apply(RDD.scala:338)
+	at org.apache.spark.rdd.RDD$$anonfun$8.apply(RDD.scala:336)
+	at org.apache.spark.storage.BlockManager$$anonfun$doPutIterator$1.apply(BlockManager.scala:958)
+	at org.apache.spark.storage.BlockManager$$anonfun$doPutIterator$1.apply(BlockManager.scala:949)
+	at org.apache.spark.storage.BlockManager.doPut(BlockManager.scala:889)
+	at org.apache.spark.storage.BlockManager.doPutIterator(BlockManager.scala:949)
+	at org.apache.spark.storage.BlockManager.getOrElseUpdate(BlockManager.scala:695)
+	at org.apache.spark.rdd.RDD.getOrCompute(RDD.scala:336)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:285)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:38)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:323)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:287)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:97)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:54)
+	at org.apache.spark.scheduler.Task.run(Task.scala:114)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:322)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+	at java.lang.Thread.run(Thread.java:745)
+
+17/04/03 14:39:13 ERROR TaskSchedulerImpl: Lost executor 7 on 172.21.15.173: Remote RPC client disassociated. Likely due to containers exceeding thresholds, or network issues. Check driver logs for WARN messages.
+17/04/03 14:39:13 WARN TaskSetManager: Lost task 5.2 in stage 1.0 (TID 41, 172.21.15.173, executor 7): ExecutorLostFailure (executor 7 exited caused by one of the running tasks) Reason: Remote RPC client disassociated. Likely due to containers exceeding thresholds, or network issues. Check driver logs for WARN messages.
+17/04/03 14:39:13 WARN TaskSetManager: Lost task 0.1 in stage 1.0 (TID 37, 172.21.15.173, executor 7): ExecutorLostFailure (executor 7 exited caused by one of the running tasks) Reason: Remote RPC client disassociated. Likely due to containers exceeding thresholds, or network issues. Check driver logs for WARN messages.
+17/04/03 14:39:13 DEBUG DFSClient: DFSClient writeChunk allocating new packet seqno=35, src=/eventLogs/app-20170403143405-0002.lz4.inprogress, packetSize=65016, chunksPerPacket=126, bytesCurBlock=43520
+17/04/03 14:39:13 DEBUG DFSClient: DFSClient flush(): bytesCurBlock=44021 lastFlushOffset=44021 createNewBlock=false
+17/04/03 14:39:13 DEBUG DFSClient: Waiting for ack for: 31
+17/04/03 14:39:13 DEBUG DFSClient: DFSClient writeChunk allocating new packet seqno=36, src=/eventLogs/app-20170403143405-0002.lz4.inprogress, packetSize=65016, chunksPerPacket=126, bytesCurBlock=43520
+17/04/03 14:39:13 DEBUG DFSClient: DFSClient flush(): bytesCurBlock=44021 lastFlushOffset=44021 createNewBlock=false
+17/04/03 14:39:13 DEBUG DFSClient: Waiting for ack for: 31
+[Stage 1:=============================================>           (8 + -6) / 10]17/04/03 14:39:15 DEBUG DFSClient: DFSClient writeChunk allocating new packet seqno=37, src=/eventLogs/app-20170403143405-0002.lz4.inprogress, packetSize=65016, chunksPerPacket=126, bytesCurBlock=43520
+17/04/03 14:39:15 DEBUG DFSClient: DFSClient flush(): bytesCurBlock=44021 lastFlushOffset=44021 createNewBlock=false
+17/04/03 14:39:15 DEBUG DFSClient: Waiting for ack for: 31
+17/04/03 14:39:15 DEBUG DFSClient: DFSClient writeChunk allocating new packet seqno=38, src=/eventLogs/app-20170403143405-0002.lz4.inprogress, packetSize=65016, chunksPerPacket=126, bytesCurBlock=43520
+17/04/03 14:39:15 DEBUG DFSClient: DFSClient flush(): bytesCurBlock=48627 lastFlushOffset=44021 createNewBlock=false
+17/04/03 14:39:15 DEBUG DFSClient: Queued packet 38
+17/04/03 14:39:15 DEBUG DFSClient: Waiting for ack for: 38
+17/04/03 14:39:15 DEBUG DFSClient: DataStreamer block BP-519507147-172.21.15.90-1479901973323:blk_1073812537_71715 sending packet packet seqno: 38 offsetInBlock: 43520 lastPacketInBlock: false lastByteOffsetInBlock: 48627
+17/04/03 14:39:15 DEBUG DFSClient: DFSClient seqno: 38 reply: SUCCESS downstreamAckTimeNanos: 0 flag: 0
+[Stage 1:=============================================>           (8 + -4) / 10]17/04/03 14:39:16 DEBUG Client: IPC Client (239305256) connection to spark1/172.21.15.90:9000 from hadoop: closed
+17/04/03 14:39:16 DEBUG Client: IPC Client (239305256) connection to spark1/172.21.15.90:9000 from hadoop: stopped, remaining connections 0
+[Stage 1:===================================================>     (9 + -4) / 10][Stage 1:========================================================(10 + -4) / 10]17/04/03 14:39:36 DEBUG Client: The ping interval is 60000 ms.
+17/04/03 14:39:36 DEBUG Client: Connecting to spark1/172.21.15.90:9000
+17/04/03 14:39:36 DEBUG Client: IPC Client (239305256) connection to spark1/172.21.15.90:9000 from hadoop: starting, having connections 1
+17/04/03 14:39:36 DEBUG Client: IPC Client (239305256) connection to spark1/172.21.15.90:9000 from hadoop sending #18
+17/04/03 14:39:36 DEBUG Client: IPC Client (239305256) connection to spark1/172.21.15.90:9000 from hadoop got value #18
+17/04/03 14:39:36 DEBUG ProtobufRpcEngine: Call: renewLease took 7ms
+17/04/03 14:39:36 DEBUG LeaseRenewer: Lease renewed for client DFSClient_NONMAPREDUCE_611152811_1
+17/04/03 14:39:36 DEBUG LeaseRenewer: Lease renewer daemon for [DFSClient_NONMAPREDUCE_611152811_1] with renew id 1 executed
+[Stage 1:========================================================(12 + -4) / 10]17/04/03 14:39:46 DEBUG Client: IPC Client (239305256) connection to spark1/172.21.15.90:9000 from hadoop: closed
+17/04/03 14:39:46 DEBUG Client: IPC Client (239305256) connection to spark1/172.21.15.90:9000 from hadoop: stopped, remaining connections 0
+17/04/03 14:40:06 WARN TaskSetManager: Lost task 1.3 in stage 1.0 (TID 44, 172.21.15.173, executor 8): java.lang.OutOfMemoryError: Java heap space
+	at java.lang.reflect.Array.newArray(Native Method)
+	at java.lang.reflect.Array.newInstance(Array.java:70)
+	at scala.reflect.ClassTag$class.newArray(ClassTag.scala:61)
+	at scala.reflect.ClassTag$$anon$1.newArray(ClassTag.scala:152)
+	at org.apache.spark.util.collection.PrimitiveVector.copyArrayWithLength(PrimitiveVector.scala:87)
+	at org.apache.spark.util.collection.PrimitiveVector.resize(PrimitiveVector.scala:74)
+	at org.apache.spark.util.collection.PrimitiveVector.trim(PrimitiveVector.scala:70)
+	at org.apache.spark.graphx.impl.EdgePartitionBuilder$mcI$sp.toEdgePartition$mcI$sp(EdgePartitionBuilder.scala:38)
+	at org.apache.spark.graphx.GraphLoader$$anonfun$1.apply(GraphLoader.scala:92)
+	at org.apache.spark.graphx.GraphLoader$$anonfun$1.apply(GraphLoader.scala:75)
+	at org.apache.spark.rdd.RDD$$anonfun$mapPartitionsWithIndex$1$$anonfun$apply$26.apply(RDD.scala:845)
+	at org.apache.spark.rdd.RDD$$anonfun$mapPartitionsWithIndex$1$$anonfun$apply$26.apply(RDD.scala:845)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:38)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:323)
+	at org.apache.spark.rdd.RDD$$anonfun$8.apply(RDD.scala:338)
+	at org.apache.spark.rdd.RDD$$anonfun$8.apply(RDD.scala:336)
+	at org.apache.spark.storage.BlockManager$$anonfun$doPutIterator$1.apply(BlockManager.scala:958)
+	at org.apache.spark.storage.BlockManager$$anonfun$doPutIterator$1.apply(BlockManager.scala:949)
+	at org.apache.spark.storage.BlockManager.doPut(BlockManager.scala:889)
+	at org.apache.spark.storage.BlockManager.doPutIterator(BlockManager.scala:949)
+	at org.apache.spark.storage.BlockManager.getOrElseUpdate(BlockManager.scala:695)
+	at org.apache.spark.rdd.RDD.getOrCompute(RDD.scala:336)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:285)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:38)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:323)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:287)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:97)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:54)
+	at org.apache.spark.scheduler.Task.run(Task.scala:114)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:322)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+
+17/04/03 14:40:06 ERROR TaskSchedulerImpl: Lost executor 8 on 172.21.15.173: Remote RPC client disassociated. Likely due to containers exceeding thresholds, or network issues. Check driver logs for WARN messages.
+17/04/03 14:40:06 WARN TaskSetManager: Lost task 4.2 in stage 1.0 (TID 45, 172.21.15.173, executor 8): ExecutorLostFailure (executor 8 exited caused by one of the running tasks) Reason: Remote RPC client disassociated. Likely due to containers exceeding thresholds, or network issues. Check driver logs for WARN messages.
+17/04/03 14:40:06 WARN TaskSetManager: Lost task 6.2 in stage 1.0 (TID 48, 172.21.15.173, executor 8): ExecutorLostFailure (executor 8 exited caused by one of the running tasks) Reason: Remote RPC client disassociated. Likely due to containers exceeding thresholds, or network issues. Check driver logs for WARN messages.
+17/04/03 14:40:06 DEBUG DFSClient: DFSClient writeChunk allocating new packet seqno=39, src=/eventLogs/app-20170403143405-0002.lz4.inprogress, packetSize=65016, chunksPerPacket=126, bytesCurBlock=48128
+17/04/03 14:40:06 DEBUG DFSClient: DFSClient flush(): bytesCurBlock=55933 lastFlushOffset=48627 createNewBlock=false
+17/04/03 14:40:06 DEBUG DFSClient: Queued packet 39
+17/04/03 14:40:06 DEBUG DFSClient: Waiting for ack for: 39
+17/04/03 14:40:06 DEBUG DFSClient: DataStreamer block BP-519507147-172.21.15.90-1479901973323:blk_1073812537_71715 sending packet packet seqno: 39 offsetInBlock: 48128 lastPacketInBlock: false lastByteOffsetInBlock: 55933
+17/04/03 14:40:06 WARN DFSClient: Slow ReadProcessor read fields took 50711ms (threshold=30000ms); ack: seqno: 39 reply: SUCCESS downstreamAckTimeNanos: 0 flag: 0, targets: [DatanodeInfoWithStorage[172.21.15.173:50010,DS-bcd3842f-7acc-473a-9a24-360950418375,DISK]]
+17/04/03 14:40:06 DEBUG DFSClient: DFSClient writeChunk allocating new packet seqno=40, src=/eventLogs/app-20170403143405-0002.lz4.inprogress, packetSize=65016, chunksPerPacket=126, bytesCurBlock=55808
+17/04/03 14:40:06 DEBUG DFSClient: DFSClient flush(): bytesCurBlock=55933 lastFlushOffset=55933 createNewBlock=false
+17/04/03 14:40:06 DEBUG DFSClient: Waiting for ack for: 39
+[Stage 1:========================================================(12 + -8) / 10]17/04/03 14:40:06 DEBUG Client: The ping interval is 60000 ms.
+17/04/03 14:40:06 DEBUG Client: Connecting to spark1/172.21.15.90:9000
+17/04/03 14:40:06 DEBUG Client: IPC Client (239305256) connection to spark1/172.21.15.90:9000 from hadoop: starting, having connections 1
+17/04/03 14:40:06 DEBUG Client: IPC Client (239305256) connection to spark1/172.21.15.90:9000 from hadoop sending #19
+17/04/03 14:40:06 DEBUG Client: IPC Client (239305256) connection to spark1/172.21.15.90:9000 from hadoop got value #19
+17/04/03 14:40:06 DEBUG ProtobufRpcEngine: Call: renewLease took 6ms
+17/04/03 14:40:06 DEBUG LeaseRenewer: Lease renewed for client DFSClient_NONMAPREDUCE_611152811_1
+17/04/03 14:40:06 DEBUG LeaseRenewer: Lease renewer daemon for [DFSClient_NONMAPREDUCE_611152811_1] with renew id 1 executed
+17/04/03 14:40:08 DEBUG DFSClient: DFSClient writeChunk allocating new packet seqno=41, src=/eventLogs/app-20170403143405-0002.lz4.inprogress, packetSize=65016, chunksPerPacket=126, bytesCurBlock=55808
+17/04/03 14:40:08 DEBUG DFSClient: DFSClient flush(): bytesCurBlock=55933 lastFlushOffset=55933 createNewBlock=false
+17/04/03 14:40:08 DEBUG DFSClient: Waiting for ack for: 39
+[Stage 1:========================================================(12 + -6) / 10]17/04/03 14:40:08 DEBUG DFSClient: DFSClient writeChunk allocating new packet seqno=42, src=/eventLogs/app-20170403143405-0002.lz4.inprogress, packetSize=65016, chunksPerPacket=126, bytesCurBlock=55808
+17/04/03 14:40:08 DEBUG DFSClient: DFSClient flush(): bytesCurBlock=55933 lastFlushOffset=55933 createNewBlock=false
+17/04/03 14:40:08 DEBUG DFSClient: Waiting for ack for: 39
+17/04/03 14:40:16 DEBUG Client: IPC Client (239305256) connection to spark1/172.21.15.90:9000 from hadoop: closed
+17/04/03 14:40:16 DEBUG Client: IPC Client (239305256) connection to spark1/172.21.15.90:9000 from hadoop: stopped, remaining connections 0
+17/04/03 14:40:26 WARN TaskSetManager: Lost task 2.2 in stage 1.0 (TID 46, 172.21.15.173, executor 9): java.lang.OutOfMemoryError: Java heap space
+	at java.lang.reflect.Array.newArray(Native Method)
+	at java.lang.reflect.Array.newInstance(Array.java:70)
+	at scala.reflect.ClassTag$class.newArray(ClassTag.scala:61)
+	at scala.reflect.ClassTag$$anon$1.newArray(ClassTag.scala:152)
+	at org.apache.spark.util.collection.PrimitiveVector.copyArrayWithLength(PrimitiveVector.scala:87)
+	at org.apache.spark.util.collection.PrimitiveVector.resize(PrimitiveVector.scala:74)
+	at org.apache.spark.util.collection.PrimitiveVector.trim(PrimitiveVector.scala:70)
+	at org.apache.spark.graphx.impl.EdgePartitionBuilder$mcI$sp.toEdgePartition$mcI$sp(EdgePartitionBuilder.scala:38)
+	at org.apache.spark.graphx.GraphLoader$$anonfun$1.apply(GraphLoader.scala:92)
+	at org.apache.spark.graphx.GraphLoader$$anonfun$1.apply(GraphLoader.scala:75)
+	at org.apache.spark.rdd.RDD$$anonfun$mapPartitionsWithIndex$1$$anonfun$apply$26.apply(RDD.scala:845)
+	at org.apache.spark.rdd.RDD$$anonfun$mapPartitionsWithIndex$1$$anonfun$apply$26.apply(RDD.scala:845)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:38)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:323)
+	at org.apache.spark.rdd.RDD$$anonfun$8.apply(RDD.scala:338)
+	at org.apache.spark.rdd.RDD$$anonfun$8.apply(RDD.scala:336)
+	at org.apache.spark.storage.BlockManager$$anonfun$doPutIterator$1.apply(BlockManager.scala:958)
+	at org.apache.spark.storage.BlockManager$$anonfun$doPutIterator$1.apply(BlockManager.scala:949)
+	at org.apache.spark.storage.BlockManager.doPut(BlockManager.scala:889)
+	at org.apache.spark.storage.BlockManager.doPutIterator(BlockManager.scala:949)
+	at org.apache.spark.storage.BlockManager.getOrElseUpdate(BlockManager.scala:695)
+	at org.apache.spark.rdd.RDD.getOrCompute(RDD.scala:336)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:285)
+	at org.apache.spark.rdd.MapPartitionsRDD.compute(MapPartitionsRDD.scala:38)
+	at org.apache.spark.rdd.RDD.computeOrReadCheckpoint(RDD.scala:323)
+	at org.apache.spark.rdd.RDD.iterator(RDD.scala:287)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:97)
+	at org.apache.spark.scheduler.ShuffleMapTask.runTask(ShuffleMapTask.scala:54)
+	at org.apache.spark.scheduler.Task.run(Task.scala:114)
+	at org.apache.spark.executor.Executor$TaskRunner.run(Executor.scala:322)
+	at java.util.concurrent.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1145)
+	at java.util.concurrent.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:615)
+
+17/04/03 14:40:27 ERROR TaskSchedulerImpl: Lost executor 9 on 172.21.15.173: Remote RPC client disassociated. Likely due to containers exceeding thresholds, or network issues. Check driver logs for WARN messages.
+17/04/03 14:40:27 WARN TaskSetManager: Lost task 3.2 in stage 1.0 (TID 47, 172.21.15.173, executor 9): ExecutorLostFailure (executor 9 exited caused by one of the running tasks) Reason: Remote RPC client disassociated. Likely due to containers exceeding thresholds, or network issues. Check driver logs for WARN messages.
+17/04/03 14:40:27 WARN TaskSetManager: Lost task 6.3 in stage 1.0 (TID 51, 172.21.15.173, executor 9): ExecutorLostFailure (executor 9 exited caused by one of the running tasks) Reason: Remote RPC client disassociated. Likely due to containers exceeding thresholds, or network issues. Check driver logs for WARN messages.
+17/04/03 14:40:27 ERROR TaskSetManager: Task 6 in stage 1.0 failed 4 times; aborting job
+17/04/03 14:40:27 DEBUG DFSClient: DFSClient writeChunk allocating new packet seqno=43, src=/eventLogs/app-20170403143405-0002.lz4.inprogress, packetSize=65016, chunksPerPacket=126, bytesCurBlock=55808
+17/04/03 14:40:27 DEBUG DFSClient: DFSClient flush(): bytesCurBlock=60682 lastFlushOffset=55933 createNewBlock=false
+17/04/03 14:40:27 DEBUG DFSClient: Queued packet 43
+17/04/03 14:40:27 DEBUG DFSClient: Waiting for ack for: 43
+17/04/03 14:40:27 DEBUG DFSClient: DataStreamer block BP-519507147-172.21.15.90-1479901973323:blk_1073812537_71715 sending packet packet seqno: 43 offsetInBlock: 55808 lastPacketInBlock: false lastByteOffsetInBlock: 60682
+17/04/03 14:40:27 DEBUG DFSClient: DFSClient seqno: 43 reply: SUCCESS downstreamAckTimeNanos: 0 flag: 0
+17/04/03 14:40:27 DEBUG DFSClient: DFSClient writeChunk allocating new packet seqno=44, src=/eventLogs/app-20170403143405-0002.lz4.inprogress, packetSize=65016, chunksPerPacket=126, bytesCurBlock=60416
+17/04/03 14:40:27 DEBUG DFSClient: DFSClient flush(): bytesCurBlock=60682 lastFlushOffset=60682 createNewBlock=false
+17/04/03 14:40:27 DEBUG DFSClient: Waiting for ack for: 43
+Exception in thread "main" org.apache.spark.SparkException: Job aborted due to stage failure: Task 6 in stage 1.0 failed 4 times, most recent failure: Lost task 6.3 in stage 1.0 (TID 51, 172.21.15.173, executor 9): ExecutorLostFailure (executor 9 exited caused by one of the running tasks) Reason: Remote RPC client disassociated. Likely due to containers exceeding thresholds, or network issues. Check driver logs for WARN messages.
+Driver stacktrace:
+	at org.apache.spark.scheduler.DAGScheduler.org$apache$spark$scheduler$DAGScheduler$$failJobAndIndependentStages(DAGScheduler.scala:1456)
+	at org.apache.spark.scheduler.DAGScheduler$$anonfun$abortStage$1.apply(DAGScheduler.scala:1444)
+	at org.apache.spark.scheduler.DAGScheduler$$anonfun$abortStage$1.apply(DAGScheduler.scala:1443)
+	at scala.collection.mutable.ResizableArray$class.foreach(ResizableArray.scala:59)
+	at scala.collection.mutable.ArrayBuffer.foreach(ArrayBuffer.scala:48)
+	at org.apache.spark.scheduler.DAGScheduler.abortStage(DAGScheduler.scala:1443)
+	at org.apache.spark.scheduler.DAGScheduler$$anonfun$handleTaskSetFailed$1.apply(DAGScheduler.scala:802)
+	at org.apache.spark.scheduler.DAGScheduler$$anonfun$handleTaskSetFailed$1.apply(DAGScheduler.scala:802)
+	at scala.Option.foreach(Option.scala:257)
+	at org.apache.spark.scheduler.DAGScheduler.handleTaskSetFailed(DAGScheduler.scala:802)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.doOnReceive(DAGScheduler.scala:1671)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.onReceive(DAGScheduler.scala:1626)
+	at org.apache.spark.scheduler.DAGSchedulerEventProcessLoop.onReceive(DAGScheduler.scala:1615)
+	at org.apache.spark.util.EventLoop$$anon$1.run(EventLoop.scala:48)
+	at org.apache.spark.scheduler.DAGScheduler.runJob(DAGScheduler.scala:628)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2016)
+	at org.apache.spark.SparkContext.runJob(SparkContext.scala:2113)
+	at org.apache.spark.rdd.RDD$$anonfun$reduce$1.apply(RDD.scala:1027)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:151)
+	at org.apache.spark.rdd.RDDOperationScope$.withScope(RDDOperationScope.scala:112)
+	at org.apache.spark.rdd.RDD.withScope(RDD.scala:364)
+	at org.apache.spark.rdd.RDD.reduce(RDD.scala:1009)
+	at org.apache.spark.graphx.impl.VertexRDDImpl.count(VertexRDDImpl.scala:90)
+	at org.apache.spark.graphx.Pregel$.apply(Pregel.scala:128)
+	at org.apache.spark.graphx.lib.ShortestPaths$.run(ShortestPaths.scala:70)
+	at src.main.scala.ShortestPathsApp$.main(ShortestPathsApp.scala:71)
+	at src.main.scala.ShortestPathsApp.main(ShortestPathsApp.scala)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.apache.spark.deploy.SparkSubmit$.org$apache$spark$deploy$SparkSubmit$$runMain(SparkSubmit.scala:728)
+	at org.apache.spark.deploy.SparkSubmit$.doRunMain$1(SparkSubmit.scala:177)
+	at org.apache.spark.deploy.SparkSubmit$.submit(SparkSubmit.scala:202)
+	at org.apache.spark.deploy.SparkSubmit$.main(SparkSubmit.scala:116)
+	at org.apache.spark.deploy.SparkSubmit.main(SparkSubmit.scala)
+17/04/03 14:40:27 DEBUG DFSClient: DFSClient writeChunk allocating new packet seqno=45, src=/eventLogs/app-20170403143405-0002.lz4.inprogress, packetSize=65016, chunksPerPacket=126, bytesCurBlock=60416
+17/04/03 14:40:27 DEBUG DFSClient: DFSClient flush(): bytesCurBlock=60682 lastFlushOffset=60682 createNewBlock=false
+17/04/03 14:40:27 DEBUG DFSClient: Waiting for ack for: 43
+17/04/03 14:40:27 DEBUG DFSClient: DFSClient writeChunk allocating new packet seqno=46, src=/eventLogs/app-20170403143405-0002.lz4.inprogress, packetSize=65016, chunksPerPacket=126, bytesCurBlock=60416
+17/04/03 14:40:27 DEBUG DFSClient: DFSClient flush(): bytesCurBlock=60682 lastFlushOffset=60682 createNewBlock=false
+17/04/03 14:40:27 DEBUG DFSClient: Waiting for ack for: 43
+17/04/03 14:40:27 DEBUG DFSClient: DFSClient writeChunk allocating new packet seqno=47, src=/eventLogs/app-20170403143405-0002.lz4.inprogress, packetSize=65016, chunksPerPacket=126, bytesCurBlock=60416
+17/04/03 14:40:27 DEBUG DFSClient: DFSClient flush(): bytesCurBlock=60682 lastFlushOffset=60682 createNewBlock=false
+17/04/03 14:40:27 DEBUG DFSClient: Waiting for ack for: 43
+17/04/03 14:40:27 DEBUG DFSClient: DFSClient writeChunk allocating new packet seqno=48, src=/eventLogs/app-20170403143405-0002.lz4.inprogress, packetSize=65016, chunksPerPacket=126, bytesCurBlock=60416
+17/04/03 14:40:27 DEBUG DFSClient: Queued packet 48
+17/04/03 14:40:27 DEBUG DFSClient: Queued packet 49
+17/04/03 14:40:27 DEBUG DFSClient: Waiting for ack for: 49
+17/04/03 14:40:27 DEBUG DFSClient: DataStreamer block BP-519507147-172.21.15.90-1479901973323:blk_1073812537_71715 sending packet packet seqno: 48 offsetInBlock: 60416 lastPacketInBlock: false lastByteOffsetInBlock: 65004
+17/04/03 14:40:27 DEBUG DFSClient: DFSClient seqno: 48 reply: SUCCESS downstreamAckTimeNanos: 0 flag: 0
+17/04/03 14:40:27 DEBUG DFSClient: DataStreamer block BP-519507147-172.21.15.90-1479901973323:blk_1073812537_71715 sending packet packet seqno: 49 offsetInBlock: 65004 lastPacketInBlock: true lastByteOffsetInBlock: 65004
+17/04/03 14:40:27 DEBUG DFSClient: DFSClient seqno: 49 reply: SUCCESS downstreamAckTimeNanos: 0 flag: 0
+17/04/03 14:40:27 DEBUG DFSClient: Closing old block BP-519507147-172.21.15.90-1479901973323:blk_1073812537_71715
+17/04/03 14:40:27 DEBUG Client: The ping interval is 60000 ms.
+17/04/03 14:40:27 DEBUG Client: Connecting to spark1/172.21.15.90:9000
+17/04/03 14:40:27 DEBUG Client: IPC Client (239305256) connection to spark1/172.21.15.90:9000 from hadoop: starting, having connections 1
+17/04/03 14:40:27 DEBUG Client: IPC Client (239305256) connection to spark1/172.21.15.90:9000 from hadoop sending #20
+17/04/03 14:40:27 DEBUG Client: IPC Client (239305256) connection to spark1/172.21.15.90:9000 from hadoop got value #20
+17/04/03 14:40:27 DEBUG ProtobufRpcEngine: Call: complete took 3ms
+17/04/03 14:40:27 DEBUG Client: IPC Client (239305256) connection to spark1/172.21.15.90:9000 from hadoop sending #21
+17/04/03 14:40:27 DEBUG Client: IPC Client (239305256) connection to spark1/172.21.15.90:9000 from hadoop got value #21
+17/04/03 14:40:27 DEBUG ProtobufRpcEngine: Call: complete took 9ms
+17/04/03 14:40:27 DEBUG Client: IPC Client (239305256) connection to spark1/172.21.15.90:9000 from hadoop sending #22
+17/04/03 14:40:27 DEBUG Client: IPC Client (239305256) connection to spark1/172.21.15.90:9000 from hadoop got value #22
+17/04/03 14:40:27 DEBUG ProtobufRpcEngine: Call: getFileInfo took 0ms
+17/04/03 14:40:27 DEBUG Client: IPC Client (239305256) connection to spark1/172.21.15.90:9000 from hadoop sending #23
+17/04/03 14:40:27 ERROR LiveListenerBus: SparkListenerBus has already stopped! Dropping event SparkListenerBlockUpdated(BlockUpdatedInfo(BlockManagerId(10, 172.21.15.173, 56849, None),broadcast_2_piece0,StorageLevel(memory, 1 replicas),2990,0))
+17/04/03 14:40:27 DEBUG Client: IPC Client (239305256) connection to spark1/172.21.15.90:9000 from hadoop got value #23
+17/04/03 14:40:27 DEBUG ProtobufRpcEngine: Call: rename took 7ms
+17/04/03 14:40:27 DEBUG Client: IPC Client (239305256) connection to spark1/172.21.15.90:9000 from hadoop sending #24
+17/04/03 14:40:27 DEBUG Client: IPC Client (239305256) connection to spark1/172.21.15.90:9000 from hadoop got value #24
+17/04/03 14:40:27 DEBUG ProtobufRpcEngine: Call: setTimes took 11ms
+17/04/03 14:40:27 DEBUG PoolThreadCache: Freed 4 thread-local buffer(s) from thread: shuffle-server-6-3
+17/04/03 14:40:27 DEBUG PoolThreadCache: Freed 5 thread-local buffer(s) from thread: shuffle-server-6-4
+17/04/03 14:40:27 DEBUG PoolThreadCache: Freed 4 thread-local buffer(s) from thread: shuffle-server-6-2
+17/04/03 14:40:27 DEBUG PoolThreadCache: Freed 19 thread-local buffer(s) from thread: rpc-server-3-4
+17/04/03 14:40:27 DEBUG Client: stopping client from cache: org.apache.hadoop.ipc.Client@1a43c7a0
+17/04/03 14:40:27 DEBUG Client: removing client from cache: org.apache.hadoop.ipc.Client@1a43c7a0
+17/04/03 14:40:27 DEBUG Client: stopping actual client because no more references remain: org.apache.hadoop.ipc.Client@1a43c7a0
+17/04/03 14:40:27 DEBUG Client: Stopping client
+17/04/03 14:40:27 DEBUG Client: IPC Client (239305256) connection to spark1/172.21.15.90:9000 from hadoop: closed
+17/04/03 14:40:27 DEBUG Client: IPC Client (239305256) connection to spark1/172.21.15.90:9000 from hadoop: stopped, remaining connections 0

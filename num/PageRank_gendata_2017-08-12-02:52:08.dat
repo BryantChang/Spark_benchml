@@ -1,0 +1,34 @@
+17/08/12 02:52:11 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+17/08/12 02:52:11 WARN SparkConf: Detected deprecated memory fraction settings: [spark.storage.memoryFraction]. As of Spark 1.6, execution and storage memory management are unified. All memory fractions used in the old model are now deprecated and no longer read. If you wish to use the old memory management, you may explicitly enable `spark.memory.useLegacyMode` (not recommended).
+17/08/12 02:52:12 INFO log: Logging initialized @3514ms
+17/08/12 02:52:12 INFO Server: jetty-9.3.z-SNAPSHOT
+17/08/12 02:52:12 INFO Server: Started @3639ms
+17/08/12 02:52:12 INFO AbstractConnector: Started ServerConnector@2e8ab815{HTTP/1.1,[http/1.1]}{0.0.0.0:4040}
+17/08/12 02:52:12 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@7c18432b{/jobs,null,AVAILABLE,@Spark}
+17/08/12 02:52:12 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@69adf72c{/jobs/json,null,AVAILABLE,@Spark}
+17/08/12 02:52:12 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@1a15b789{/jobs/job,null,AVAILABLE,@Spark}
+17/08/12 02:52:12 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@6c4f9535{/jobs/job/json,null,AVAILABLE,@Spark}
+17/08/12 02:52:12 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@30c31dd7{/stages,null,AVAILABLE,@Spark}
+17/08/12 02:52:12 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@596df867{/stages/json,null,AVAILABLE,@Spark}
+17/08/12 02:52:12 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@241a53ef{/stages/stage,null,AVAILABLE,@Spark}
+17/08/12 02:52:12 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@615f972{/stages/stage/json,null,AVAILABLE,@Spark}
+17/08/12 02:52:12 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@73393584{/stages/pool,null,AVAILABLE,@Spark}
+17/08/12 02:52:12 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@1827a871{/stages/pool/json,null,AVAILABLE,@Spark}
+17/08/12 02:52:12 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@7249dadf{/storage,null,AVAILABLE,@Spark}
+17/08/12 02:52:12 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@66238be2{/storage/json,null,AVAILABLE,@Spark}
+17/08/12 02:52:12 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@200606de{/storage/rdd,null,AVAILABLE,@Spark}
+17/08/12 02:52:12 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@f8908f6{/storage/rdd/json,null,AVAILABLE,@Spark}
+17/08/12 02:52:12 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@2ef8a8c3{/environment,null,AVAILABLE,@Spark}
+17/08/12 02:52:12 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@63fd4873{/environment/json,null,AVAILABLE,@Spark}
+17/08/12 02:52:12 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@7544a1e4{/executors,null,AVAILABLE,@Spark}
+17/08/12 02:52:12 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@7957dc72{/executors/json,null,AVAILABLE,@Spark}
+17/08/12 02:52:12 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@3aacf32a{/executors/threadDump,null,AVAILABLE,@Spark}
+17/08/12 02:52:12 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@82c57b3{/executors/threadDump/json,null,AVAILABLE,@Spark}
+17/08/12 02:52:12 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@600b0b7{/static,null,AVAILABLE,@Spark}
+17/08/12 02:52:12 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@38875e7d{/,null,AVAILABLE,@Spark}
+17/08/12 02:52:12 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@d816dde{/api,null,AVAILABLE,@Spark}
+17/08/12 02:52:12 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@3113a37{/jobs/job/kill,null,AVAILABLE,@Spark}
+17/08/12 02:52:12 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@4e9658b5{/stages/stage/kill,null,AVAILABLE,@Spark}
+17/08/12 02:52:13 INFO ContextHandler: Started o.s.j.s.ServletContextHandler@736ac09a{/metrics/json,null,AVAILABLE,@Spark}
+17/08/12 02:52:15 INFO FileOutputCommitter: File Output Committer Algorithm version is 1
+[Stage 0:>                                                         (0 + 0) / 10][Stage 0:>                                                        (0 + 10) / 10][Stage 0:=====>                                                    (1 + 9) / 10][Stage 0:=================>                                        (3 + 7) / 10][Stage 0:=======================>                                  (4 + 6) / 10][Stage 0:=============================>                            (5 + 5) / 10][Stage 0:==================================>                       (6 + 4) / 10][Stage 0:========================================>                 (7 + 3) / 10][Stage 0:==============================================>           (8 + 2) / 10]                                                                                17/08/12 02:52:37 INFO AbstractConnector: Stopped Spark@2e8ab815{HTTP/1.1,[http/1.1]}{0.0.0.0:4040}

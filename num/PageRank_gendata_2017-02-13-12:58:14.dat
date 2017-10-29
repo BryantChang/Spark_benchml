@@ -1,0 +1,20 @@
+Using Spark's default log4j profile: org/apache/spark/log4j-defaults.properties
+17/02/13 12:58:15 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+17/02/13 12:58:15 WARN SparkConf: Detected deprecated memory fraction settings: [spark.storage.memoryFraction]. As of Spark 1.6, execution and storage memory management are unified. All memory fractions used in the old model are now deprecated and no longer read. If you wish to use the old memory management, you may explicitly enable `spark.memory.useLegacyMode` (not recommended).
+17/02/13 12:58:15 WARN SparkConf: 
+SPARK_CLASSPATH was detected (set to '/home/hadoop/bryantchang/platforms/spark-2.0.2-bin-hadoop2.7/lib/mysql-connector-java-5.1.40-bin.jar:').
+This is deprecated in Spark 1.0+.
+
+Please instead use:
+ - ./spark-submit with --driver-class-path to augment the driver classpath
+ - spark.executor.extraClassPath to augment the executor classpath
+        
+17/02/13 12:58:15 WARN SparkConf: Setting 'spark.executor.extraClassPath' to '/home/hadoop/bryantchang/platforms/spark-2.0.2-bin-hadoop2.7/lib/mysql-connector-java-5.1.40-bin.jar:' as a work-around.
+17/02/13 12:58:15 WARN SparkConf: Setting 'spark.driver.extraClassPath' to '/home/hadoop/bryantchang/platforms/spark-2.0.2-bin-hadoop2.7/lib/mysql-connector-java-5.1.40-bin.jar:' as a work-around.
+17/02/13 12:58:17 INFO deprecation: mapred.tip.id is deprecated. Instead, use mapreduce.task.id
+17/02/13 12:58:17 INFO deprecation: mapred.task.id is deprecated. Instead, use mapreduce.task.attempt.id
+17/02/13 12:58:17 INFO deprecation: mapred.task.is.map is deprecated. Instead, use mapreduce.task.ismap
+17/02/13 12:58:17 INFO deprecation: mapred.task.partition is deprecated. Instead, use mapreduce.task.partition
+17/02/13 12:58:17 INFO deprecation: mapred.job.id is deprecated. Instead, use mapreduce.job.id
+17/02/13 12:58:17 INFO FileOutputCommitter: File Output Committer Algorithm version is 1
+[Stage 0:>                                                         (0 + 0) / 10][Stage 0:>                                                         (0 + 4) / 10][Stage 0:>                                                         (0 + 5) / 10][Stage 0:=====>                                                    (1 + 4) / 10][Stage 0:===========>                                              (2 + 4) / 10][Stage 0:=================>                                        (3 + 4) / 10][Stage 0:=======================>                                  (4 + 4) / 10][Stage 0:=============================>                            (5 + 4) / 10][Stage 0:==================================>                       (6 + 4) / 10][Stage 0:========================================>                 (7 + 3) / 10][Stage 0:==============================================>           (8 + 2) / 10][Stage 0:====================================================>     (9 + 1) / 10]                                                                                

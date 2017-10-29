@@ -1,0 +1,17 @@
+5
+Using Spark's default log4j profile: org/apache/spark/log4j-defaults.properties
+16/12/12 08:57:07 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+16/12/12 08:57:07 WARN SparkConf: Detected deprecated memory fraction settings: [spark.storage.memoryFraction]. As of Spark 1.6, execution and storage memory management are unified. All memory fractions used in the old model are now deprecated and no longer read. If you wish to use the old memory management, you may explicitly enable `spark.memory.useLegacyMode` (not recommended).
+16/12/12 08:57:07 WARN SparkConf: 
+SPARK_CLASSPATH was detected (set to '/home/hadoop/bryantchang/platforms/spark-2.0.2-bin-hadoop2.7/lib/mysql-connector-java-5.1.40-bin.jar:').
+This is deprecated in Spark 1.0+.
+
+Please instead use:
+ - ./spark-submit with --driver-class-path to augment the driver classpath
+ - spark.executor.extraClassPath to augment the executor classpath
+        
+16/12/12 08:57:07 WARN SparkConf: Setting 'spark.executor.extraClassPath' to '/home/hadoop/bryantchang/platforms/spark-2.0.2-bin-hadoop2.7/lib/mysql-connector-java-5.1.40-bin.jar:' as a work-around.
+16/12/12 08:57:07 WARN SparkConf: Setting 'spark.driver.extraClassPath' to '/home/hadoop/bryantchang/platforms/spark-2.0.2-bin-hadoop2.7/lib/mysql-connector-java-5.1.40-bin.jar:' as a work-around.
+app-20161212085707-0013
+16/12/12 08:57:09 INFO FileInputFormat: Total input paths to process : 10
+[Stage 0:>                                                        (0 + 0) / 300][Stage 0:>                                                        (0 + 4) / 300]

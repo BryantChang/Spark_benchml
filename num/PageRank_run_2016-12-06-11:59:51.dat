@@ -1,0 +1,51 @@
+7
+Using Spark's default log4j profile: org/apache/spark/log4j-defaults.properties
+16/12/06 11:59:52 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+16/12/06 11:59:52 WARN SparkConf: Detected deprecated memory fraction settings: [spark.storage.memoryFraction]. As of Spark 1.6, execution and storage memory management are unified. All memory fractions used in the old model are now deprecated and no longer read. If you wish to use the old memory management, you may explicitly enable `spark.memory.useLegacyMode` (not recommended).
+16/12/06 11:59:52 ERROR SparkContext: Error initializing SparkContext.
+java.lang.NumberFormatException: Size must be specified as bytes (b), kibibytes (k), mebibytes (m), gibibytes (g), tebibytes (t), or pebibytes(p). E.g. 50b, 100k, or 250m.
+Fractional values are not supported. Input was: 2.5
+	at org.apache.spark.network.util.JavaUtils.byteStringAs(JavaUtils.java:243)
+	at org.apache.spark.network.util.JavaUtils.byteStringAsBytes(JavaUtils.java:254)
+	at org.apache.spark.util.Utils$.byteStringAsBytes(Utils.scala:1073)
+	at org.apache.spark.SparkConf.getSizeAsBytes(SparkConf.scala:294)
+	at org.apache.spark.memory.UnifiedMemoryManager$.getMaxMemory(UnifiedMemoryManager.scala:218)
+	at org.apache.spark.memory.UnifiedMemoryManager$.apply(UnifiedMemoryManager.scala:194)
+	at org.apache.spark.SparkEnv$.create(SparkEnv.scala:308)
+	at org.apache.spark.SparkEnv$.createDriverEnv(SparkEnv.scala:165)
+	at org.apache.spark.SparkContext.createSparkEnv(SparkContext.scala:256)
+	at org.apache.spark.SparkContext.<init>(SparkContext.scala:420)
+	at src.main.scala.SimplePageRank$.main(SimplePageRank.scala:47)
+	at src.main.scala.SimplePageRank.main(SimplePageRank.scala)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.apache.spark.deploy.SparkSubmit$.org$apache$spark$deploy$SparkSubmit$$runMain(SparkSubmit.scala:736)
+	at org.apache.spark.deploy.SparkSubmit$.doRunMain$1(SparkSubmit.scala:185)
+	at org.apache.spark.deploy.SparkSubmit$.submit(SparkSubmit.scala:210)
+	at org.apache.spark.deploy.SparkSubmit$.main(SparkSubmit.scala:124)
+	at org.apache.spark.deploy.SparkSubmit.main(SparkSubmit.scala)
+Exception in thread "main" java.lang.NumberFormatException: Size must be specified as bytes (b), kibibytes (k), mebibytes (m), gibibytes (g), tebibytes (t), or pebibytes(p). E.g. 50b, 100k, or 250m.
+Fractional values are not supported. Input was: 2.5
+	at org.apache.spark.network.util.JavaUtils.byteStringAs(JavaUtils.java:243)
+	at org.apache.spark.network.util.JavaUtils.byteStringAsBytes(JavaUtils.java:254)
+	at org.apache.spark.util.Utils$.byteStringAsBytes(Utils.scala:1073)
+	at org.apache.spark.SparkConf.getSizeAsBytes(SparkConf.scala:294)
+	at org.apache.spark.memory.UnifiedMemoryManager$.getMaxMemory(UnifiedMemoryManager.scala:218)
+	at org.apache.spark.memory.UnifiedMemoryManager$.apply(UnifiedMemoryManager.scala:194)
+	at org.apache.spark.SparkEnv$.create(SparkEnv.scala:308)
+	at org.apache.spark.SparkEnv$.createDriverEnv(SparkEnv.scala:165)
+	at org.apache.spark.SparkContext.createSparkEnv(SparkContext.scala:256)
+	at org.apache.spark.SparkContext.<init>(SparkContext.scala:420)
+	at src.main.scala.SimplePageRank$.main(SimplePageRank.scala:47)
+	at src.main.scala.SimplePageRank.main(SimplePageRank.scala)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:606)
+	at org.apache.spark.deploy.SparkSubmit$.org$apache$spark$deploy$SparkSubmit$$runMain(SparkSubmit.scala:736)
+	at org.apache.spark.deploy.SparkSubmit$.doRunMain$1(SparkSubmit.scala:185)
+	at org.apache.spark.deploy.SparkSubmit$.submit(SparkSubmit.scala:210)
+	at org.apache.spark.deploy.SparkSubmit$.main(SparkSubmit.scala:124)
+	at org.apache.spark.deploy.SparkSubmit.main(SparkSubmit.scala)

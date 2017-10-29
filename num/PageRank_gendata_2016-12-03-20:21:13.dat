@@ -1,0 +1,10 @@
+Using Spark's default log4j profile: org/apache/spark/log4j-defaults.properties
+16/12/03 20:21:14 WARN NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+16/12/03 20:21:14 WARN SparkConf: Detected deprecated memory fraction settings: [spark.storage.memoryFraction]. As of Spark 1.6, execution and storage memory management are unified. All memory fractions used in the old model are now deprecated and no longer read. If you wish to use the old memory management, you may explicitly enable `spark.memory.useLegacyMode` (not recommended).
+16/12/03 20:21:16 INFO deprecation: mapred.tip.id is deprecated. Instead, use mapreduce.task.id
+16/12/03 20:21:16 INFO deprecation: mapred.task.id is deprecated. Instead, use mapreduce.task.attempt.id
+16/12/03 20:21:16 INFO deprecation: mapred.task.is.map is deprecated. Instead, use mapreduce.task.ismap
+16/12/03 20:21:16 INFO deprecation: mapred.task.partition is deprecated. Instead, use mapreduce.task.partition
+16/12/03 20:21:16 INFO deprecation: mapred.job.id is deprecated. Instead, use mapreduce.job.id
+16/12/03 20:21:16 INFO FileOutputCommitter: File Output Committer Algorithm version is 1
+[Stage 0:>                                                         (0 + 0) / 10][Stage 0:>                                                         (0 + 4) / 10][Stage 0:=====>                                                    (1 + 4) / 10][Stage 0:===========>                                              (2 + 4) / 10][Stage 0:=================>                                        (3 + 4) / 10][Stage 0:=======================>                                  (4 + 4) / 10][Stage 0:=============================>                            (5 + 4) / 10][Stage 0:==================================>                       (6 + 4) / 10][Stage 0:==============================================>           (8 + 2) / 10][Stage 0:====================================================>     (9 + 1) / 10]                                                                                

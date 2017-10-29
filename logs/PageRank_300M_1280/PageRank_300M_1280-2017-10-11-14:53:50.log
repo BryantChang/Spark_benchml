@@ -1,0 +1,11 @@
+Linux 2.6.32-431.el6.x86_64 (spark1) 	2017年10月11日 	_x86_64_	(4 CPU)
+
+Device:         rrqm/s   wrqm/s     r/s     w/s    rkB/s    wkB/s avgrq-sz avgqu-sz   await  svctm  %util
+dm-2              0.00     0.00    6.88   19.98    73.91    79.91    11.46     6.27  233.37   0.24   0.65
+
+Device:         rrqm/s   wrqm/s     r/s     w/s    rkB/s    wkB/s avgrq-sz avgqu-sz   await  svctm  %util
+dm-2              0.00     0.00    0.00    1.00     0.00     4.00     8.00     0.00    3.00   3.00   0.30
+
+Device:         rrqm/s   wrqm/s     r/s     w/s    rkB/s    wkB/s avgrq-sz avgqu-sz   await  svctm  %util
+dm-2              0.00     0.00    1.00    2.00     4.00     8.00     8.00     0.03   11.00  11.00   3.30
+
