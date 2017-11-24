@@ -15,8 +15,7 @@ object SimplePageRank {
       println("usage: <input> <output> <minEdge> <maxIterations> <tolerance> <resetProb> <StorageLevel>")
       System.exit(0)
     }
-    Logger.getLogger("org.apache.spark").setLevel(Level.WARN)
-    Logger.getLogger("org.eclipse.jetty.server").setLevel(Level.OFF)
+  
 
     //val conf = new SparkConf
     //conf.setAppName("Spark PageRank Application")

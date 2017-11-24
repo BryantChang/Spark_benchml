@@ -14,7 +14,8 @@ DIR=`cd $bin/../; pwd`
 DU ${INPUT_HDFS} SIZE 
 JAR="${DIR}/target/DecisionTreeApp-1.0.jar"
 CLASS="DecisionTree.src.main.java.DecisionTreeApp"
-
+DEL_OLD_LOGS
+ssh spark2 rm -rf /home/hadoop/bryantchang/logs/sparklogs/executor_logs/${APP}_${TYPE}_${SPARK_EXECUTOR_MEMORY}.log
 echo "perf_monitor.sh ${MONITOR_LOG_PATH}/${APP}_${TYPE}_${SPARK_EXECUTOR_MEMORY}.log 1 &"
 
 sleep 10
@@ -34,7 +35,11 @@ get_config_fields >> ${BENCH_REPORT}
 print_config  ${APP} ${START_TIME} ${END_TIME} ${SIZE} ${START_TS} ${res}>> ${BENCH_REPORT};
 done
 
-ssh spark2 perf_monitor_stop.sh
+STOP_MONITOR
+ssh spark2 mv /home/hadoop/bryantchang/logs/sparklogs/test.log   /home/hadoop/bryantchang/logs/sparklogs/executor_logs/${APP}_${TYPE}_${SPARK_EXECUTOR_MEMORY}.log
+ssh spark2 analyse_gc_log.sh ${APP}_${TYPE}_${SPARK_EXECUTOR_MEMORY}.log /home/hadoop/bryantchang/logs/sparklogs/gc_logs
+ssh spark2 python /home/hadoop/bryantchang/tools/monitor/summary_gc.py ${APP}_${TYPE}_${SPARK_EXECUTOR_MEMORY}.log
+ssh spark2 python /home/hadoop/bryantchang/tools/monitor/analyse_perf.py ${APP}_${TYPE}_${SPARK_EXECUTOR_MEMORY}.log
 teardown
 
 exit 0

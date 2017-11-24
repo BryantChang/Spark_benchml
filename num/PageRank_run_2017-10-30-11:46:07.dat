@@ -1,0 +1,8 @@
+log4j:ERROR Could not find value for key log4j.appender.DEBUG
+log4j:ERROR Could not instantiate appender named "DEBUG".
+log4j:ERROR Could not find value for key log4j.appender.INFO
+log4j:ERROR Could not instantiate appender named "INFO".
+log4j:ERROR Could not find value for key log4j.appender.console
+log4j:ERROR Could not instantiate appender named "console".
+Running Spark using the REST application submission protocol.
+Warning: Master endpoint spark://spark1:7077 was not a REST server. Falling back to legacy submission gateway instead.

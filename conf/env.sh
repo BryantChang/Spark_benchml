@@ -3,8 +3,16 @@
 
 master=spark1
 slave=spark2
-MONITOR_PATH=/home/hadoop/bryantchang/tools/monitor
-MONITOR_LOG_PATH=/home/hadoop/bryantchang/logs/sparklogs/monitor_logs
+
+TOOLS_DIR="/home/hadoop/bryantchang/tools/awsmc"
+
+##Log locations
+EXECUTOR_ORI_LOG_DIR="/home/hadoop/bryantchang/logs/sparklogs/executor_logs"
+MONITOR_ORI_LOG_DIR="/home/hadoop/bryantchang/logs/sparklogs/monitor_logs"
+MONITOR_RES_LOG_DIR="/home/hadoop/bryantchang/logs/sparklogs/monitor_logs/analyse_result"
+GC_ORI_LOG_DIR="/home/hadoop/bryantchang/logs/sparklogs/gc_logs"
+GC_RES_LOG_DIR="/home/hadoop/bryantchang/logs/sparklogs/gc_logs/gc_result"
+SPARK_EXECUTOR_ORI_LOG_DIR="/home/hadoop/bryantchang/logs/sparklogs"
 #A list of machines where the spark cluster is running
 MC_LIST=/YOUR/SLAVES
 FILESYSTEM="hdfs"

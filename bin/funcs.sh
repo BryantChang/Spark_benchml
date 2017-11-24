@@ -15,6 +15,7 @@
 # limitations under the License.
 
 ############### common functions ################
+slave="spark2"
 function timestamp() {
     sec=`date +%s`
     nanosec=`date +%N`
@@ -214,4 +215,11 @@ function  CPTO() {
        if [ $? == 1 ]; then  return 1; fi
       ${HADOOP_HOME}/bin/hdfs dfs -copyToLocal  $src $dst
     fi
+}
+
+function DEL_OLD_LOGS() {
+    ssh ${slave} rm -rf ${SPARK_EXECUTOR_ORI_LOG_DIR}/test.log
+}
+function STOP_MONITOR() {
+    ssh ${slave} perf_monitor_stop.sh
 }

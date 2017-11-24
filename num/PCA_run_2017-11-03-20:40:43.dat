@@ -1,0 +1,11 @@
+log4j:ERROR Could not find value for key log4j.appender.DEBUG
+log4j:ERROR Could not instantiate appender named "DEBUG".
+log4j:ERROR Could not find value for key log4j.appender.INFO
+log4j:ERROR Could not instantiate appender named "INFO".
+log4j:ERROR Could not find value for key log4j.appender.console
+log4j:ERROR Could not instantiate appender named "console".
+START load
+START training
+[Stage 2:=====>                                                    (1 + 0) / 10][Stage 2:=====>                                                    (1 + 4) / 10][Stage 2:===========>                                              (2 + 4) / 10][Stage 2:=======================>                                  (4 + 4) / 10][Stage 2:=============================>                            (5 + 4) / 10][Stage 2:==================================>                       (6 + 4) / 10][Stage 2:========================================>                 (7 + 3) / 10][Stage 2:==============================================>           (8 + 2) / 10][Stage 2:====================================================>     (9 + 1) / 10]                                                                                [Stage 4:>                                                         (0 + 4) / 10][Stage 4:=================>                                        (3 + 4) / 10][Stage 4:=============================>                            (5 + 4) / 10][Stage 4:========================================>                 (7 + 3) / 10][Stage 4:====================================================>     (9 + 1) / 10]                                                                                START test
+[Stage 6:>                                                         (0 + 4) / 10][Stage 6:=================>                                        (3 + 4) / 10][Stage 6:=============================>                            (5 + 4) / 10][Stage 6:========================================>                 (7 + 3) / 10][Stage 6:====================================================>     (9 + 1) / 10]                                                                                {"loadTime":0.24,"trainingTime":25.315,"testTime":1.693}
+Number of Data = 800000
