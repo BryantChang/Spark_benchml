@@ -223,3 +223,4 @@ function DEL_OLD_LOGS() {
 function STOP_MONITOR() {
     ssh ${slave} perf_monitor_stop.sh
 }
+

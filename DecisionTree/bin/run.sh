@@ -34,10 +34,10 @@ print_config  ${APP} ${START_TIME} ${END_TIME} ${SIZE} ${START_TS} ${res}>> ${BE
 done
 
 STOP_MONITOR
-ssh spark2 mv /home/hadoop/bryantchang/logs/sparklogs/test.log   /home/hadoop/bryantchang/logs/sparklogs/executor_logs/${APP}_${TYPE}_${SPARK_EXECUTOR_MEMORY}.log
-ssh spark2 analyse_gc_log.sh ${APP}_${TYPE}_${SPARK_EXECUTOR_MEMORY}.log /home/hadoop/bryantchang/logs/sparklogs/gc_logs
-ssh spark2 python /home/hadoop/bryantchang/tools/monitor/summary_gc.py ${APP}_${TYPE}_${SPARK_EXECUTOR_MEMORY}.log
-ssh spark2 python /home/hadoop/bryantchang/tools/monitor/analyse_perf.py ${APP}_${TYPE}_${SPARK_EXECUTOR_MEMORY}.log
+ssh spark2 mv ${SPARK_EXECUTOR_ORI_LOG_DIR}/test.log   ${EXECUTOR_ORI_LOG_DIR}/${APP}_${TYPE}_${SPARK_EXECUTOR_MEMORY}.log
+ssh spark2 analyse_gc_log.sh ${APP}_${TYPE}_${SPARK_EXECUTOR_MEMORY}.log ${GC_ORI_LOG_DIR}
+ssh spark2 sh ${TOOLS_DIR}/bin/summary_gc.sh ${APP}_${TYPE}_${SPARK_EXECUTOR_MEMORY}.log
+ssh spark2 sh ${TOOLS_DIR}/bin/analyse_perf.sh ${APP}_${TYPE}_${SPARK_EXECUTOR_MEMORY}.log
 teardown
 
 exit 0

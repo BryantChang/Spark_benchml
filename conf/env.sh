@@ -7,6 +7,8 @@ slave=spark2
 TOOLS_DIR="/home/hadoop/bryantchang/tools/awsmc"
 
 ##Log locations
+
+
 EXECUTOR_ORI_LOG_DIR="/home/hadoop/bryantchang/logs/sparklogs/executor_logs"
 MONITOR_ORI_LOG_DIR="/home/hadoop/bryantchang/logs/sparklogs/monitor_logs"
 MONITOR_RES_LOG_DIR="/home/hadoop/bryantchang/logs/sparklogs/monitor_logs/analyse_result"
