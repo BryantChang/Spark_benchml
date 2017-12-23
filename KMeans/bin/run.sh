@@ -23,7 +23,7 @@ if  [ $# -ge 1 ] && [ $1 = "graphx" ]; then
 fi
 DEL_OLD_LOGS
 ssh spark2 rm -rf ${MONITOR_ORI_LOG_DIR}/${APP}_${TYPE}_${SPARK_EXECUTOR_MEMORY}.log
-echo "perf_monitor.sh ${MONITOR_ORI_LOG_DIR}/${APP}_${TYPE}_${SPARK_EXECUTOR_MEMORY}.log 1 &"
+echo "ssh spark2 perf_monitor.sh ${MONITOR_ORI_LOG_DIR}/${APP}_${TYPE}_${SPARK_EXECUTOR_MEMORY}.log 1 &"
 
 sleep 10
 
