@@ -25,7 +25,6 @@ DEL_OLD_LOGS
 ssh spark2 rm -rf ${MONITOR_ORI_LOG_DIR}/${APP}_${TYPE}_${SPARK_EXECUTOR_MEMORY}.log
 nohup ssh spark2 -t -t "perf_monitor.sh ${MONITOR_ORI_LOG_DIR}/${APP}_${TYPE}_${SPARK_EXECUTOR_MEMORY}.log" &
 
-sleep 10
 
 echo "start to execute"
 # sh +x iostat_execute.sh "dm-2" ${APP}_${TYPE}_${EXEMEM} &
