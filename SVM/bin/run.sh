@@ -16,9 +16,7 @@ JAR="${DIR}/target/SVMApp-1.0.jar"
 
 DEL_OLD_LOGS
 ssh spark2 rm -rf ${MONITOR_ORI_LOG_DIR}/${APP}_${TYPE}_${SPARK_EXECUTOR_MEMORY}.log
-echo "perf_monitor.sh ${MONITOR_ORI_LOG_DIR}/${APP}_${TYPE}_${SPARK_EXECUTOR_MEMORY}.log 1 &"
-
-sleep 10
+nohup ssh spark2 -t -t "perf_monitor.sh ${MONITOR_ORI_LOG_DIR}/${APP}_${TYPE}_${SPARK_EXECUTOR_MEMORY}.log" &
 
 setup
 for((i=0;i<${NUM_TRIALS};i++)); do

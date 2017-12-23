@@ -22,9 +22,7 @@ Addition_jar="--jars ${DIR}/target/jars/guava-19.0-rc2.jar"
 # ssh spark2 "sh +x iostat_execute.sh \"dm-2\" ${APP}_${TYPE} &"&
 DEL_OLD_LOGS
 ssh spark2 rm -rf ${MONITOR_ORI_LOG_DIR}/${APP}_${TYPE}_${SPARK_EXECUTOR_MEMORY}.log
-echo "perf_monitor.sh ${MONITOR_ORI_LOG_DIR}/${APP}_${TYPE}_${SPARK_EXECUTOR_MEMORY}.log 1 &"
-
-sleep 10
+nohup ssh spark2 -t -t "perf_monitor.sh ${MONITOR_ORI_LOG_DIR}/${APP}_${TYPE}_${SPARK_EXECUTOR_MEMORY}.log" &
 setup
 for((i=0;i<${NUM_TRIALS};i++)); do
     echo "${APP} opt ${OPTION}"
