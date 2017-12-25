@@ -5,9 +5,16 @@ master=spark1
 slave=spark2
 
 TOOLS_DIR="/home/hadoop/bryantchang/tools/awsmc"
+# TOOLS_DIR="/home/zc/bryantchang/tools/awsmc"
 
 ##Log locations
 
+
+# EXECUTOR_ORI_LOG_DIR="/home/zc/bryantchang/logs/executor_logs"
+# MONITOR_ORI_LOG_DIR="/home/zc/bryantchang/logs/monitor_logs"
+# MONITOR_RES_LOG_DIR="/home/zc/bryantchang/logs/monitor_logs/analyse_result"
+# GC_ORI_LOG_DIR="/home/zc/bryantchang/logs/gc_logs"
+# GC_RES_LOG_DIR="/home/zc/bryantchang/logs/gc_logs/gc_result"
 
 EXECUTOR_ORI_LOG_DIR="/home/hadoop/bryantchang/logs/sparklogs/executor_logs"
 MONITOR_ORI_LOG_DIR="/home/hadoop/bryantchang/logs/sparklogs/monitor_logs"
