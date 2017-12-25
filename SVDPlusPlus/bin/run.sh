@@ -26,7 +26,7 @@ OPTION="${INOUT_SCHEME}${INPUT_HDFS} ${INOUT_SCHEME}${OUTPUT_HDFS} ${NUM_OF_PART
 CORES=`cat ${SPARK_HOME}/conf/spark-defaults.conf | grep 'spark.executor.cores' | cut -d ' ' -f 2`
 PARALLELISM=`cat ${SPARK_HOME}/conf/spark-defaults.conf | grep 'spark.default.parallelism' | cut -d ' ' -f 2`
 RDD_COMPRESS=`cat ${SPARK_HOME}/conf/spark-defaults.conf | grep 'spark.rdd.compress' | cut -d ' ' -f 2`
-SHUFFLE_COMPRESS=`cat ${SPARK_HOME}/conf/spark-defaults.conf | grep 'spark.shuffle.cores' | cut -d ' ' -f 2`
+SHUFFLE_COMPRESS=`cat ${SPARK_HOME}/conf/spark-defaults.conf | grep 'spark.shuffle.compress' | cut -d ' ' -f 2`
 DEL_OLD_LOGS
 ssh spark2 rm -rf ${EXECUTOR_ORI_LOG_DIR}/${APP}_${TYPE}_${SPARK_EXECUTOR_MEMORY}_${CORES}_${PARALLELISM}_${RDD_COMPRESS}_${SHUFFLE_COMPRESS}.log
 nohup ssh spark2 -t -t "perf_monitor.sh ${MONITOR_ORI_LOG_DIR}/${APP}_${TYPE}_${SPARK_EXECUTOR_MEMORY}_${CORES}_${PARALLELISM}_${RDD_COMPRESS}_${SHUFFLE_COMPRESS}.log" &
